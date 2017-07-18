@@ -1,0 +1,18 @@
+.site-top {
+  @include grid-row;
+}
+
+.site-logo {
+  @include grid-column(12);
+    @include breakpoint(medium) {
+    @include grid-column(6);
+  }
+}
+
+.site-cta {
+  @include grid-column(12);
+    @include breakpoint(medium) {
+    @include grid-column(6);
+    text-align:right;
+  }	
+}

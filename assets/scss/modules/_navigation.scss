@@ -9,7 +9,12 @@
   @include show-for(medium);
 }
 
+.desktop-menu,
+.site-navigation .top-bar-nav {
+  @include grid-row;
+}
 
+.top-bar, .top-bar ul { background-color:inherit; }
 
 // Site title
 .site-mobile-title a {

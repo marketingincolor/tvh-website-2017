@@ -4,4 +4,7 @@
 if ( has_post_thumbnail( $post->ID ) ) : ?>
 	<header class="featured-hero" role="banner" data-interchange="[<?php echo the_post_thumbnail_url('featured-small'); ?>, small], [<?php echo the_post_thumbnail_url('featured-medium'); ?>, medium], [<?php echo the_post_thumbnail_url('featured-large'); ?>, large], [<?php echo the_post_thumbnail_url('featured-xlarge'); ?>, xlarge]">
 	</header>
+
+<?php else : ?>
+	<img src="http://satyr.io/1200x400">
 <?php endif;

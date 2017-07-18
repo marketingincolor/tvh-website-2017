@@ -99,6 +99,9 @@ get_header(); ?>
 
 </section>
 
-
+<!-- TODO: change to FUNCTION or PLUGIN call to display testimonial conditionally -->
+<div class="testimonial">
+	<h2>INSERT TESTIMONIAL HERE</h2>
+</div>
 
 <?php get_footer();

@@ -7,15 +7,14 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
 ?>
-
 		</section>
 		<div class="footer-container" data-sticky-footer>
 			<footer class="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
-				<?php do_action( 'foundationpress_after_footer' ); ?>
+				<?php dynamic_sidebar( 'footer-widgets' ); ?><em>SOCIAL MEDIA AS WIDGET CONTENT</em><br>
+				<?php do_action( 'foundationpress_after_footer' ); ?><em>NAVIGATION AS WIDGET CONTENT</em>
+				<p class="foot-copyright">&copy; Holding Company of The Villages, Inc., <?php echo date('Y'); ?> All Rights Reserved. The Villages is a registered trademark of Holding Company of The Villages, Inc.</p>
 			</footer>
 		</div>
 
@@ -25,7 +24,6 @@
 		</div><!-- Close off-canvas content -->
 	</div><!-- Close off-canvas wrapper -->
 <?php endif; ?>
-
 
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
