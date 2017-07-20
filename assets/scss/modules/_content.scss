@@ -10,15 +10,23 @@
 .main-content {
 
   // default 2 column
-  @include grid-column(12);
+  //@include grid-column(12);
   @include breakpoint(medium) {
-    @include grid-column(8);
+    @include grid-column(12);
   }
 
   // 1 column
-  .full-width.main-wrap & {
+  //.full-width.main-wrap & {
+  //  @include breakpoint(medium) {
+  //    @include grid-column(12);
+  //  }
+  //}
+
+  // 2 column sidebar right
+  .sidebar-right.main-wrap & {
+    @include grid-column(12);
     @include breakpoint(medium) {
-      @include grid-column(12);
+      @include grid-column(8);
     }
   }
 
@@ -53,4 +61,16 @@
 .testimonial {
   background-color:green;
   text-align:center;
+  margin-top:2em;
+}
+
+
+.orange { color:#db6829; }
+
+.top-button, 
+.cta-button {
+  border-radius: 7px;
+  height: 41px;
+  padding: 14px 20px;
+  border: 1.5px solid #db6829;
 }

@@ -21,8 +21,12 @@
 	<?php do_action( 'foundationpress_after_body' ); ?>
 	
 	<div class="site-top">
-		<div class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="" alt="<?php bloginfo( 'name' ); ?>" /></a></div>
-		<div class="site-cta">CTA</div>
+		<div class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-logo-header-main.png" alt="<?php bloginfo( 'name' ); ?>" /></a></div>
+		<div class="site-cta">
+			<button class="top-button orange">(888) 888-8888</button>
+			<button class="top-button orange">Make An Appointment</button>
+			<button class="top-button orange">Patient Portal</button>
+		</div>
 	</div>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>

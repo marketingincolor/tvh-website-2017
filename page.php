@@ -45,7 +45,7 @@
  <?php endwhile;?>
 
  <?php do_action( 'foundationpress_after_content' ); ?>
- <?php get_sidebar(); ?>
+ <?php //get_sidebar(); ?>
 
  </div>
  <!-- TODO: change to FUNCTION or PLUGIN call to display testimonial conditionally -->
