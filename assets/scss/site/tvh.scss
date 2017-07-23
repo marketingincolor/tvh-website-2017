@@ -1,0 +1,40 @@
+//Colors
+$orange: #db6829;
+
+
+//Footer Social Links
+.footer-social-link {
+	display: inline-block; 
+	
+	& a { 
+		color: $orange;
+	    display: block;
+	    //float: left;
+	    width: 2.375rem;
+	    height: 2.375rem;
+	    border: 2px solid $orange;
+	    border-radius: 20px;
+	    margin: .625rem;
+	    position: relative;
+	}
+
+	& a i {
+	    font-size: 1.25rem;
+	    color: $orange;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	}
+}
+
+//Footer Navigation
+#tvh-footer-menu li { 
+	display: inline-block; 
+	& a { color: $orange; }
+	& a:after { 
+		content: '|';
+		padding: 0rem 1rem; 
+	}
+	&:last-child a:after { content: ''; }
+}
