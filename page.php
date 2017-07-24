@@ -48,8 +48,7 @@
  <?php //get_sidebar(); ?>
 
  </div>
- <!-- TODO: change to FUNCTION or PLUGIN call to display testimonial conditionally -->
- <div class="testimonial">
-	<h2>INSERT TESTIMONIAL HERE</h2>
- </div>
+
+ <?php get_template_part( 'template-parts/main-testimonial' ); ?>
+
  <?php get_footer();

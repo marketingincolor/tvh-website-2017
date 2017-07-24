@@ -1,6 +1,6 @@
 // Page header
 .front-hero {
-  .marketing {
+  .fh-content {
     @include grid-row();
     max-width: 55rem;
   }
@@ -20,7 +20,7 @@
     background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
     background-size: cover;
     background-position: center;
-    height: rem-calc(685);
+    height: rem-calc(364);
     margin: 0 0 rem-calc(72);
   }
 
@@ -31,7 +31,6 @@
 
     @include breakpoint(medium) {
       @include grid-column(5);
-      padding-top: 6rem;
     }
   }
 
@@ -79,7 +78,7 @@
   @include grid-row();
   text-align: center;
 
-  .front-cta {
+  /*.front-cta {
     background-color:#f5f5f2;
     border-radius:20px;
   }
@@ -96,7 +95,26 @@
       @include grid-column-offset(2);
       @include grid-column-end;
 
+    }*/
+.front-cta {
+    @include breakpoint(small) {
+      @include grid-column(10, 0);
+      //@include grid-column-offset(1);
     }
+
+    @include breakpoint(medium) {
+      @include grid-column(4);
+      //@include grid-column-position(center);
+      @include grid-column-end;
+
+    }
+
+    .choose,
+    .tour {
+      background-color:#f5f5f2;
+      border-radius:20px;
+    }
+
 
     img {
 
@@ -111,6 +129,11 @@
     p {
       padding: 1.25rem;
       font-size: 0.9375rem;
+      margin-bottom:0;
+    }
+
+    button {
+      padding-bottom:1em;
     }
   }
 

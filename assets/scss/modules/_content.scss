@@ -58,13 +58,6 @@
   }
 }
 
-.testimonial {
-  background-color:green;
-  text-align:center;
-  margin-top:2em;
-}
-
-
 .orange { color:#db6829; }
 
 .top-button, 
@@ -73,4 +66,33 @@
   height: 41px;
   padding: 14px 20px;
   border: 1.5px solid #db6829;
+}
+
+.testimonial {
+  .tm-content {
+    @include grid-row();
+    max-width: 55rem;
+    color:#fff;
+  }
+
+  @include breakpoint(small) {
+    background: url('../images/tvh-tm-bgnd.jpg') top center;
+    background-size: cover;
+    background-position: bottom;
+    padding: rem-calc(40%) 0 0;
+    margin: rem-calc(32) 0 0 ;
+    height: auto;
+    position: relative;
+  }
+
+  @include breakpoint(medium) {
+    background: url('../images/tvh-tm-bgnd.jpg') top center;
+    background-size: cover;
+    background-position: center;
+    height: rem-calc(286);
+    margin: rem-calc(64) 0 0 ;
+  }
+
+  text-align:center;
+
 }

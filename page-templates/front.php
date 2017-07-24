@@ -5,7 +5,7 @@ Template Name: Front
 get_header(); ?>
 
 <header class="front-hero" role="banner">
-	<div class="marketing">
+	<div class="fh-content">
 		<div class="tagline">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
@@ -47,27 +47,28 @@ get_header(); ?>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<section class="cta-container">
+<section class="cta-container" data-equalizer="outer">
 
-	<div class="front-cta choose">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="semantic">
-		<h3>Why choose TVH</h3>
-		<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
-		<button class="cta-button orange">Learn More</button>
+	<div class="front-cta">
+		<div class="choose" data-equalizer-watch="outer">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="semantic">
+			<h3>Why choose TVH</h3>
+			<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
+			<button class="cta-button orange">Learn More</button>
+		</div>
 	</div>
 
-	<div class="front-cta tour">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="responsive">
-		<h3>Take a virtual tour</h3>
-		<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design.</p>
-		<button class="cta-button orange">Take a Tour</button>
+	<div class="front-cta">
+		<div class="tour" data-equalizer-watch="outer">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="responsive">
+			<h3>Take a virtual tour</h3>
+			<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
+			<button class="cta-button orange">Take a Tour</button>
+		</div>
 	</div>
 
 </section>
 
-<!-- TODO: change to FUNCTION or PLUGIN call to display testimonial conditionally -->
-<div class="testimonial">
-	<h2>INSERT TESTIMONIAL HERE</h2>
-</div>
+<?php get_template_part( 'template-parts/main-testimonial' ); ?>
 
 <?php get_footer();
