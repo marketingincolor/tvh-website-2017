@@ -6,7 +6,7 @@
   }
 
   @include breakpoint(small) {
-    background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
+    background: url('../images/tvh-test-hero-image.jpg') bottom center;
     background-size: cover;
     background-position: bottom;
     padding: rem-calc(65%) 0;
@@ -17,7 +17,7 @@
   }
 
   @include breakpoint(medium) {
-    background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
+    background: url('../images/tvh-test-hero-image.jpg') bottom center;
     background-size: cover;
     background-position: center;
     height: rem-calc(364);
@@ -66,18 +66,15 @@
       @include grid-column(12);
     }
 
-    @include breakpoint(medium) {
-      @include grid-column(10);
-      @include grid-column-offset(1);
-    }
   }
 }
 
 // Calls To Action
 .cta-container {
-  @include grid-row();
+  //@include grid-row();
   text-align: center;
 
+  /* originally removed from template */
   /*.front-cta {
     background-color:#f5f5f2;
     border-radius:20px;
@@ -96,10 +93,15 @@
       @include grid-column-end;
 
     }*/
+
+
+
+
+/* Custom layout elemtents removed for testing*/
 .front-cta {
-    @include breakpoint(small) {
+    /*@include breakpoint(small) {
       @include grid-column(10, 0);
-      //@include grid-column-offset(1);
+      @include grid-column-offset(1);
     }
 
     @include breakpoint(medium) {
@@ -107,7 +109,7 @@
       //@include grid-column-position(center);
       @include grid-column-end;
 
-    }
+    }*/
 
     .choose,
     .tour {

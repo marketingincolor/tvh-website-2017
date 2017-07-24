@@ -7,9 +7,7 @@ get_header(); ?>
 <header class="front-hero" role="banner">
 	<div class="fh-content">
 		<div class="tagline">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
-			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>
+			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">video launch link</a>
 		</div>
 	</div>
 
@@ -25,20 +23,6 @@ get_header(); ?>
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
-			<footer>
-				<?php
-					wp_link_pages(
-						array(
-							'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-							'after'  => '</p></nav>',
-						)
-					);
-				?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_page_before_comments' ); ?>
-			<?php comments_template(); ?>
-			<?php do_action( 'foundationpress_page_after_comments' ); ?>
 		</div>
 
 	</div>
@@ -47,10 +31,10 @@ get_header(); ?>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<section class="cta-container" data-equalizer="outer">
+<section class="cta-container row columns small-11 medium-8 small-centered" data-equalizer="outer">
 
-	<div class="front-cta">
-		<div class="choose" data-equalizer-watch="outer">
+	<div class="front-cta small-12 large-6 columns">
+		<div class="choose small-10 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="semantic">
 			<h3>Why choose TVH</h3>
 			<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
@@ -58,8 +42,8 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="front-cta">
-		<div class="tour" data-equalizer-watch="outer">
+	<div class="front-cta small-12 large-6 columns end">
+		<div class="tour small-10 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="responsive">
 			<h3>Take a virtual tour</h3>
 			<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>

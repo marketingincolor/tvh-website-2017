@@ -7212,8 +7212,18 @@ a.thumbnail {
   .site-navigation .top-bar-nav::after {
     clear: both; }
 
+.top-bar {
+  padding: 0; }
+
 .top-bar, .top-bar ul {
   background-color: #ffffff; }
+
+.top-bar li {
+  height: 50px;
+  display: inline-block; }
+
+.current-menu-item {
+  border-bottom: 10px solid orange; }
 
 .site-desktop-title a {
   font-weight: bold; }
@@ -7491,7 +7501,19 @@ a.thumbnail {
   .footer ul {
     list-style-type: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    text-align: center; }
+  .footer li {
+    display: inline-block;
+    vertical-align: middle;
+    color: #db6829; }
+  .footer li a {
+    padding: 1em;
+    color: #db6829; }
+  .footer li:after {
+    content: "|"; }
+  .footer li:last-child:after {
+    content: ""; }
   .footer .foot-copyright {
     font-size: 12px;
     color: #999999; }
@@ -7560,7 +7582,7 @@ body#tinymce {
   outline: none; }
 
 .front-hero {
-  background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
+  background: url("../images/tvh-test-hero-image.jpg") bottom center;
   -webkit-background-size: cover;
           background-size: cover;
   background-position: bottom;
@@ -7581,7 +7603,7 @@ body#tinymce {
       clear: both; }
   @media print, screen and (min-width: 40em) {
     .front-hero {
-      background: url("../images/demo/hero-bg-foundation-6-large.svg") bottom center;
+      background: url("../images/tvh-test-hero-image.jpg") bottom center;
       -webkit-background-size: cover;
               background-size: cover;
       background-position: center;
@@ -7645,26 +7667,10 @@ body#tinymce {
         padding-left: 0.9375rem; } }
     .intro .fp-intro:last-child:not(:first-child) {
       float: right; }
-    @media print, screen and (min-width: 40em) {
-      .intro .fp-intro {
-        width: 83.33333%;
-        float: left;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem;
-        margin-left: 8.33333%; } }
-  @media print, screen and (min-width: 40em) and (min-width: 40em) {
-    .intro .fp-intro {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-    @media print, screen and (min-width: 40em) {
-        .intro .fp-intro:last-child:not(:first-child) {
-          float: right; } }
 
 .cta-container {
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
+  /* originally removed from template */
   /*.front-cta {
     background-color:#f5f5f2;
     border-radius:20px;
@@ -7682,34 +7688,20 @@ body#tinymce {
       @include grid-column-offset(2);
       @include grid-column-end;
 
-    }*/ }
-  .cta-container::before, .cta-container::after {
-    display: table;
-    content: ' '; }
-  .cta-container::after {
-    clear: both; }
+    }*/
+  /* Custom layout elemtents removed for testing*/ }
   .cta-container .front-cta {
-    width: 83.33333%;
-    float: left;
-    padding-right: 0;
-    padding-left: 0; }
-    .cta-container .front-cta:last-child:not(:first-child) {
-      float: right; }
-    @media print, screen and (min-width: 40em) {
-      .cta-container .front-cta {
-        width: 33.33333%;
-        float: left;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem; } }
-  @media print, screen and (min-width: 40em) and (min-width: 40em) {
-    .cta-container .front-cta {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-    @media print, screen and (min-width: 40em) {
-        .cta-container .front-cta:last-child:not(:first-child) {
-          float: right; }
-        .cta-container .front-cta:last-child:last-child {
-          float: left; } }
+    /*@include breakpoint(small) {
+      @include grid-column(10, 0);
+      @include grid-column-offset(1);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(4);
+      //@include grid-column-position(center);
+      @include grid-column-end;
+
+    }*/ }
     .cta-container .front-cta .choose,
     .cta-container .front-cta .tour {
       background-color: #f5f5f2;

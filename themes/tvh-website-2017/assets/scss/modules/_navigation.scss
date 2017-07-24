@@ -14,8 +14,10 @@
   @include grid-row;
 }
 
+.top-bar { padding:0; }
 .top-bar, .top-bar ul { background-color:#ffffff; }
-
+.top-bar li { height:50px; display:inline-block;  }
+.current-menu-item { border-bottom:10px solid orange; }
 // Site title
 .site-mobile-title a {
   // placeholder
