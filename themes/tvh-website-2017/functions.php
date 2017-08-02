@@ -109,6 +109,15 @@ function tvh_register_settings()
     // Add settings section
     add_settings_section( 'tvh_text_section', '', 'tvh_display_section', 'tvh_theme_options.php' );
     //Facebook Link Args
+    $pn_args = array(
+      'type'      => 'text',
+      'id'        => 'tvh_pn_textbox',
+      'name'      => 'tvh_pn_textbox',
+      'desc'      => '',
+      'std'       => '',
+      'label_for' => 'tvh_pn_textbox',
+      'class'     => 'css_class'
+    );
     $fb_args = array(
       'type'      => 'text',
       'id'        => 'tvh_fb_textbox',
@@ -136,6 +145,7 @@ function tvh_register_settings()
       'label_for' => 'tvh_youtube_textbox',
       'class'     => 'css_class'
     );
+    add_settings_field( 'tvh_pn_link', 'Phone Number:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $pn_args );
     add_settings_field( 'tvh_fb_link', 'Facebook Link:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $fb_args );
     add_settings_field( 'tvh_twitter_link', 'Twitter Link:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $twitter_args );
     add_settings_field( 'tvh_youtube_link', 'YouTube Link:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $youtube_args );
@@ -185,3 +195,44 @@ function tvh_validate_settings($input)
 register_nav_menus( array(
   'tvh_footer_menu' => 'Footer Menu',
 ) );
+
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Custom Search Template Chooser
+ * ------------------------------------------------------------------------ */
+ function template_chooser($template)   
+{    
+  global $wp_query;   
+  $post_type = get_query_var('post_type');   
+  if( $wp_query->is_search && $post_type == 'staff' )   
+  {
+    return locate_template('archive-doctor.php');  //  redirect to archive-doctor.php
+  }   
+  return $template;   
+}
+add_filter('template_include', 'template_chooser');  
+
+
+function meta_search_query($query) {
+
+  $query_args_meta = array(
+    'posts_per_page' => -1,
+    'post_type' => 'staff',
+    'meta_query' => array(
+        'relation' => 'AND',
+        array(
+            'key' => 'location',
+            'value' => sanitize_text_field( $_GET['location'] ),
+            'compare' => 'LIKE'
+        ),
+        array(
+            'key' => 'specialty',
+            'value' => sanitize_text_field( $_GET['specialty'] ),
+            'compare' => 'LIKE'
+        )
+    )
+);
+}

@@ -7433,8 +7433,7 @@ a.thumbnail {
       width: 33.33333%;
       float: left;
       padding-right: 0.625rem;
-      padding-left: 0.625rem;
-      margin-top: 1rem; } }
+      padding-left: 0.625rem; } }
   @media print, screen and (min-width: 40em) and (min-width: 40em) {
     .sidebar {
       padding-right: 0.9375rem;
@@ -7449,8 +7448,7 @@ a.thumbnail {
       padding-right: 0.625rem;
       padding-left: 0.625rem;
       position: relative;
-      left: -66.66667%;
-      margin-top: 1rem; } }
+      left: -66.66667%; } }
   @media print, screen and (min-width: 40em) and (min-width: 40em) {
     .sidebar-left.main-wrap .sidebar {
       padding-right: 0.9375rem;
@@ -7835,6 +7833,65 @@ body {
   font-weight: 300; }
 
 /* h1 */
+.doctor-finder {
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  background-color: #f5f5f2;
+  border-radius: 22px;
+  padding: 2em 0em; }
+  @media print, screen and (min-width: 40em) {
+    .doctor-finder {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .doctor-finder:last-child:not(:first-child) {
+    float: right; }
+  .doctor-finder h4 {
+    font-size: 1.25em;
+    font-weight: 300;
+    text-align: center; }
+  .doctor-finder input[type="submit"] {
+    background: transparent;
+    cursor: pointer; }
+
+.single-staff .main-wrap {
+  background: inherit; }
+  .single-staff .main-wrap .main-content .entry-header .entry-image {
+    background-color: #f5f5f2;
+    border-radius: 22px; }
+    .single-staff .main-wrap .main-content .entry-header .entry-image .entry-caption {
+      text-align: center; }
+  .single-staff .main-wrap .main-content .entry-content .entry-dr-meta {
+    margin: 2em 0em; }
+  .single-staff .main-wrap .main-content .entry-content h5 {
+    font-weight: bold; }
+    .single-staff .main-wrap .main-content .entry-content h5 span {
+      font-weight: normal; }
+  .single-staff .main-wrap .main-content .entry-content h5.staff-quote {
+    color: #2d7a3d;
+    font-weight: 300;
+    font-size: 1.375em;
+    margin-bottom: 2em; }
+
+.sidebar-staff {
+  padding-left: 4em; }
+  .sidebar-staff article {
+    margin-bottom: 2em;
+    background-color: #f5f5f2;
+    border-radius: 22px; }
+    .sidebar-staff article .staff-widget-title {
+      background-color: #2d7a3d;
+      border-radius: 22px 22px 0px 0px;
+      text-align: center;
+      color: #fff;
+      padding: .5em 0em; }
+    .sidebar-staff article .staff-widget-container {
+      padding: 2em;
+      text-align: center; }
+  .sidebar-staff :last-child {
+    margin-bottom: 0em; }
+
 .orange {
   color: #db6829; }
 

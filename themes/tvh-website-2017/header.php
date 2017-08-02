@@ -23,7 +23,11 @@
 	<div class="site-top collapse-for-medium-up">
 		<div class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-logo-header-main.png" alt="<?php bloginfo( 'name' ); ?>" /></a></div>
 		<div class="site-cta">
-			<button class="top-button orange">(888) 888-8888</button>
+		<?php //Get Custom Theme Options
+		$options = get_option('tvh_theme_options');
+		if ( $options['tvh_pn_textbox'] != null || $options['tvh_pn_textbox'] != "" ) : ?>
+			<button class="top-button orange"><?php echo $options['tvh_pn_textbox']; ?></button>
+		<?php endif; ?>
 			<button class="top-button orange">Make An Appointment</button>
 			<button class="top-button orange">Patient Portal</button>
 		</div>

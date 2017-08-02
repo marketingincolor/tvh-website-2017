@@ -2,6 +2,8 @@ body { font-size:18px; color:#333333; }
 
 //Colors
 $orange: #db6829;
+$green: #2d7a3d;
+$grey: #f5f5f2;
 
 // Page Content
 .main-wrap { } /* see content.scss */
@@ -9,8 +11,81 @@ $orange: #db6829;
 .main-wrap .main-content header {}
 .main-wrap .main-content header .entry-title { font-size:30px; font-weight:300; } /* h1 */
 
-// Testimonial Components
+// Doctor Finder
+.doctor-finder {
+  @include grid-column(12);
+  background-color:$grey;
+  border-radius:22px;
+  padding:2em 0em;
+  h4 {
+    font-size:1.25em; font-weight:300; text-align:center;
+  }
+  input[type="submit"] { background:transparent; cursor:pointer; }
+}
 
+// Staff Listings
+.single-staff {
+  .main-wrap {
+    background:inherit;
+    .main-content {
+      .entry-header {
+        .entry-image {
+          background-color:$grey;
+          border-radius:22px;
+          img {
+
+          }
+          .entry-caption {
+            text-align:center;
+            h3 {}
+            h4 {}
+          }
+        }
+      }
+      .entry-content {
+        .entry-dr-meta { margin:2em 0em; }
+        h5 { 
+          font-weight:bold;
+          span { font-weight:normal; }
+        }
+        h5.staff-quote { 
+          color:$green; 
+          font-weight:300; 
+          font-size:1.375em;
+          margin-bottom:2em; 
+        }
+      }
+    }
+  }
+}
+
+// Staff Sidebars
+.sidebar-staff {
+  padding-left:4em;
+  article {
+    margin-bottom:2em;
+    background-color:$grey;
+    border-radius:22px;
+    .staff-widget-title {
+      background-color:$green;
+      border-radius:22px 22px 0px 0px;
+      text-align:center;
+      color:#fff;
+      padding:.5em 0em;
+    }
+    .staff-widget-container {
+      padding:2em;
+      text-align:center;
+    }
+    .widget-dr-home {}
+    .widget-insurance {}
+    .widget-directory-dl {}
+    .widget-dr-articles {}
+  }
+  :last-child {margin-bottom:0em;}
+}
+
+// Testimonial Components
 .orange { color:$orange; }
 
 .top-button, 
@@ -56,7 +131,7 @@ $orange: #db6829;
 
 }
 
-//Footer Social Links
+// Footer Social Links
 .footer-social-link {
 	display: inline-block; 
 	
