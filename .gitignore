@@ -1,4 +1,13 @@
-.DS_Store
+ai1wm-backups/*
+upgrade/*
+uploads/*
+*.log
+plugins/*
+# !wp-content/plugins/my-single-file-plugin.php
+!plugins/site-settings/
+
+themes/*
+!themes/tvh-website-2017/
 themes/tvh-website-2017/*.sass-cache*
 themes/tvh-website-2017/*.log
 themes/tvh-website-2017/node_modules/
@@ -10,13 +19,3 @@ themes/tvh-website-2017/assets/javascript/custom/demosite.js
 themes/tvh-website-2017/packaged/
 themes/tvh-website-2017/wpcs/
 themes/tvh-website-2017/gulpfile.js
-
-# Ignore everything in the "plugins" directory, except the plugins you
-# specify (see the commented-out examples for hints on how to do this.)
-plugins/*
-# !wp-content/plugins/my-single-file-plugin.php
-!plugins/site-settings/
-# Ignore everything in the "themes" directory, except the themes you
-# specify (see the commented-out example for a hint on how to do this.)
-themes/*
-!themes/tvh-website-2017/

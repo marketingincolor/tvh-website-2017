@@ -7,7 +7,7 @@ get_header(); ?>
 <header class="front-hero" role="banner">
 	<div class="fh-content">
 		<div class="tagline">
-			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">video launch link</a>
+			<a role="button" class="download large button sites-button hide-for-small-only" href="">video launch link</a>
 		</div>
 	</div>
 
@@ -17,7 +17,7 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <section class="intro" role="main">
 	<div class="fp-intro">
-
+		<h1><?php the_title(); ?></h1>
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 			<div class="entry-content">
@@ -32,25 +32,25 @@ get_header(); ?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
 <section class="cta-container row columns small-11 medium-8 small-centered" data-equalizer="outer">
-
+<div data-equalizer="inner" class="collapse">
 	<div class="front-cta small-12 large-6 columns">
 		<div class="choose small-10 small-centered" data-equalizer-watch="outer">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="semantic">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-front-img-choose.jpg" alt="semantic">
 			<h3>Why choose TVH</h3>
-			<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
-			<button class="cta-button orange">Learn More</button>
+			<p data-equalizer-watch="inner">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad minim.</p>
+			<p><a href="about/"><button class="cta-button orange">Learn More</button></a></p>
 		</div>
 	</div>
 
 	<div class="front-cta small-12 large-6 columns end">
 		<div class="tour small-10 small-centered" data-equalizer-watch="outer">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-test-image.jpg" alt="responsive">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-front-img-tour.jpg" alt="responsive">
 			<h3>Take a virtual tour</h3>
-			<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
-			<button class="cta-button orange">Take a Tour</button>
+			<p data-equalizer-watch="inner">Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+			<p><a href="about/"><button class="cta-button orange">Take a Tour</button></a></p>
 		</div>
 	</div>
-
+</div>
 </section>
 
 <?php get_template_part( 'template-parts/main-testimonial' ); ?>

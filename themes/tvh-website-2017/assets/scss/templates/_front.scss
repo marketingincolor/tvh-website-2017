@@ -2,7 +2,7 @@
 .front-hero {
   .fh-content {
     @include grid-row();
-    max-width: 55rem;
+    //max-width: 55rem;
   }
 
   @include breakpoint(small) {
@@ -27,11 +27,14 @@
   .tagline {
     @include breakpoint(small) {
       @include grid-column(8);
+      @include grid-column-position(center);
     }
 
     @include breakpoint(medium) {
       @include grid-column(5);
+      @include grid-column-position(center);
     }
+    text-align:center;
   }
 
   h1 {
@@ -65,7 +68,7 @@
     @include breakpoint(small) {
       @include grid-column(12);
     }
-
+    h1 { font-size:30px; font-weight:300; }
   }
 }
 
@@ -73,6 +76,7 @@
 .cta-container {
   //@include grid-row();
   text-align: center;
+  margin-top:2em;
 
   /* originally removed from template */
   /*.front-cta {
@@ -126,16 +130,18 @@
       color: #0a0a0a;
       font-weight: 300;
       font-size: 1.75rem;
+      margin: .75em 0em;
     }
 
     p {
-      padding: 1.25rem;
-      font-size: 0.9375rem;
+      padding: 0em 1.25em 1.25rem;
+      font-size: 1rem;
       margin-bottom:0;
     }
 
     button {
-      padding-bottom:1em;
+      padding:1em 2.5em;
+      cursor:pointer;
     }
   }
 

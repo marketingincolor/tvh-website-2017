@@ -12,7 +12,39 @@
 		<div class="footer-container" data-sticky-footer>
 			<footer class="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?><em>SOCIAL MEDIA AS WIDGET CONTENT</em><br>
+				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+
+
+				<!-- Social Links -->
+				<?php 
+					//Get Custom Theme Options
+					$options = get_option('tvh_theme_options');
+					//If we have facebook data add icon
+					if ( $options['tvh_fb_textbox'] != null || $options['tvh_fb_textbox'] != "" ) : ?>
+						<div id="footer-social-container">
+							<div class="footer-social-link">
+								<a href="<?php echo $options['tvh_fb_textbox']; ?>" title="The Villages Health Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							</div>
+					<?php endif; 
+					//If we have twitter data add icon
+					if ( $options['tvh_twitter_textbox'] != null || $options['tvh_twitter_textbox'] != "") : ?>
+							<div class="footer-social-link">
+								<a href="<?php echo $options['tvh_twitter_textbox']; ?>" title="The Villages Health Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							</div>
+					<?php endif; 
+					//If we have YouTube data dd icon
+					if ( $options['tvh_youtube_textbox'] != null || $options['tvh_youtube_textbox'] != "") : ?>
+							<div class="footer-social-link">
+								<a href="<?php echo $options['tvh_youtube_textbox']; ?>" title="The Villages Health YouTube" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					<?php endif; 
+				?>
+				<!-- /Social Links -->
+
+
+
+
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 
 				<?php 

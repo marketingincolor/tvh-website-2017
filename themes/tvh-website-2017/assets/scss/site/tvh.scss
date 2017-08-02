@@ -1,0 +1,83 @@
+body { font-size:18px; color:#333333; }
+
+//Colors
+$orange: #db6829;
+
+// Page Content
+.main-wrap { } /* see content.scss */
+.main-wrap .main-content {} /* article */
+.main-wrap .main-content header {}
+.main-wrap .main-content header .entry-title { font-size:30px; font-weight:300; } /* h1 */
+
+// Testimonial Components
+
+.orange { color:$orange; }
+
+.top-button, 
+.cta-button {
+  border-radius: 7px;
+  height: 41px;
+  padding: 14px 20px;
+  border: 1.5px solid $orange;
+  line-height:.5;
+}
+
+.testimonial {
+  .tm-content {
+    @include grid-row();
+    max-width: 50rem;
+    color:#fff;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .tm-content h3 { font-size:1.75rem; font-weight:300; }
+  .tm-content h4 { font-size:1rem; font-style:italic; font-weight:300; }
+
+  @include breakpoint(small) {
+    background: url('../images/tvh-tm-bgnd.jpg') top center;
+    background-size: cover;
+    background-position: bottom;
+    //padding: rem-calc(40%) 0 0;
+    margin: rem-calc(32) 0 0 ;
+    height: auto;
+    position: relative;
+  }
+
+  @include breakpoint(medium) {
+    background: url('../images/tvh-tm-bgnd.jpg') top center;
+    background-size: cover;
+    background-position: center;
+    height: rem-calc(286);
+    margin: rem-calc(64) 0 0 ;
+  }
+
+  text-align:center;
+
+}
+
+//Footer Social Links
+.footer-social-link {
+	display: inline-block; 
+	
+	& a { 
+		color: $orange;
+	    display: block;
+	    //float: left;
+	    width: 2.375rem;
+	    height: 2.375rem;
+	    border: 1px solid $orange;
+	    border-radius: 20px;
+	    margin: .625rem;
+	    position: relative;
+	}
+
+	& a i {
+	    font-size: 1.25rem;
+	    color: $orange;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	}
+}

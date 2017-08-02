@@ -1,14 +1,33 @@
 .featured-hero {
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   height: rem-calc(100);
-
   @include breakpoint(medium) {
     height: rem-calc(200);
   }
-
   @include breakpoint(xlarge) {
     height: rem-calc(400);
   }
+  .featured-display {
+    max-width: 81.25rem;
+    text-align:right;
+    line-height:1rem;
+    @include breakpoint(medium) {
+      line-height: 13rem;
+    }
+        @include breakpoint(xlarge) {
+      line-height: 25rem;
+    }
+    .featured-caption {
+      background:rgba(255,255,255, .85);
+      font-size:.85em;
+      font-style:italic;
+      padding:.5em 1em;
+      display:inline-block;
+      vertical-align:bottom;
+      line-height:normal;
+    }
+  }
+
 }

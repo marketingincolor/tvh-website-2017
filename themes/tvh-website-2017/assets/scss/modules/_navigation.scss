@@ -13,11 +13,15 @@
 .site-navigation .top-bar-nav {
   @include grid-row;
 }
+.desktop-menu {
+  @include grid-column();
+}
 
-.top-bar { padding:0; }
+.top-bar { padding:0; margin-top:1.5em; }
 .top-bar, .top-bar ul { background-color:#ffffff; }
 .top-bar li { height:50px; display:inline-block;  }
-.current-menu-item { border-bottom:10px solid orange; }
+.top-bar li a { color:#333; font-weight:normal; font-size:1em; }
+.current-menu-item { border-bottom:10px solid #db6829; }
 // Site title
 .site-mobile-title a {
   // placeholder
@@ -41,10 +45,10 @@
   // submenu arrow
   .is-accordion-submenu-parent {
     > a::after {
-      border-color: $accordionmenu-arrow-color transparent transparent;
+      border-color: #333 transparent transparent !important;
     }
     &.active > a::after {
-      border-color: $menu-item-color-active transparent transparent;
+      border-color: #333 transparent transparent !important;
     }
   }
 
@@ -62,10 +66,10 @@
   // submenu arrow
   li.is-dropdown-submenu-parent {
     > a::after {
-      border-color: $accordionmenu-arrow-color transparent transparent;
+      border-color: #333 transparent transparent !important;
     }
     &.active > a::after {
-      border-color: $menu-item-color-active transparent transparent;
+      border-color: #333 transparent transparent !important;
     }
   }
 }
