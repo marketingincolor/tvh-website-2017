@@ -48,7 +48,7 @@
  <?php //get_sidebar(); ?>
 
 <?php if ( is_page('find-a-doctor') ) : ?>
-<?php get_template_part( 'template-parts/find-a-doctor' ); ?>
+	<?php get_template_part( 'template-parts/find-a-doctor' ); ?>
 <?php endif; ?>
 
  </div>

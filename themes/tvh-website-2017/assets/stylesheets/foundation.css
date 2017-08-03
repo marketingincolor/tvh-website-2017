@@ -7240,8 +7240,18 @@ a.thumbnail {
   font-weight: normal;
   font-size: 1em; }
 
-.current-menu-item {
+.top-bar .menu .active a {
+  background: none;
+  color: #333; }
+
+.top-bar .current-menu-item {
   border-bottom: 10px solid #db6829; }
+
+.top-bar .submenu .current-menu-item, .top-bar .submenu .current-page-ancestor {
+  background-color: #db6829; }
+
+.top-bar .submenu .current-menu-item a, .top-bar .submenu .current-page-ancestor a {
+  color: #fff; }
 
 .site-desktop-title a {
   font-weight: bold; }
@@ -7854,6 +7864,16 @@ body {
   .doctor-finder input[type="submit"] {
     background: transparent;
     cursor: pointer; }
+
+.services-grid {
+  text-align: center;
+  padding: 1em 0em 3em; }
+  .services-grid .services-item {
+    padding: 1em; }
+    .services-grid .services-item a {
+      display: inline-block; }
+    .services-grid .services-item button {
+      cursor: pointer; }
 
 .single-staff .main-wrap {
   background: inherit; }

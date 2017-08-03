@@ -20,8 +20,6 @@ $dr_fellowships = get_field('fellowships') ? get_field('fellowships') : "" ;
 $dr_quote = get_field('quote') ? get_field('quote') : "" ;
 get_header(); ?>
 
-<?php //get_template_part( 'template-parts/featured-image' ); ?>
-
 <div class="main-wrap sidebar-right" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
@@ -41,12 +39,12 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 		<div class="entry-content row columns">
 			<div class="entry-dr-meta">
-			<?php if( get_field('specialty') ): ?>
+			<!-- <?php if( get_field('specialty') ): ?>
 			    <h5><?php the_field('specialty'); ?></h5>
 			<?php endif; ?>
 			<?php if( get_field('location') ): ?>
 			    <h5><?php the_field('location'); ?></h5>
-			<?php endif; ?>
+			<?php endif; ?> -->
 			<?php if( get_field('hometown') ): ?>
 			    <h5>Hometown: <span><?php echo $dr_hometown; ?></span></h5>
 			<?php endif; ?>

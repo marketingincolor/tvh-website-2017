@@ -32,6 +32,11 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_page_before_comments' ); ?>
 		<?php comments_template(); ?>
 		<?php do_action( 'foundationpress_page_after_comments' ); ?>
+
+		<?php if (is_page('specialty-services')) : ?>
+			<?php get_template_part( 'template-parts/services-grid' ); ?>
+		<?php endif; ?>
+
 	</article>
 <?php endwhile;?>
 

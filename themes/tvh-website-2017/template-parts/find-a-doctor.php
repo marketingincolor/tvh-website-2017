@@ -19,13 +19,13 @@
 					<option value="Cardiology">Cardiology</option>
 					<option value="Dermatology">Dermatology</option>
 					<option value="Endocrinology">Endocrinology</option>
+					<option value="Gastroenterology">Gastroenterology</option>
 					<option value="General Surgery">General Surgery</option>
 					<option value="Gynecology">Gynecology</option>
 					<option value="Neurology">Neurology</option>
 					<option value="Orthaopaedics">Orthaopaedics</option>
 					<option value="Rheumatology">Rheumatology</option>
 					<option value="Psychiatry">Psychiatry</option>
-					<option value="Gastroenterology">Gastroenterology</option>
 					<option value="Urology">Urology</option>
 				</select>
 			</div>
