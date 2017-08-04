@@ -1,63 +1,9 @@
 // Page header
 .front-hero {
-  .fh-content {
-    @include grid-row();
-    //max-width: 55rem;
-  }
-
-  @include breakpoint(small) {
-    background: url('../images/tvh-test-hero-image.jpg') bottom center;
-    background-size: cover;
-    background-position: bottom;
-    padding: rem-calc(65%) 0;
-    margin: 0 0 rem-calc(32);
-    height: auto;
-    position: relative;
-    text-align: left;
-  }
-
-  @include breakpoint(medium) {
-    background: url('../images/tvh-test-hero-image.jpg') bottom center;
-    background-size: cover;
-    background-position: center;
-    height: rem-calc(364);
-    margin: 0 0 rem-calc(72);
-  }
-
   .tagline {
-    @include breakpoint(small) {
-      @include grid-column(8);
-      @include grid-column-position(center);
-    }
-
-    @include breakpoint(medium) {
-      @include grid-column(5);
-      @include grid-column-position(center);
-    }
-    text-align:center;
-  }
-
-  h1 {
-    color: #fff;
-    font-weight: 500;
-
-    @include breakpoint(small) {
-      font-size: 2.2rem;
-    }
-
-    @include breakpoint(medium) {
-      font-size: 2.875rem;
-    }
-  }
-
-  h4 {
-    color: #fefefe;
-    font-weight: 300;
-    font-size: 1.3125rem;
-  }
-
-  .download {
-    margin-top: rem-calc(20);
+    position:absolute;
+    top: calc(48% - 40px);
+    left: calc(50% - 40px);
   }
 }
 

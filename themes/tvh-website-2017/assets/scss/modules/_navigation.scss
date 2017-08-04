@@ -17,14 +17,25 @@
   @include grid-column();
 }
 
+// Navigation Bar
 .top-bar { padding:0; margin-top:1.5em; }
 .top-bar, .top-bar ul { background-color:#ffffff; }
 .top-bar li { height:50px; display:inline-block;  }
-.top-bar li a { color:#333; font-weight:normal; font-size:1em; }
-.top-bar .menu .active a { background:none; color:#333; }
-.top-bar .current-menu-item { border-bottom:10px solid #db6829; }
-.top-bar .submenu .current-menu-item, .top-bar .submenu .current-page-ancestor { background-color:#db6829; }
-.top-bar .submenu .current-menu-item a, .top-bar .submenu .current-page-ancestor a { color:#fff; }
+.top-bar li a { color:#333; font-weight:normal; font-size:1em; padding:0.7rem 1rem !important; }
+
+.top-bar .is-dropdown-submenu { background:transparent; border:none; }
+.top-bar .is-dropdown-submenu li { background-color:rgba(219, 104, 41, 0.9); height:auto; }
+.top-bar .is-dropdown-submenu li a { color:#fff; }
+
+.desktop-menu .active a { background:none; color:#333; }
+.desktop-menu .current-menu-parent a,
+.desktop-menu .current-menu-item a, 
+.desktop-menu .menu-item a:hover { border-bottom:10px solid #db6829; }
+.is-submenu-item a { border-bottom:0px !important; }
+.submenu .current-menu-item, .submenu .current-page-ancestor { background-color:#db6829; }
+.submenu .current-menu-item a, .submenu .menu-item a:hover { color:#fff; border-bottom:0px; background-color:rgba(168, 80, 32, 0.9); }
+.submenu .current-menu-item a, .submenu .current-page-ancestor a { color:#fff; }
+
 // Site title
 .site-mobile-title a {
   // placeholder
@@ -33,7 +44,6 @@
 .site-desktop-title a {
   font-weight: bold;
 }
-
 
 
 // Mobile menu
@@ -48,10 +58,10 @@
   // submenu arrow
   .is-accordion-submenu-parent {
     > a::after {
-      border-color: #333 transparent transparent !important;
+      border-color: /*#333*/ transparent transparent transparent !important;
     }
     &.active > a::after {
-      border-color: #333 transparent transparent !important;
+      border-color: /*#333*/ transparent transparent transparent !important;
     }
   }
 
@@ -69,10 +79,10 @@
   // submenu arrow
   li.is-dropdown-submenu-parent {
     > a::after {
-      border-color: #333 transparent transparent !important;
+      border-color: /*#333*/ transparent transparent transparent !important;
     }
     &.active > a::after {
-      border-color: #333 transparent transparent !important;
+      border-color: /*#333*/ transparent transparent transparent !important;
     }
   }
 }

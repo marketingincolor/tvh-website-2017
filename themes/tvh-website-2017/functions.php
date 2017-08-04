@@ -236,3 +236,10 @@ function meta_search_query($query) {
     )
 );
 }
+
+function myplugin_register_query_vars( $vars ) {
+  $vars[] = 'specialty';
+  $vars[] = 'location';
+  return $vars;
+}
+//add_filter( 'query_vars', 'myplugin_register_query_vars' );

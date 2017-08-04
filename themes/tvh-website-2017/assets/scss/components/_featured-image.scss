@@ -2,9 +2,9 @@
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  height: rem-calc(100);
+  height: rem-calc(200);
   @include breakpoint(medium) {
-    height: rem-calc(200);
+    height: rem-calc(300);
   }
   @include breakpoint(xlarge) {
     height: rem-calc(400);
@@ -29,5 +29,4 @@
       line-height:normal;
     }
   }
-
 }

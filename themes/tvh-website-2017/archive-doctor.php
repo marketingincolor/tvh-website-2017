@@ -14,7 +14,7 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
+//$location = _POST['location'];
 get_header(); ?>
 
 <div class="main-wrap" role="main">

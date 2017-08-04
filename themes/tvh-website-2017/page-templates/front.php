@@ -2,16 +2,25 @@
 /*
 Template Name: Front
 */
+$vidlink = get_template_directory_uri() . '/assets/images/tvh-ws-btn-vid-launch.png';
+$codelink = '[video_lightbox_youtube video_id="pKhpg_XfH-o&t&rel=0" width="640" height="480" anchor="'.$vidlink.'"]';
 get_header(); ?>
 
-<header class="front-hero" role="banner">
+<header class="front-hero">
+<?php get_template_part( 'template-parts/featured-image' ); ?>
+<div class="tagline">
+<?php//echo do_shortcode($codelink); ?>
+<a href="https://www.youtube.com/watch?v=pKhpg_XfH-o&t&rel=0" rel="wp-video-lightbox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tvh-ws-btn-vid-launch.png" /></a>
+</div>
+</header>
+
+<!-- <header class="front-hero-old" role="banner">
 	<div class="fh-content">
 		<div class="tagline">
-			<a role="button" class="download large button sites-button hide-for-small-only" href="">video launch link</a>
+			<a role="button" class="download large button sites-button hide-for-small-only" href="https://www.youtube.com/watch?v=pKhpg_XfH-o&t" rel="wp-video-lightbox">video launch link</a>
 		</div>
 	</div>
-
-</header>
+</header> -->
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
