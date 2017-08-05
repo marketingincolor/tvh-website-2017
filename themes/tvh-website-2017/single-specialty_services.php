@@ -11,14 +11,7 @@ $thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '
 $thumbnail_url = $thumbnail_url[0];
 get_header(); ?>
 
-<header class="entry-header row columns">
-	<div class="entry-image row collapse" style="background:url(<?php echo $thumbnail_url; ?>) top center / cover;">
-		<?php //echo the_post_thumbnail('full'); ?>
-		<div class="entry-caption small-12 columns">
-			<h3>&nbsp;</h3>
-		</div>
-	</div>
-</header>
+<?php get_template_part( 'template-parts/featured-image' ); ?>
 
 <div class="main-wrap sidebar-right" role="main">
 
