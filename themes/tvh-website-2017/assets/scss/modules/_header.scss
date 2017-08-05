@@ -1,6 +1,7 @@
 .site-top {
   @include grid-row;
-  margin-top: 2em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 
 .site-logo {
@@ -15,5 +16,6 @@
     @include breakpoint(medium) {
     @include grid-column(6);
     text-align:right;
+    margin-top:0.5%;
   }	
 }

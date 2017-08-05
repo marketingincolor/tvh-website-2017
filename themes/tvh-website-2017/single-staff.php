@@ -8,7 +8,7 @@
 $dr_firstname = get_field('first_name') ? get_field('first_name') : "" ;
 $dr_lastname = get_field('last_name') ? get_field('last_name') : "" ;
 $dr_specialty = get_field('specialty') ? get_field('specialty') : "" ;
-$dr_location = get_field('location') ? get_field('location') : "" ;
+$dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
 $dr_credentials = get_field('credentials') ? get_field('credentials') : "" ;
 $dr_position = get_field('position') ? get_field('position') : "" ;
 $dr_hometown = get_field('hometown') ? get_field('hometown') : "" ;
@@ -18,6 +18,9 @@ $dr_residency = get_field('residency') ? get_field('residency') : "" ;
 $dr_certifications = get_field('certifications') ? get_field('certifications') : "" ;
 $dr_fellowships = get_field('fellowships') ? get_field('fellowships') : "" ;
 $dr_quote = get_field('quote') ? get_field('quote') : "" ;
+
+$thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', true );
+$thumbnail_url = $thumbnail_url[0];
 get_header(); ?>
 
 <div class="main-wrap sidebar-right" role="main">
@@ -27,8 +30,8 @@ get_header(); ?>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
 
 		<header class="entry-header row columns">
-			<div class="entry-image row collapse">
-				<?php echo the_post_thumbnail('full'); ?>
+			<div class="entry-image row collapse" style="background:url(<?php echo $thumbnail_url; ?>) top center / cover;">
+				<?php //echo the_post_thumbnail('full'); ?>
 				<div class="entry-caption small-12 columns">
 					<h3><?php echo $dr_firstname . "&nbsp;". $dr_lastname; ?>, <?php echo $dr_credentials; ?> </h3>
 					<h4><?php echo $dr_position; ?></h4>
@@ -42,8 +45,8 @@ get_header(); ?>
 			<!-- <?php if( get_field('specialty') ): ?>
 			    <h5><?php the_field('specialty'); ?></h5>
 			<?php endif; ?>
-			<?php if( get_field('location') ): ?>
-			    <h5><?php the_field('location'); ?></h5>
+			<?php if( get_field('carecenter') ): ?>
+			    <h5><?php the_field('carecenter'); ?></h5>
 			<?php endif; ?> -->
 			<?php if( get_field('hometown') ): ?>
 			    <h5>Hometown: <span><?php echo $dr_hometown; ?></span></h5>

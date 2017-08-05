@@ -7,7 +7,7 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
     <div class="featured-display hide-for-small-only medium-10 medium-centered">
     	<div class="featured-caption"><?php echo $caption; ?></div>
     </div>
-<?php endif; ?>
+	<?php endif; ?>
 
 	</header>
 

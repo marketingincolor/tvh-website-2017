@@ -4,7 +4,7 @@
 	$dr_firstname = get_field('first_name') ? get_field('first_name') : "" ;
 	$dr_lastname = get_field('last_name') ? get_field('last_name') : "" ;
 	$doctor = $dr_firstname . "&nbsp;" .$dr_lastname;
-	$dr_location = get_field('location') ? get_field('location') : "" ;
+	$dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
 ?>
 
 	<div class="staff-widget-title">

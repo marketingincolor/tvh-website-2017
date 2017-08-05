@@ -27,9 +27,9 @@
 							</div>
 					<?php endif; 
 					//If we have twitter data add icon
-					if ( $options['tvh_twitter_textbox'] != null || $options['tvh_twitter_textbox'] != "") : ?>
+					if ( $options['tvh_linkedin_textbox'] != null || $options['tvh_linkedin_textbox'] != "") : ?>
 							<div class="footer-social-link">
-								<a href="<?php echo $options['tvh_twitter_textbox']; ?>" title="The Villages Health Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								<a href="<?php echo $options['tvh_linkedin_textbox']; ?>" title="The Villages Health LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 							</div>
 					<?php endif; 
 					//If we have YouTube data dd icon

@@ -1,15 +1,23 @@
 body { font-size:1.125em; color:#333333; }
+h1 {}
+h2 { font-size:1.875em; font-weight:300; }
+h3 { font-size:1.4375em; font-weight:300; }
+h4 { font-size:1.25em; font-weight:300; }
 h1, h2, h3, h4 { line-height:1.4; }
+
 //Colors
 $orange: #db6829;
 $green: #2d7a3d;
 $grey: #f5f5f2;
 
 // Page Content
+a { color:$orange; }
+a:hover { color:#a85020; }
 .main-wrap { } /* see content.scss */
 .main-wrap .main-content {} /* article */
 .main-wrap .main-content header {}
 .main-wrap .main-content header .entry-title { font-size:30px; font-weight:300; } /* h1 */
+.disclaimer { font-size:14px; line-height:1.4; font-style:italic; }
 
 // Doctor Finder
 .doctor-finder {
@@ -43,11 +51,17 @@ $grey: #f5f5f2;
         .entry-image {
           background-color:$grey;
           border-radius:22px;
+          height:410px;
+          @include breakpoint(small) {
+            //height:410px;
+          }
           img {
-
+            //max-height:320px;
+            //position:absolute;
           }
           .entry-caption {
             text-align:center;
+            margin-top:calc(410px - 94px);
             h3 {}
             h4 {}
           }
@@ -71,20 +85,20 @@ $grey: #f5f5f2;
 }
 
 // Staff Sidebars
-.sidebar-staff {
+.sidebar, .sidebar-staff {
   padding-left:4em;
   article {
     margin-bottom:2em;
     background-color:$grey;
     border-radius:22px;
-    .staff-widget-title {
+    .widget-title, .staff-widget-title {
       background-color:$green;
       border-radius:22px 22px 0px 0px;
       text-align:center;
       color:#fff;
       padding:.5em 0em;
     }
-    .staff-widget-container {
+    .widget-container, .staff-widget-container {
       padding:2em;
       text-align:center;
     }
@@ -93,19 +107,24 @@ $grey: #f5f5f2;
     .widget-directory-dl {}
     .widget-dr-articles {}
   }
-  :last-child {margin-bottom:0em;}
+  //:last-child {margin-bottom:0em;}
 }
 
 // Testimonial Components
 .orange { color:$orange; }
 
 .top-button, 
-.cta-button {
+.cta-button,
+.cta-button-front {
   border-radius: 7px;
   height: 41px;
   padding: 14px 20px;
   border: 1.5px solid $orange;
-  line-height:.5;
+  line-height:.3;
+  font-size:17px;
+}
+.cta-button {
+  font-size:18px;
 }
 
 .testimonial {

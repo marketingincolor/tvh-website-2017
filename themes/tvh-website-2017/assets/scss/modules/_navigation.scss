@@ -18,9 +18,9 @@
 }
 
 // Navigation Bar
-.top-bar { padding:0; margin-top:1.5em; }
+.top-bar { padding:0; /*margin-top:1.5em;*/ }
 .top-bar, .top-bar ul { background-color:#ffffff; }
-.top-bar li { height:50px; display:inline-block;  }
+.top-bar li { height:48px; display:inline-block;  }
 .top-bar li a { color:#333; font-weight:normal; font-size:1em; padding:0.7rem 1rem !important; }
 
 .top-bar .is-dropdown-submenu { background:transparent; border:none; }
@@ -30,7 +30,7 @@
 .desktop-menu .active a { background:none; color:#333; }
 .desktop-menu .current-menu-parent a,
 .desktop-menu .current-menu-item a, 
-.desktop-menu .menu-item a:hover { border-bottom:10px solid #db6829; }
+.desktop-menu .menu-item a:hover { border-bottom:8px solid #db6829; }
 .is-submenu-item a { border-bottom:0px !important; }
 .submenu .current-menu-item, .submenu .current-page-ancestor { background-color:#db6829; }
 .submenu .current-menu-item a, .submenu .menu-item a:hover { color:#fff; border-bottom:0px; background-color:rgba(168, 80, 32, 0.9); }

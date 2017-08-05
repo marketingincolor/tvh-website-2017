@@ -12,9 +12,9 @@
   .featured-display {
     max-width: 81.25rem;
     text-align:right;
-    line-height:1rem;
+    line-height:12.5rem;
     @include breakpoint(medium) {
-      line-height: 13rem;
+      line-height: 19rem;
     }
         @include breakpoint(xlarge) {
       line-height: 25rem;

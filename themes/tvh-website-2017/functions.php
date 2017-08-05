@@ -127,13 +127,13 @@ function tvh_register_settings()
       'label_for' => 'tvh_fb_textbox',
       'class'     => 'css_class'
     );
-    $twitter_args = array(
+    $linkedin_args = array(
       'type'      => 'text',
-      'id'        => 'tvh_twitter_textbox',
-      'name'      => 'tvh_twitter_textbox',
+      'id'        => 'tvh_linkedin_textbox',
+      'name'      => 'tvh_linkedin_textbox',
       'desc'      => '',
       'std'       => '',
-      'label_for' => 'tvh_twitter_textbox',
+      'label_for' => 'tvh_linkedin_textbox',
       'class'     => 'css_class'
     );
     $youtube_args = array(
@@ -147,7 +147,7 @@ function tvh_register_settings()
     );
     add_settings_field( 'tvh_pn_link', 'Phone Number:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $pn_args );
     add_settings_field( 'tvh_fb_link', 'Facebook Link:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $fb_args );
-    add_settings_field( 'tvh_twitter_link', 'Twitter Link:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $twitter_args );
+    add_settings_field( 'tvh_linkedin_link', 'LinkedIn Link:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $linkedin_args );
     add_settings_field( 'tvh_youtube_link', 'YouTube Link:', 'tvh_display_setting', 'tvh_theme_options.php', 'tvh_text_section', $youtube_args );
 }
 add_action( 'admin_init', 'tvh_register_settings' );
