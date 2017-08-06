@@ -8,7 +8,7 @@
 ?>
 <aside class="sidebar">
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
-	<article id="widget-1" class="widget widget-dr-home">
+	<article id="widget-1" class="widget widget-location">
 		<div class="widget-title">
 			Become Our Patient
 		</div>

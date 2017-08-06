@@ -62,6 +62,16 @@
 
  </div>
 
- <?php get_template_part( 'template-parts/main-testimonial' ); ?>
+<?php if ( is_page('services') ) : ?>
+	<?php get_template_part( 'template-parts/cta-services' ); ?>
+<?php endif; ?>
+
+<?php if ( is_page('careers') ) : ?>
+	<?php get_template_part( 'template-parts/testimonial-career' ); ?>
+<?php elseif ( is_page('find-a-doctor') ) : ?>
+	<?php get_template_part( 'template-parts/testimonial-findadoctor' ); ?>
+<?php else : ?>
+	<?php get_template_part( 'template-parts/testimonial-main' ); ?>
+<?php endif; ?>
 
  <?php get_footer();

@@ -5,7 +5,7 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-$sp_location = get_field('carecenter') ? get_field('carecenter') : "" ;
+$location = get_field('carecenter') ? get_field('carecenter') : "" ;
 
 $thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', true );
 $thumbnail_url = $thumbnail_url[0];
@@ -26,7 +26,7 @@ get_header(); ?>
 			<div class="entry-dr-meta">
 
 			<?php if( get_field('carecenter') ): ?>
-			    <h5>Care Center: <span><?php echo $sp_location; ?></span></h5>
+			    <h5>Care Center: <span><?php echo $location; ?></span></h5>
 			<?php endif; ?>
 
 			</div>

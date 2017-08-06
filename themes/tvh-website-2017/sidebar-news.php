@@ -12,7 +12,7 @@ $dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
 ?>
 <aside class="sidebar">
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
-	<article id="widget-1" class="widget widget-dr-home">
+	<article id="widget-1" class="widget widget-location">
 		<div class="widget-title">
 			Sidebar Wiget Title
 		</div>

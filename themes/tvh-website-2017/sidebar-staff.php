@@ -12,16 +12,16 @@ $dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
 ?>
 <aside class="sidebar sidebar-staff">
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
-	<article id="staff-widget-1" class="widget widget-dr-home">
-		<?php get_template_part( 'template-parts/staff-location' ); ?>
+	<article id="widget-1" class="widget widget-location">
+		<?php get_template_part( 'template-parts/side-location' ); ?>
 	</article>
-	<article id="staff-widget-2" class="widget widget-insurance">
-		<?php get_template_part( 'template-parts/staff-insurance' ); ?>
+	<article id="widget-2" class="widget widget-insurance">
+		<?php get_template_part( 'template-parts/accepted-insurance' ); ?>
 	</article>
-	<article id="staff-widget-3" class="widget widget-directory-dl">
-		<?php get_template_part( 'template-parts/staff-download' ); ?>
+	<article id="widget-3" class="widget widget-directory-dl">
+		<?php get_template_part( 'template-parts/provider-download' ); ?>
 	</article>
-	<!-- <article id="staff-widget-4" class="widget widget-dr-articles">
+	<!-- <article id="widget-4" class="widget widget-dr-articles">
 		<?php //get_template_part( 'template-parts/staff-articles' ); ?>
 	</article> -->
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>
