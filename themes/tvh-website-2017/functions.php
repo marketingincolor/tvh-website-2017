@@ -197,12 +197,23 @@ register_nav_menus( array(
 ) );
 
 
-
+/* ------------------------------------------------------------------------ *
+ * Custom Function - get_id_by_slug('any-page-slug','any-post-type');
+ * ------------------------------------------------------------------------ */
+function get_id_by_slug($page_slug, $slug_page_type = 'page') {
+  $find_page = get_page_by_path($page_slug, OBJECT, $slug_page_type);
+  if ($find_page) {
+    return $find_page->ID;
+  } else {
+    return null;
+  }
+}
 
 
 /* ------------------------------------------------------------------------ *
  * Custom Search Template Chooser
  * ------------------------------------------------------------------------ */
+
  function template_chooser($template)   
 {    
   global $wp_query;   
@@ -222,24 +233,17 @@ function meta_search_query($query) {
     'posts_per_page' => -1,
     'post_type' => 'staff',
     'meta_query' => array(
-        'relation' => 'AND',
-        array(
-            'key' => 'location',
-            'value' => sanitize_text_field( $_GET['location'] ),
-            'compare' => 'LIKE'
-        ),
-        array(
-            'key' => 'specialty',
-            'value' => sanitize_text_field( $_GET['specialty'] ),
-            'compare' => 'LIKE'
-        )
+      'relation' => 'AND',
+      array(
+          'key' => 'location',
+          'value' => sanitize_text_field( $_GET['location'] ),
+          'compare' => 'LIKE'
+      ),
+      array(
+          'key' => 'specialty',
+          'value' => sanitize_text_field( $_GET['specialty'] ),
+          'compare' => 'LIKE'
+      )
     )
-);
+  );
 }
-
-function myplugin_register_query_vars( $vars ) {
-  $vars[] = 'specialty';
-  $vars[] = 'location';
-  return $vars;
-}
-//add_filter( 'query_vars', 'myplugin_register_query_vars' );
