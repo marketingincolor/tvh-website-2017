@@ -12,5 +12,5 @@
 
 	<div class="staff-widget-container">
 		<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-cover.jpg" alt="Image of Provider Directory"></p>
-		<button class="cta-button orange">Download Provider Directory</button>
+		<a href="<?php echo site_url(); ?>/"><button class="cta-button orange">Download Provider Directory</button></a>
 	</div>
