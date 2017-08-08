@@ -64,6 +64,8 @@
 
 <?php if ( is_page('services') ) : ?>
 	<?php get_template_part( 'template-parts/cta-services' ); ?>
+<?php elseif ( is_page('about') ) : ?>
+	<?php get_template_part( 'template-parts/cta-about' ); ?>
 <?php endif; ?>
 
 <?php if ( is_page('careers') ) : ?>

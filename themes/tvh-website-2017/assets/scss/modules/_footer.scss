@@ -7,7 +7,7 @@
 
 .footer {
   @include grid-row();
-  padding: rem-calc(30) 0;
+  padding: 5rem 0rem 1rem;
   text-align:center;
 
   ul {

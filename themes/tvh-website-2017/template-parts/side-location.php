@@ -2,7 +2,12 @@
 	// Custom Widget for Location Information
 	// 
 	$dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
-	$location_id = get_id_by_slug( $dr_location, 'location' );
+	if ( $dr_location != "" ) {
+		$location_id = get_id_by_slug( $dr_location, 'location' );
+	} else {
+		$location_id = get_the_id();
+		$dr_location = 'Contact Us';
+	}
 
 	$location_address = get_post_meta($location_id, '_location_address', true);
 	$location_town = get_post_meta($location_id, '_location_town', true);

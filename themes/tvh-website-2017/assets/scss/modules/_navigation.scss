@@ -20,10 +20,10 @@
 // Navigation Bar
 .top-bar { padding:0; /*margin-top:1.5em;*/ }
 .top-bar, .top-bar ul { background-color:#ffffff; }
-.top-bar li { height:48px; display:inline-block;  }
-.top-bar li a { color:#333; font-weight:normal; font-size:1em; padding:0.7rem 1rem !important; }
+.top-bar li { height:42px; display:inline-block;  }
+.top-bar li a { color:#333; font-weight:normal; font-size:1em; padding:0.5rem 1rem !important; }
 
-.top-bar .is-dropdown-submenu { background:transparent; border:none; }
+.top-bar .is-dropdown-submenu { background:transparent; border:none; min-width:240px;}
 .top-bar .is-dropdown-submenu li { background-color:rgba(219, 104, 41, 0.9); height:auto; }
 .top-bar .is-dropdown-submenu li a { color:#fff; }
 

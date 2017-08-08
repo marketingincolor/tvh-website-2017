@@ -46,7 +46,9 @@ get_header(); ?>
 </div>
 
 <?php if ( is_page('care-centers')): ?>
-	 <?php get_template_part( 'template-parts/testimonial-main' ); ?>
+	<?php get_template_part( 'template-parts/testimonial-main' ); ?>
+<?php elseif ( is_page('for-patients')): ?>
+	<?php get_template_part( 'template-parts/testimonial-main' ); ?>
 <?php endif; ?>
 
 
