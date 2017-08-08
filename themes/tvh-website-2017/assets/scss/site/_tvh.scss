@@ -127,13 +127,14 @@ a:hover { color:#a85020; }
   height: 41px;
   padding: 14px 20px;
   border: 1.5px solid $orange;
-  line-height:.3;
+  line-height:.2;
   font-size:17px;
-}
-.cta-button {
-  font-size:18px;
   cursor:pointer;
 }
+.cta-button-front {
+  font-size:18px;
+}
+.cta-button:hover, .cta-button-front:hover { background-color:$orange; color:#fff; }
 
 .testimonial {
   .tm-content {

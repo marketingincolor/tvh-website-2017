@@ -7693,9 +7693,11 @@ body#tinymce {
       margin-top: .65em;
       text-transform: capitalize; }
     .cta-container .front-cta p {
-      padding: 0em 1.25em 1.25rem;
+      padding: 0em 1.25em;
       font-size: 1.125rem;
       margin-bottom: 0; }
+    .cta-container .front-cta .btn-box {
+      padding: 2.5rem 0rem; }
     .cta-container .front-cta button {
       padding: 1em 2.5em;
       cursor: pointer;
@@ -7926,12 +7928,16 @@ a:hover {
   height: 41px;
   padding: 14px 20px;
   border: 1.5px solid #db6829;
-  line-height: .3;
-  font-size: 17px; }
-
-.cta-button {
-  font-size: 18px;
+  line-height: .2;
+  font-size: 17px;
   cursor: pointer; }
+
+.cta-button-front {
+  font-size: 18px; }
+
+.cta-button:hover, .cta-button-front:hover {
+  background-color: #db6829;
+  color: #fff; }
 
 .testimonial {
   background: url("../images/tvh-tm-bgnd.jpg") top center;
