@@ -5,6 +5,7 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
+$options = get_option('tvh_theme_options');
 ?>
 <aside class="sidebar">
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
@@ -22,20 +23,20 @@
 			Take A Care Center Tour
 		</div>
 		<div class="widget-container">
-			<p>Call XXX-XXX-XXXX to schedule your personal tour and see firsthand how exceptional healthcare works.</p>
+			<p>Call <?php echo $options['tvh_pn_textbox']; ?> to schedule your personal tour and see firsthand how exceptional healthcare works.</p>
 		</div>
 	</article>
 	<article id="widget-3" class="widget widget-directory-dl">
 		<div class="widget-title">
-			Contact Us
+			Call Us to Learn More
 		</div>
 		<div class="widget-container">
-			<p>Call XXX-XXX-XXXX to learn more about becoming our patient.</p>
+			<p>Call <?php echo $options['tvh_pn_textbox']; ?> to learn more about becoming our patient.</p>
 		</div>
 	</article>
 	<article id="widget-4" class="widget widget-dr-articles">
 		<div class="widget-title">
-			Seeing a Specialist
+			Specialty Care
 		</div>
 		<div class="widget-container">
 			<p>You don't have to be our patient to see our specialists.</p>
