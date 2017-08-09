@@ -8,7 +8,7 @@
 		<div class="choose small-10 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-front-img-choose.jpg" alt="semantic">
 			<h3>Why choose TVH</h3>
-			<p data-equalizer-watch="inner">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad minim.</p>
+			<p data-equalizer-watch="inner">Learn why you'll receive the best possible care and can feel confident in your decision.</p>
 			<p class="btn-box"><a href="about/why-choose-tvh"><button class="cta-button-front orange">Learn More</button></a></p>
 		</div>
 	</div>
@@ -17,7 +17,7 @@
 		<div class="tour small-10 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-front-img-tour.jpg" alt="responsive">
 			<h3>Take a virtual tour</h3>
-			<p data-equalizer-watch="inner">Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+			<p data-equalizer-watch="inner">Take a tour of our Care Center and see how exceptional health care can be.</p>
 			<p class="btn-box"><a href="virtual-tour/"><button class="cta-button-front orange">Take a Tour</button></a></p>
 		</div>
 	</div>
