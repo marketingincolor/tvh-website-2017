@@ -11,6 +11,6 @@
 
 
 	<div class="staff-widget-container">
-		<p>Insert Provider Directory Image</p>
-		<button class="cta-button orange">Download Provider Directory</button>
+		<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-cover.jpg" alt="Image of Provider Directory"></p>
+		<a href="<?php echo site_url(); ?>/"><button class="cta-button orange">Download Provider Directory</button></a>
 	</div>

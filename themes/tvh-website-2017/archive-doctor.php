@@ -19,10 +19,49 @@ get_header(); ?>
 
 <div class="main-wrap" role="main">
 	<article class="main-content"><h3>Find A Doctor Results</h3>
-	<?php if ( have_posts() ) : ?>
+	<?php
+	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+	$search    = $_GET['s'];
+	$specialty = $_GET['specialty'];
+	$location  = $_GET['carecenter'];
+
+	// For Debugging
+	//echo 'String: ' . $search . '<br />';
+	//echo 'Speciality: ' .$specialty . '<br />';
+	//echo 'Location: ' . $location . '<br />';
+	//print_r($_GET);
+	?>
+	<?php
+
+
+	$args = array(
+		's' => $search,
+		'category__not_in' => tvh_exclude_staff(),
+		'posts_per_page' => 10,
+		'paged' => $paged,
+		'post_type'  => 'staff',
+		'meta_query' => array(
+			'relation'    => 'AND',
+			array(
+				'key'     => 'specialty',
+				'value'   => $specialty,
+				'compare' => 'LIKE',
+			),
+			array(
+				'key'     => 'carecenter',
+				'value'   => $location,
+				'compare' => 'LIKE',
+			),
+
+		),
+	);
+
+	$staff_search = new WP_Query($args);
+	?>
+	<?php if ( $staff_search->have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( $staff_search->have_posts() ) : $staff_search->the_post(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
 				<div class="entry-content">
 					<a href="<?php the_permalink(); ?>"><?php the_title(); ?>
@@ -45,22 +84,16 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 		<?php else : ?>
-			<?php //get_template_part( 'template-parts/content', 'none' ); ?>
+
+			<!-- REVISE TEMPLATE FOR NO STAFF FOUND -->
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; // End have_posts() check. ?>
+		<?php wp_reset_query(); ?>
 
-		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php
-		if ( function_exists( 'foundationpress_pagination' ) ) :
-			foundationpress_pagination();
-		elseif ( is_paged() ) :
-		?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Previous', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Next &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
-		<?php endif; ?>
-
+	    <?php
+	        tvh_staff_pagination($staff_search->max_num_pages, 10,$paged);
+	    ?>
 	</article>
 	<?php //get_sidebar(); ?>
 

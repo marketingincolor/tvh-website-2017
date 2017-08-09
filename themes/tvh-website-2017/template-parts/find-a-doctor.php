@@ -5,7 +5,7 @@
  ?>
 <div class="doctor-finder">
 	<div class="small-11 small-centered columns">
-		<h4>Insert written instructions for searching Doctors</h4>
+		<h4>Search our 40+ primary care doctors and 20+ specialists by...</h4>
 		<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
 			<div class="small-12 columns"><input type="text" name="s" placeholder="Doctor Name"/></div>
 			<input type="hidden" name="post_type" value="staff" /> <!-- // hidden 'staff' value -->
@@ -30,8 +30,8 @@
 				</select>
 			</div>
 			<div class="small-6 columns">
-				<label for="location">Location</label>
-				<select name="location">
+				<label for="carecenter">Locations</label>
+				<select name="carecenter">
 					<option value="">Select a Location</option>
 					<option value="Belleview Care Center">Belleview Care Center</option>
 					<option value="Colony Care Center">Colony Care Center</option>
@@ -40,6 +40,7 @@
 					<option value="Pinellas Care Center">Pinellas Care Center</option>
 					<option value="Santa Barbara Care Center">Santa Barbara Care Center</option>
 					<option value="Brownwood Care Center">Brownwood Care Center</option>
+					<option value="Specialty Care Center">Specialty Care Center</option>
 				</select>
 			</div>
 			<input class="top-button orange" type="submit" alt="Search" value="Find A Doctor" />

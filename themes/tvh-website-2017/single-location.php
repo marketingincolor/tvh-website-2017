@@ -6,11 +6,24 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header(); 	
+	//$dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
+	//$location_id = get_id_by_slug( $dr_location, 'location' );
+	$location_id = get_the_id();
+
+	$location_address = get_post_meta($location_id, '_location_address', true);
+	$location_town = get_post_meta($location_id, '_location_town', true);
+	$location_state = get_post_meta($location_id, '_location_state', true);
+	$location_zip = get_post_meta($location_id, '_location_postcode', true);
+	$location_country = get_post_meta($location_id, '_location_country', true);
+	
+	$location_phone = get_post_meta($location_id, 'location_phone', true);
+	$location_time = get_post_meta($location_id, 'location_time', true);
+?>
 
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 
-<div class="main-wrap not-sidebar-right" role="main">
+<div class="main-wrap sidebar-right" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
@@ -35,14 +48,15 @@ get_header(); ?>
 			?>
 			<p><?php the_tags(); ?></p>
 		</footer>
-		<?php the_post_navigation(); ?>
+		<?php //the_post_navigation(); ?>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
 		<?php //comments_template(); ?>
+		<?php get_template_part('template-parts/location-team'); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
 	</article>
 <?php endwhile;?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
-<?php //get_sidebar(); ?>
+<?php get_sidebar('locations'); ?>
 </div>
 <?php get_footer();

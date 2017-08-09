@@ -20,16 +20,14 @@
 ?>
 
 	<div class="staff-widget-title">
-		<?php echo $dr_location; ?>
+		Make An Appointment
 	</div>
 	<div class="staff-widget-container">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-phone.png" alt="Phone Number:">
-		<h3><?php echo $location_phone; ?></h3>
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-address.png" alt="Address:">
-		<h4><?php echo $location_address; ?><br>
-		<?php echo $location_town; ?>, <?php echo $location_state; ?>, <?php echo $location_zip; ?></h4>
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-hours.png" alt="Office Hours:">
-		<h4>Office Hours:<br><?php echo $location_time; ?></h4>
+
+		<h3>Current Patients:</h3>
+		<p>Please contact your Care Center to make an appointment with our behavioral health staff and to learn about insurance coverage for these services.</p>
+		<h3>Not a Patient Yet?</h3>
+		<p>You must be a primary care patient of The Villages Health to receive care from our behavioral health staff. Please contact a Care Center near you to learn more about becoming our patient and the insurance that we accept.</p>
 
 	</div>
 

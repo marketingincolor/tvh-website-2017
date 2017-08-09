@@ -64,6 +64,12 @@
 
 <?php if ( is_page('services') ) : ?>
 	<?php get_template_part( 'template-parts/cta-services' ); ?>
+<?php elseif ( is_page('about') ) : ?>
+	<?php get_template_part( 'template-parts/cta-about' ); ?>
+<?php elseif ( is_page('careers') ) : ?>
+	<?php get_template_part( 'template-parts/cta-careers' ); ?>
+<?php elseif ( is_page('primary-care') ) : ?>
+	<?php get_template_part( 'template-parts/cta-primarycare' ); ?>
 <?php endif; ?>
 
 <?php if ( is_page('careers') ) : ?>
