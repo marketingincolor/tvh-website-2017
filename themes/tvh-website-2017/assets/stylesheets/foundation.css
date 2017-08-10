@@ -7827,7 +7827,7 @@ a:hover {
 /* see content.scss */
 /* article */
 .main-wrap .main-content header .entry-title {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 300; }
 
 /* h1 */
@@ -7853,10 +7853,24 @@ a:hover {
   .doctor-finder h4 {
     font-size: 1.25em;
     font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .doctor-finder form {
     text-align: center; }
+  .doctor-finder label {
+    text-align: left;
+    font-size: 1em; }
   .doctor-finder input[type="submit"] {
     background: transparent;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .doctor-finder select, .doctor-finder input[type="text"] {
+    border-radius: 10px;
+    border: none;
+    line-height: 1.4;
+    height: 3em;
+    margin-bottom: 2em; }
 
 .services-grid {
   text-align: center;
@@ -7917,6 +7931,18 @@ a:hover {
 
 #individual-doctor p:first-child {
   margin-bottom: 0rem; }
+
+.em-location-map-container {
+  width: 100% !important;
+  border-radius: 22px !important; }
+  .em-location-map-container .em-location-map, .em-location-map-container .em-locations-map {
+    border-radius: 22px !important; }
+
+.widget-map .em-location-map-container {
+  width: 100% !important;
+  border-radius: 22px !important; }
+  .widget-map .em-location-map-container .em-location-map, .widget-map .em-location-map-container .em-locations-map {
+    border-radius: 22px !important; }
 
 .orange {
   color: #db6829; }

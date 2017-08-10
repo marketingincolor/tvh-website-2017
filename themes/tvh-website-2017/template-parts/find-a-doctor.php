@@ -6,8 +6,8 @@
 <div class="doctor-finder">
 	<div class="small-11 small-centered columns">
 		<h4>Search our 40+ primary care doctors and 20+ specialists by...</h4>
-		<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-			<div class="small-12 columns"><input type="text" name="s" placeholder="Doctor Name"/></div>
+		<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform" class="dr-search">
+			<div class="small-12 columns"><label for="s">Doctor's Name</label><input type="text" name="s" placeholder="First or Last Name"/></div>
 			<input type="hidden" name="post_type" value="staff" /> <!-- // hidden 'staff' value -->
 			<div class="small-6 columns">
 				<label for="specialty">Specialty</label>

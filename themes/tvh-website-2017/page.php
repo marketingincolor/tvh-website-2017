@@ -58,6 +58,8 @@
 
 <?php if ( is_page('find-a-doctor') ) : ?>
 	<?php get_template_part( 'template-parts/find-a-doctor' ); ?>
+<?php elseif ( is_page('leadership') ) : ?>
+	<?php get_template_part( 'template-parts/leadership-team' ); ?>
 <?php endif; ?>
 
  </div>

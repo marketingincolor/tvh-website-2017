@@ -49,9 +49,11 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
 		<?php comments_template(); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
+
+		<?php get_template_part( 'template-parts/specialty-team' ); ?>
+		
 	</article>
 <?php endwhile;?>
-
 <?php do_action( 'foundationpress_after_content' ); ?>
 <?php get_sidebar('specialtyservices'); ?>
 </div>
