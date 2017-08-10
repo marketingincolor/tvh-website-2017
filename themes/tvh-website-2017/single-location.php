@@ -5,21 +5,15 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
-get_header(); 	
-	//$dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
-	//$location_id = get_id_by_slug( $dr_location, 'location' );
-	$location_id = get_the_id();
-
-	$location_address = get_post_meta($location_id, '_location_address', true);
-	$location_town = get_post_meta($location_id, '_location_town', true);
-	$location_state = get_post_meta($location_id, '_location_state', true);
-	$location_zip = get_post_meta($location_id, '_location_postcode', true);
-	$location_country = get_post_meta($location_id, '_location_country', true);
-	
-	$location_phone = get_post_meta($location_id, 'location_phone', true);
-	$location_time = get_post_meta($location_id, 'location_time', true);
-?>
+$location_id = get_the_id();
+$location_address = get_post_meta($location_id, '_location_address', true);
+$location_town = get_post_meta($location_id, '_location_town', true);
+$location_state = get_post_meta($location_id, '_location_state', true);
+$location_zip = get_post_meta($location_id, '_location_postcode', true);
+$location_country = get_post_meta($location_id, '_location_country', true);
+$location_phone = get_post_meta($location_id, 'location_phone', true);
+$location_time = get_post_meta($location_id, 'location_time', true);
+get_header(); ?>
 
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 
