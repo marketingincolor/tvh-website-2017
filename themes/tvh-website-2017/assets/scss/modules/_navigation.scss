@@ -36,6 +36,9 @@
 .submenu .current-menu-item a, .submenu .menu-item a:hover { color:#fff; border-bottom:0px; background-color:rgba(168, 80, 32, 0.9); }
 .submenu .current-menu-item a, .submenu .current-page-ancestor a { color:#fff; }
 
+.dropdown.menu.vertical > li.opens-right > .is-dropdown-submenu { left:25%; }
+.dropdown.menu.vertical > li .is-dropdown-submenu { top:100%; }
+
 // Site title
 .site-mobile-title a {
   // placeholder

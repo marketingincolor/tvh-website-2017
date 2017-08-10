@@ -2,28 +2,59 @@
 // Custom Widget for Staff Location Pages
 // 
 //$staff_location = get_field('location') ? get_field('location') : "" ;
-$staff_location = get_the_title();
-$staff_type1 = get_category_by_slug( 'physician-assistant' );
-$staff_type2 = get_category_by_slug( 'patient-representative' );
-$staff_type3 = get_category_by_slug( 'other-doctors');
-$staff_type4 = get_category_by_slug( 'nurse' );
-$staff_type5 = get_category_by_slug( 'hospitalist' );
-$staff_types = $staff_type1->term_id . ', ' . $staff_type2->term_id . ', ' . $staff_type3->term_id . ', ' . $staff_type4->term_id . ', ' . $staff_type5->term_id;
+//$staff_location = get_the_title();
+$page_location = $post->post_name;
+switch ($page_location) {
+	case 'belleview-care-center' :
+	$staff_location = 'Belleview Care Center';
+	break;
+	case 'colony-care-center' :
+	$staff_location = 'Colony Care Center';
+	break;
+	case 'creekside-care-center' :
+	$staff_location = 'Creekside Care Center';
+	break;
+	case 'mulberry-grove-care-center' :
+	$staff_location = 'Mulberry Grove Care Center';
+	break;
+	case 'pinellas-care-center' :
+	$staff_location = 'Pinellas Care Center';
+	break;
+	case 'santa-barbara-care-center' :
+	$staff_location = 'Santa Barbara Care Center';
+	break;
+	case 'brownwood-care-center' :
+	$staff_location = 'Brownwood Care Center';
+	break;
+	case 'specialty-care-center' :
+	$staff_location = 'Specialty Care Center';
+	break;
+	case 'acute-care-clinic' :
+	$staff_location = 'Saturday Acute Care Clinic';
+	break;
+}
+
+
+//$staff_type1 = get_category_by_slug( 'physician-assistant' );
+//$staff_type2 = get_category_by_slug( 'patient-representative' );
+//$staff_type3 = get_category_by_slug( 'other-doctors');
+//$staff_type4 = get_category_by_slug( 'nurse' );
+//$staff_type5 = get_category_by_slug( 'hospitalist' );
+//$staff_types = $staff_type1->term_id . ', ' . $staff_type2->term_id . ', ' . $staff_type3->term_id . ', ' . $staff_type4->term_id . ', ' . $staff_type5->term_id;
 $doc_args = array(
 	'meta_key' => 'carecenter',
 	'meta_value' => $staff_location,
-	'category__not_in' => array( 6, 7, 9, 8, 10 ),
+	'category__not_in' => array( 4, 5, 6, 7, 9, 8, 10 ),
 	'post_type' => 'staff'
 );
 $staff_args = array(
 	'meta_key' => 'carecenter',
 	'meta_value' => $staff_location,
-	'category__in' => array( 6, 7, 9, 8, 10 ),
+	'category__in' => array( 4, 5, 6, 7, 9, 8, 10 ),
 	'post_type' => 'staff'
 );
 ?>
-
-
+<?php if ($staff_location != 'Saturday Acute Care Clinic') : ?>
 <!--DOCTOR TEMPLATE -->
 <section id="all-doctors">
 	<div class="row">
@@ -93,7 +124,7 @@ $staff_args = array(
 	</div>
 </section>
 <!--END DOCTOR TEMPLATE-->
-
+<?php endif; ?>
 
 
 

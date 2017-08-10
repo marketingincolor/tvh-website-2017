@@ -7276,6 +7276,12 @@ a.thumbnail {
 .submenu .current-menu-item a, .submenu .current-page-ancestor a {
   color: #fff; }
 
+.dropdown.menu.vertical > li.opens-right > .is-dropdown-submenu {
+  left: 25%; }
+
+.dropdown.menu.vertical > li .is-dropdown-submenu {
+  top: 100%; }
+
 .site-desktop-title a {
   font-weight: bold; }
 
@@ -7920,6 +7926,9 @@ a:hover {
       text-align: center; }
   .sidebar :last-child, .sidebar-staff :last-child {
     margin-bottom: 0em; }
+
+#individual-doctor {
+  padding: 1em; }
 
 .meet-your-care-team {
   border-left: 5px solid #2c7a3e;
