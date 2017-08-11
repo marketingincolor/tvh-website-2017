@@ -12,7 +12,7 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 	</header>
 
 <?php else : ?>
-	<header class="featured-hero row expanded" role="banner" data-interchange="[//satyr.io/1440x365/seagreen.png, small], [//satyr.io/1440x365/seagreen.png, medium], [//satyr.io/1440x365/seagreen.png, large], [//satyr.io/1440x365/seagreen.png, xlarge]">
-	</header>
+	<?php /* <header class="featured-hero row expanded" role="banner" data-interchange="[//satyr.io/1440x365/seagreen.png, small], [//satyr.io/1440x365/seagreen.png, medium], [//satyr.io/1440x365/seagreen.png, large], [//satyr.io/1440x365/seagreen.png, xlarge]">
+	</header> */ ?>
 <?php endif; ?>
 

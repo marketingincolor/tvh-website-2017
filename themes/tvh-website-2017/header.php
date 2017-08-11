@@ -8,6 +8,8 @@
  * @since FoundationPress 1.0.0
  */
 //Get Custom Theme Options
+global $post;
+$post_slug = $post->post_name;
 $options = get_option('tvh_theme_options');
 $number = $options['tvh_pn_textbox'];
 $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
@@ -20,7 +22,7 @@ $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php if ( is_page($post_slug) ) { body_class( $post_slug ); } else { body_class(); } ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 	
 	<div class="site-top collapse-for-medium-up">
