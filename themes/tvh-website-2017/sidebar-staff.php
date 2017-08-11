@@ -18,9 +18,13 @@ $dr_specialty = get_field('specialty') ? get_field('specialty') : "" ;
 		<?php get_template_part( 'template-parts/side-psych' ); ?>
 	</article>
 <?php else : ?>
-	<article id="widget-1" class="widget widget-location">
-		<?php get_template_part( 'template-parts/side-location' ); ?>
-	</article>
+
+	<?php if ( is_single('elliot-j-sussman') || is_single('thomas-menichino') || is_single('jeffrey-lowenkron') || is_single('robert-warden') ) :  else : ?>
+		<article id="widget-1" class="widget widget-location">
+			<?php get_template_part( 'template-parts/side-location' ); ?>
+		</article>
+	<?php endif; ?>
+
 	<article id="widget-2" class="widget widget-insurance">
 		<?php get_template_part( 'template-parts/accepted-insurance' ); ?>
 	</article>	

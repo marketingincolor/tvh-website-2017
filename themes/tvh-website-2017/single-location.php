@@ -6,6 +6,7 @@
  * @since FoundationPress 1.0.0
  */
 $location_id = get_the_id();
+$location_slug = get_post_field( 'post_name', $location_id );
 $location_address = get_post_meta($location_id, '_location_address', true);
 $location_town = get_post_meta($location_id, '_location_town', true);
 $location_state = get_post_meta($location_id, '_location_state', true);
@@ -47,6 +48,10 @@ get_header(); ?>
 		<?php //comments_template(); ?>
 		<?php get_template_part('template-parts/location-team'); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
+
+		<?php if ( $location_slug == 'specialty-care-center' ) : ?>
+			<?php get_template_part( 'template-parts/services-grid' ); ?>
+		<?php endif; ?>
 	</article>
 <?php endwhile;?>
 

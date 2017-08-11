@@ -11,12 +11,6 @@ $doc_args = array(
 
 <!--DOCTOR TEMPLATE -->
 <section id="all-doctors">
-	<!--<div class="row">
-		<div class="meet-your-care-team small-12-columns">
-		<h3>Meet Your Care Team</h3>
-		</div>
-	</div>-->
-
 	<div class="row" data-equalizer data-equalize-by-row="true">
 	<?php 
 	$show_drs = new WP_Query( $doc_args );

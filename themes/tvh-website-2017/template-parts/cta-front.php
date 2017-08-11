@@ -18,7 +18,7 @@
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-front-img-tour.jpg" alt="responsive">
 			<h3>Take a virtual tour</h3>
 			<p data-equalizer-watch="inner">Take a tour of our Care Center and see how exceptional health care can be.</p>
-			<p class="btn-box"><a href="virtual-tour/"><button class="cta-button-front orange">Take a Tour</button></a></p>
+			<p class="btn-box"><a href="care-centers/"><button class="cta-button-front orange">Take a Tour</button></a></p>
 		</div>
 	</div>
 </div>

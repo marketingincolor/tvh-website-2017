@@ -23,23 +23,23 @@
 					<option value="General Surgery">General Surgery</option>
 					<option value="Gynecology">Gynecology</option>
 					<option value="Neurology">Neurology</option>
-					<option value="Orthaopaedics">Orthaopaedics</option>
+					<option value="Orthopaedics">Orthopaedics</option>
 					<option value="Rheumatology">Rheumatology</option>
 					<option value="Psychiatry">Psychiatry</option>
 					<option value="Urology">Urology</option>
 				</select>
 			</div>
 			<div class="small-6 columns">
-				<label for="carecenter">Locations</label>
+				<label for="carecenter">Location</label>
 				<select name="carecenter">
 					<option value="">Select a Location</option>
 					<option value="Belleview Care Center">Belleview Care Center</option>
+					<option value="Brownwood Care Center">Brownwood Care Center</option>
 					<option value="Colony Care Center">Colony Care Center</option>
 					<option value="Creekside Care Center">Creekside Care Center</option>
 					<option value="Mulberry Grove Care Center">Mulberry Grove Care Center</option>
 					<option value="Pinellas Care Center">Pinellas Care Center</option>
 					<option value="Santa Barbara Care Center">Santa Barbara Care Center</option>
-					<option value="Brownwood Care Center">Brownwood Care Center</option>
 					<option value="Specialty Care Center">Specialty Care Center</option>
 				</select>
 			</div>

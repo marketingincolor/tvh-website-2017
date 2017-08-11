@@ -4,7 +4,7 @@ Template Name: Right Sidebar
 */
 get_header(); ?>
 
-<?php if (is_page('why-choose-tvh')) : ?>
+<?php if (is_page('care-centers')) : ?>
 <header class="front-hero">
 	<?php get_template_part( 'template-parts/featured-image' ); ?>
 	<div class="tagline">
@@ -43,7 +43,7 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_page_after_comments' ); ?>
 
 		<?php if (is_page('specialty-services')) : ?>
-			<?php get_template_part( 'template-parts/services-grid' ); ?>
+			<?php //get_template_part( 'template-parts/services-grid' ); ?>
 		<?php endif; ?>
 
 	</article>

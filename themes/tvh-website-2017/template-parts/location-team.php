@@ -34,24 +34,61 @@ switch ($page_location) {
 	break;
 }
 
-
-//$staff_type1 = get_category_by_slug( 'physician-assistant' );
-//$staff_type2 = get_category_by_slug( 'patient-representative' );
-//$staff_type3 = get_category_by_slug( 'other-doctors');
-//$staff_type4 = get_category_by_slug( 'nurse' );
-//$staff_type5 = get_category_by_slug( 'hospitalist' );
-//$staff_types = $staff_type1->term_id . ', ' . $staff_type2->term_id . ', ' . $staff_type3->term_id . ', ' . $staff_type4->term_id . ', ' . $staff_type5->term_id;
 $doc_args = array(
-	'meta_key' => 'carecenter',
-	'meta_value' => $staff_location,
 	'category__not_in' => array( 4, 5, 6, 7, 9, 8, 10 ),
-	'post_type' => 'staff'
+	'post_type' => 'staff',
+	'meta_query' => array(
+		'relation' => 'OR',
+		array(
+			'relation' => 'AND',
+			'all_clause' => array(
+				'key' => 'carecenter',
+				'value' => $staff_location,
+				'compare' => 'LIKE',
+			),
+			'last_clause' => array(
+				'key' => 'last_name',
+				'compare' => 'EXISTS'
+			),
+		),
+		array(
+			'relation' => 'AND',
+			'center_clause' => array(
+				'key' => 'carecenter',
+				'value' => $staff_location,
+				'compare' => 'LIKE',
+			),
+			'pos_clause' => array(
+				'key' => 'position',
+				'value' => 'Medical Director',
+				'compare' => '=',
+			),
+		),
+	),
+	'orderby' => array(
+		'pos_clause' => 'DESC',
+		'last_clause' => 'ASC',
+	),
 );
 $staff_args = array(
-	'meta_key' => 'carecenter',
-	'meta_value' => $staff_location,
 	'category__in' => array( 4, 5, 6, 7, 9, 8, 10 ),
-	'post_type' => 'staff'
+	'post_type' => 'staff',
+
+	'meta_query' => array(
+		'relation' => 'AND',
+		'all_clause' => array(
+			'key' => 'carecenter',
+			'value' => $staff_location,
+			'compare' => 'LIKE',
+		),
+		'last_clause' => array(
+			'key' => 'last_name',
+			'compare' => 'EXISTS'
+		),
+	),
+	'orderby' => array(
+		'last_clause' => 'ASC',
+	),
 );
 ?>
 <?php if ($staff_location != 'Saturday Acute Care Clinic') : ?>
@@ -105,7 +142,7 @@ $staff_args = array(
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p>
 					<?php the_title(); ?>
-					<?php if(get_field('credentials')) { echo ', '.$dr_credentials; }  ?>
+					<?php if(get_field('credentials')) { echo ', '.$dr_credentials; } ?>
 				</p>
 				<p><em><?php echo $dr_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
@@ -120,38 +157,7 @@ $staff_args = array(
 	wp_reset_postdata();
 	?>
 
-
 	</div>
 </section>
 <!--END DOCTOR TEMPLATE-->
 <?php endif; ?>
-
-
-
-
-<!--
-<?php
-
-   	$args = array(
-		'post_type' => 'staff',
-		'meta_key' => 'carecenter',
-		'meta_value' => 'Belleview Care Center'
-		);
-   $showteam = new WP_Query($args);
-
-   if($showteam->have_posts()) : 
-      while($showteam->have_posts()) : 
-         $showteam->the_post();
-?>
-         <h1><?php the_title() ?></h1>
-         <div class='post-content'><?php the_content() ?></div>      
-<?php
-      endwhile;
-   else: 
-?>
-      Oops, there are no posts.
-<?php
-   endif;
-   wp_reset_postdata();
-?>
--->

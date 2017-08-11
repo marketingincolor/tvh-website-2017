@@ -1,7 +1,7 @@
 body { font-size:1.125em; color:#333333; }
-h1 { margin-bottom:1rem; }
-h2 { font-size:1.875rem; font-weight:300; }
-h3 { font-size:1.4375rem; font-weight:300; }
+h1 { font-size:2.25rem; margin-bottom:1rem; }
+h2 { font-size:1.625rem; font-weight:300; padding-top:2rem;}
+h3 { font-size:1.4375rem; font-weight:300; padding-top:2rem;}
 h4 { font-size:1.25rem; font-weight:300; }
 h1, h2, h3, h4 { line-height:1.4; }
 
@@ -93,7 +93,7 @@ a:hover { color:#a85020; }
   }
 }
 
-// Staff Sidebars
+// Sidebars, including staff
 .sidebar, .sidebar-staff {
   padding-left:4em;
   article {
@@ -101,6 +101,7 @@ a:hover { color:#a85020; }
     background-color:$grey;
     border-radius:22px;
     .widget-title, .staff-widget-title {
+      font-size:1.25rem;
       background-color:$green;
       border-radius:22px 22px 0px 0px;
       text-align:center;
@@ -118,6 +119,7 @@ a:hover { color:#a85020; }
   }
   :last-child {margin-bottom:0em;}
 }
+.list-cc {padding:1.5em 1em;}
 
 // Teams
 #individual-doctor { padding:1em; }
