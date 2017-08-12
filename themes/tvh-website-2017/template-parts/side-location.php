@@ -24,9 +24,9 @@
 	</div>
 	<div class="staff-widget-container">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-phone.png" alt="Phone Number:">
-		<h3><?php echo $location_phone; ?></h3>
+		<h3 class="context"><?php echo $location_phone; ?></h3>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-address.png" alt="Address:">
-		<h4><?php echo $location_address; ?><br>
+		<h4 class="context"><?php echo $location_address; ?><br>
 		<?php echo $location_town; ?>, <?php echo $location_state; ?>, <?php echo $location_zip; ?></h4>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-hours.png" alt="Office Hours:">
 		<h4>Office Hours:<br><?php echo $location_time; ?></h4>

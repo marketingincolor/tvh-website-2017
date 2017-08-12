@@ -1,10 +1,11 @@
 body { font-size:1.125em; color:#333333; }
 h1 { font-size:2.25rem; margin-bottom:1rem; }
-h2 { font-size:1.625rem; font-weight:300; padding-top:2rem;}
-h3 { font-size:1.4375rem; font-weight:300; padding-top:2rem;}
+h2 { font-size:1.625rem; font-weight:300; }
+h3 { font-size:1.4375rem; font-weight:300; }
 h4 { font-size:1.25rem; font-weight:300; }
 h1, h2, h3, h4 { line-height:1.4; }
-
+p { margin-bottom:1.5rem; }
+.main-content h2, .main-content h3 { padding-top:1.5rem; }
 //Colors
 $orange: #db6829;
 $green: #2d7a3d;
@@ -24,13 +25,15 @@ a:hover { color:#a85020; }
   @include grid-column(12);
   background-color:$grey;
   border-radius:22px;
-  padding:2em 0em;
+  padding:2.5em 0em;
+  margin-top:2.2rem;
   h4 {
-    font-size:1.25em; font-weight:300; text-align:center; margin-bottom:2rem;
+    font-size:1.437rem; font-weight:300; text-align:center; margin-bottom:2rem;
   }
   form { text-align:center; }
-  label { text-align:left; font-size:1em; }
-  input[type="submit"] { background:transparent; cursor:pointer; margin-top:1rem; margin-bottom:1rem; }
+  label { text-align:left; font-size:1em; line-height:2.3; }
+  input[type="submit"] { background-color:transparent; cursor:pointer; margin-top:2rem; margin-bottom:1rem; }
+  input[type="submit"]:hover { background-color:$orange; }
   select, input[type="text"] { 
     border-radius:10px; 
     border:none;
@@ -112,6 +115,7 @@ a:hover { color:#a85020; }
       padding:2em;
       text-align:center;
     }
+    .context { margin-bottom:31px; }
     .widget-location {}
     .widget-insurance {}
     .widget-directory-dl {}
@@ -136,7 +140,7 @@ a:hover { color:#a85020; }
   .em-location-map, .em-locations-map { border-radius:22px !important; }
 }
 .widget-map .em-location-map-container { 
-  width:100% !important; border-radius:22px !important; 
+  width:100% !important; border-radius:22px !important; height:230px !important; 
   .em-location-map, .em-locations-map { border-radius:22px !important; }
 }
 
@@ -159,7 +163,7 @@ a:hover { color:#a85020; }
 .cta-button-front {
   font-size:18px;
 }
-.cta-button:hover, .cta-button-front:hover { background-color:$orange; color:#fff; }
+.top-button:hover, .cta-button:hover, .cta-button-front:hover { background-color:$orange; color:#fff; }
 
 .testimonial {
   .tm-content {
@@ -192,7 +196,7 @@ a:hover { color:#a85020; }
   text-align:center;
 }
 .inline-testimonial {
-  margin:1em 0em;
+  margin:1.7rem 0em .5rem;
   display:inline-block;
   .testimonial-image {
     float:left;
@@ -201,6 +205,7 @@ a:hover { color:#a85020; }
   }
   .testimonial-quote {
     font-weight:300;
+    font-size:1.25rem;
   }
   .testimonial-attrib {
 

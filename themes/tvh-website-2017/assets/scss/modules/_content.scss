@@ -1,7 +1,7 @@
 .main-wrap {
   @include grid-row();
   margin-top: 1rem;
-  margin-bottom: rem-calc(75);
+  margin-bottom: rem-calc(32);
 
   @include breakpoint(medium) {
     margin-top: 3rem;

@@ -18,7 +18,7 @@
 get_header(); ?>
 
 <div class="main-wrap" role="main">
-	<article class="main-content"><h3>Find A Doctor Results</h3>
+	<article class="main-content"><h3 style="margin-bottom:2rem;">Find A Doctor Results</h3>
 	<?php
 	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 	$search    = $_GET['s'];

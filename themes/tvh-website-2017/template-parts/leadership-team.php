@@ -11,7 +11,7 @@ $args = array(
 <section id="leadership">
 	<div class="row">
 		<div class="meet-your-leadership-team small-12-columns">
-		<h3>Meet the visionary leaders behind healthier health care.</h3>
+		<h2>Meet the visionary leaders behind healthier health care.</h2>
 		</div>
 	</div>
 
