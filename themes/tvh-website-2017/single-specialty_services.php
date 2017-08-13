@@ -16,11 +16,19 @@ get_header(); ?>
 <div class="main-wrap sidebar-right" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-	<div class="specialty-subnav">
-		insert specialty subnav
-	</div>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+	<div class="specialty-subnav">
+		<ul>
+	    <?php $loop = new WP_Query( array( 'post_type' => 'specialty_services') ); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			    <?php the_title( '<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark"><li>', '</li></a>' ); ?>
+			<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+		</ul>
+	</div>
+
+<?php while ( have_posts() ) : the_post(); ?>
+
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>

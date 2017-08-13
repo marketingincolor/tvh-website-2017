@@ -6,6 +6,7 @@ h4 { font-size:1.25rem; font-weight:300; }
 h1, h2, h3, h4 { line-height:1.4; }
 p { margin-bottom:1.5rem; }
 .main-content h2, .main-content h3 { padding-top:1.5rem; }
+.columns:last-child:not(:first-child) { float:left; }
 //Colors
 $orange: #db6829;
 $green: #2d7a3d;
@@ -43,7 +44,7 @@ a:hover { color:#a85020; }
   }
 }
 
-//
+// Services
 .services-grid {
   text-align:center;
   padding:1em 0em 3em;
@@ -51,6 +52,26 @@ a:hover { color:#a85020; }
     padding:1em;
     a { display:inline-block; }
     button { cursor:pointer; }
+  }
+}
+
+// Specialty Subnav
+.specialty-subnav { 
+  text-align:center;
+  ul { 
+    border-bottom:3px solid $orange; display:inline-block;
+    li { 
+      padding:10px; position:relative; list-style-type:none; display:inline-block;
+    }
+    li:before { 
+      position:absolute; 
+      content:"\2022"; 
+      left:42%; 
+      bottom:-22%; 
+      font-size:56px; 
+      line-height:.4; 
+      color:$orange;
+    }
   }
 }
 
@@ -124,6 +145,7 @@ a:hover { color:#a85020; }
   :last-child {margin-bottom:0em;}
 }
 .list-cc {padding:1.5em 1em;}
+.sidebar-location .widget-photo img, .sidebar .widget-directory-dl img { max-width:none; width:100%; }
 
 // Teams
 #individual-doctor { padding:1em; }

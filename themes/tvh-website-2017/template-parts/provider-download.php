@@ -5,12 +5,11 @@
 	$dr_lastname = get_field('last_name') ? get_field('last_name') : "" ;
 	$doctor = $dr_firstname . "&nbsp;" .$dr_lastname;
 	$dr_location = get_field('location') ? get_field('location') : "" ;
-
-
 ?>
 
+<a href="<?php echo site_url(); ?>/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-cover.jpg" alt="Image of Provider Directory"></a>
 
-	<div class="staff-widget-container">
-		<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-cover.jpg" alt="Image of Provider Directory"></p>
-		<a href="<?php echo site_url(); ?>/"><button class="cta-button orange">Download Provider Directory</button></a>
-	</div>
+	<!--<div class="staff-widget-container">
+		<p><img src="<?php //echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-cover.jpg" alt="Image of Provider Directory"></p>
+		<a href="<?php //echo site_url(); ?>/"><button class="cta-button orange">Download Provider Directory</button></a>
+	</div> -->

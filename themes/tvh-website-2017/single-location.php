@@ -46,12 +46,13 @@ get_header(); ?>
 		<?php //the_post_navigation(); ?>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
 		<?php //comments_template(); ?>
-		<?php get_template_part('template-parts/location-team'); ?>
-		<?php do_action( 'foundationpress_post_after_comments' ); ?>
-
+		
 		<?php if ( $location_slug == 'specialty-care-center' ) : ?>
 			<?php get_template_part( 'template-parts/services-grid' ); ?>
+		<?php else : ?>
+			<?php get_template_part('template-parts/location-team'); ?>
 		<?php endif; ?>
+		<?php do_action( 'foundationpress_post_after_comments' ); ?>
 	</article>
 <?php endwhile;?>
 

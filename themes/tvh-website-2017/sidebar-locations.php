@@ -20,7 +20,7 @@
 <?php do_action( 'foundationpress_before_sidebar' ); ?>
 	<?php if ( $location_slug != 'acute-care-clinic' ) : ?>
 		<article id="widget-1" class="widget widget-photo">
-			Insert Smaller Location Photo
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-<?php echo $location_slug; ?>-sidebar.jpg">
 		</article>
 	<?php endif; ?>
 		<article id="widget-2" class="widget widget-location">

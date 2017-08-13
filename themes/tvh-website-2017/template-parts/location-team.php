@@ -35,7 +35,7 @@ switch ($page_location) {
 }
 
 $doc_args = array(
-	'category__not_in' => array( 4, 5, 6, 7, 9, 8, 10 ),
+	'category__not_in' => array( 4, 5, 6, 7, 8, 9, 10 ),
 	'post_type' => 'staff',
 	'meta_query' => array(
 		'relation' => 'OR',
@@ -71,7 +71,27 @@ $doc_args = array(
 	),
 );
 $staff_args = array(
-	'category__in' => array( 4, 5, 6, 7, 9, 8, 10 ),
+	'category__in' => array( 4, 5, 6, 7, 9, 10 ),
+	'post_type' => 'staff',
+
+	'meta_query' => array(
+		'relation' => 'AND',
+		'all_clause' => array(
+			'key' => 'carecenter',
+			'value' => $staff_location,
+			'compare' => 'LIKE',
+		),
+		'last_clause' => array(
+			'key' => 'last_name',
+			'compare' => 'EXISTS'
+		),
+	),
+	'orderby' => array(
+		'last_clause' => 'ASC',
+	),
+);
+$psr_args = array(
+	'category__in' => array( 8 ),
 	'post_type' => 'staff',
 
 	'meta_query' => array(
@@ -132,19 +152,48 @@ $staff_args = array(
 	$show_staff = new WP_Query( $staff_args );
 	if($show_staff->have_posts()) :
 		while ($show_staff->have_posts()) : $show_staff->the_post(); 
-		$dr_credentials = get_field('credentials') ? get_field('credentials') : "" ;
-		$dr_position = get_field('position') ? get_field('position') : "" ;
-		$dr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
+		$staff_credentials = get_field('credentials') ? get_field('credentials') : "" ;
+		$staff_position = get_field('position') ? get_field('position') : "" ;
+		$staff_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
 		<!-- Loop to display team -->
 		<div class="small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
-				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
+				<img src="<?php echo $staff_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p>
 					<?php the_title(); ?>
-					<?php if(get_field('credentials')) { echo ', '.$dr_credentials; } ?>
+					<?php if(get_field('credentials')) { echo ', '.$staff_credentials; } ?>
 				</p>
-				<p><em><?php echo $dr_position; ?></em></p>
+				<p><em><?php echo $staff_position; ?></em></p>
+				<!--IF HAS BIO ADD HERE -->
+				<p><?php the_content(); ?></p>
+				<!--END IF HAS BIO-->
+			</div> 
+		</div>
+		<!-- end loop to display team -->
+	<?php 
+		endwhile; 
+	endif;
+	wp_reset_postdata();
+	?>
+
+	<?php 
+	$show_psr = new WP_Query( $psr_args );
+	if($show_psr->have_posts()) :
+		while ($show_psr->have_posts()) : $show_psr->the_post(); 
+		$psr_credentials = get_field('credentials') ? get_field('credentials') : "" ;
+		$psr_position = get_field('position') ? get_field('position') : "" ;
+		$psr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
+		?>
+		<!-- Loop to display team -->
+		<div class="small-12 medium-6 columns">
+			<div id="individual-doctor" class="text-center" data-equalizer-watch>
+				<img src="<?php echo $psr_round['url']; ?>" alt="<?php the_title(); ?> photo">
+				<p>
+					<?php the_title(); ?>
+					<?php if(get_field('credentials')) { echo ', '.$psr_credentials; } ?>
+				</p>
+				<p><em><?php echo $psr_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
 				<p><?php the_content(); ?></p>
 				<!--END IF HAS BIO-->

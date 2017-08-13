@@ -1,7 +1,8 @@
-<?php
+ <?php
 // Custom Widget for Staff Location Pages
 // 
-$staff_location = get_the_title();
+//$staff_location = get_the_title();
+$staff_location = $post->post_name;
 $doc_args = array(
 	'meta_key' => 'specialty',
 	'meta_value' => $staff_location,

@@ -7834,6 +7834,9 @@ p {
 .main-content h2, .main-content h3 {
   padding-top: 1.5rem; }
 
+.columns:last-child:not(:first-child) {
+  float: left; }
+
 a {
   color: #db6829; }
 
@@ -7902,6 +7905,25 @@ a:hover {
     .services-grid .services-item button {
       cursor: pointer; }
 
+.specialty-subnav {
+  text-align: center; }
+  .specialty-subnav ul {
+    border-bottom: 3px solid #db6829;
+    display: inline-block; }
+    .specialty-subnav ul li {
+      padding: 10px;
+      position: relative;
+      list-style-type: none;
+      display: inline-block; }
+    .specialty-subnav ul li:before {
+      position: absolute;
+      content: "\2022";
+      left: 42%;
+      bottom: -22%;
+      font-size: 56px;
+      line-height: .4;
+      color: #db6829; }
+
 .single-staff .main-wrap {
   background: inherit; }
   .single-staff .main-wrap .main-content .entry-header .entry-image {
@@ -7946,6 +7968,10 @@ a:hover {
 
 .list-cc {
   padding: 1.5em 1em; }
+
+.sidebar-location .widget-photo img, .sidebar .widget-directory-dl img {
+  max-width: none;
+  width: 100%; }
 
 #individual-doctor {
   padding: 1em; }

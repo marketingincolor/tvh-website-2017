@@ -6,9 +6,7 @@
 	$doctor = $dr_firstname . "&nbsp;" .$dr_lastname;
 	$dr_location = get_field('location') ? get_field('location') : "" ;
 
-
 ?>
-
 
 	<div class="staff-widget-title">
 		Primary Care Services
