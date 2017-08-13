@@ -16,19 +16,47 @@ get_header(); ?>
 <div class="main-wrap sidebar-right" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-	<div class="specialty-subnav">
-		<ul>
-	    <?php $loop = new WP_Query( array( 'post_type' => 'specialty_services') ); ?>
-			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-			    <?php the_title( '<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark"><li>', '</li></a>' ); ?>
-			<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-		</ul>
-	</div>
 
 <?php while ( have_posts() ) : the_post(); ?>
+	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+			<?php //wp_nav_menu( array( 'menu' => 'specialty', 'menu_class' => '', 'container_class' => 'specialty-subnav') ); ?>
 
+		<div class="specialty-subnav">
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/audiology">Audiology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/cardiology">Cardiology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/dermatology">Dermatology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/encodrinology">Endocrinology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/gastroenterology">Gastroenterology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/general-surgery">General Surgery</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/gynecology">Gynecology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/neurology">Neurology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/orthopaedics">Orthopaedics</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/rheumatology">Rheumatology</a>
+			</div>
+			<div class="serv-sub">
+				<a href="<?php echo site_url('/specialty-services'); ?>/urology">Urology</a>
+			</div>
+		</div>
+		
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>

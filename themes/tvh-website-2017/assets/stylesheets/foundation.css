@@ -7282,8 +7282,8 @@ a.thumbnail {
 .dropdown.menu.vertical > li .is-dropdown-submenu {
   top: 100%; }
 
-.single-staff .top-bar-nav, .contact .top-bar-nav {
-  border-bottom: 8px solid #f5f5f2; }
+.single-staff .top-bar, .contact .top-bar {
+  border-bottom: 17px solid #f5f5f2; }
 
 .site-desktop-title a {
   font-weight: bold; }
@@ -7395,7 +7395,7 @@ a.thumbnail {
   margin-right: auto;
   margin-left: auto;
   margin-top: 1rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 4.6875rem; }
   .main-wrap::before, .main-wrap::after {
     display: table;
     content: ' '; }
@@ -7906,23 +7906,39 @@ a:hover {
       cursor: pointer; }
 
 .specialty-subnav {
-  text-align: center; }
-  .specialty-subnav ul {
-    border-bottom: 3px solid #db6829;
-    display: inline-block; }
-    .specialty-subnav ul li {
-      padding: 10px;
+  text-align: center;
+  /*ul {
+    display:inline-block; margin:0 !important; list-style:none;
+    li {
+      padding:-1px; position:relative; list-style-type:none; display:inline-block; border-bottom:3px solid $orange;
+    }
+    li:after { 
+      position:absolute; 
+      content:"\2022"; 
+      left:42%; 
+      bottom:0; 
+      font-size:56px; 
+      line-height:0; 
+      color:$orange;
+      border-bottom:3px solid $orange;
+    }
+  }*/ }
+  .specialty-subnav .serv-sub {
+    display: inline;
+    border-bottom: 3px solid #db6829; }
+    .specialty-subnav .serv-sub a {
       position: relative;
-      list-style-type: none;
-      display: inline-block; }
-    .specialty-subnav ul li:before {
-      position: absolute;
+      display: inline-block;
+      padding: 0em .5em .5em;
+      line-height: 1.6; }
+    .specialty-subnav .serv-sub a:after {
       content: "\2022";
-      left: 42%;
-      bottom: -22%;
+      left: 43%;
+      bottom: 28%;
       font-size: 56px;
-      line-height: .4;
-      color: #db6829; }
+      line-height: 0;
+      color: #db6829;
+      position: absolute; }
 
 .single-staff .main-wrap {
   background: inherit; }
@@ -7933,6 +7949,11 @@ a:hover {
     .single-staff .main-wrap .main-content .entry-header .entry-image .entry-caption {
       text-align: center;
       margin-top: calc(410px - 94px); }
+      .single-staff .main-wrap .main-content .entry-header .entry-image .entry-caption h3 {
+        padding-top: 1rem;
+        margin-bottom: 0.25rem; }
+      .single-staff .main-wrap .main-content .entry-header .entry-image .entry-caption h4 {
+        font-style: italic; }
   .single-staff .main-wrap .main-content .entry-content .entry-dr-meta {
     margin: 2em 0em; }
   .single-staff .main-wrap .main-content .entry-content h5 {
