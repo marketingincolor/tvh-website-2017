@@ -10,8 +10,8 @@ $args = array(
 <!--HOSPITALIST TEMPLATE -->
 <section id="hospitalist">
 	<div class="row">
-		<div class="meet-your-hospitalist-team small-12-columns">
-		<h3>Meet the team.</h3>
+		<div class="meet-your-hospitalist-team small-12 columns">
+		<h2>Meet the team.</h2>
 		</div>
 	</div>
 
@@ -29,7 +29,7 @@ $args = array(
 		<div class="small-12 medium-3 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
-				<p><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$dr_credentials; }  ?></p>
+				<p><strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$dr_credentials; } ?></strong></p>
 				<p><em><?php echo $dr_position; ?></em></p>
 			</div> 
 		</div>

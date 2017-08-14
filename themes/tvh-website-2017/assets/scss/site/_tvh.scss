@@ -50,6 +50,7 @@ a:hover { color:#a85020; }
   padding:1em 0em 3em;
   .services-item {
     padding:1em;
+    h5 { font-weight:bold; }
     a { display:inline-block; }
     button { cursor:pointer; }
   }
@@ -111,8 +112,8 @@ a:hover { color:#a85020; }
           .entry-caption {
             text-align:center;
             margin-top:calc(410px - 94px);
-            h3 { padding-top:1rem; margin-bottom:0.25rem; }
-            h4 { font-style:italic;}
+            h3 { padding-top:1rem; margin-bottom:0rem; }
+            h4 { font-style:italic; line-height:1;}
           }
         }
       }
@@ -164,11 +165,17 @@ a:hover { color:#a85020; }
 .sidebar-location .widget-photo img, .sidebar .widget-directory-dl img { max-width:none; width:100%; }
 
 // Teams
-#individual-doctor { padding:1em; }
+#individual-doctor { 
+  p { margin-bottom:.5rem; line-height:1.2; }
+  padding:1em; 
+}
 
 
 // Locations
-.meet-your-care-team { border-left: 5px solid #2c7a3e; padding-left: 1rem; margin: 2rem 0rem; }
+.meet-your-care-team { 
+  border-left: 5px solid #2c7a3e; padding-left: 1rem; margin: 2rem 0rem; 
+  h2 { padding:1rem 0rem; margin-bottom:0; }
+}
 #individual-doctor img { border-radius: 50%; }
 #individual-doctor p:first-child { margin-bottom:0rem; }
 

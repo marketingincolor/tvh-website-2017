@@ -10,7 +10,7 @@ $args = array(
 <!--LEADERSHIP TEMPLATE -->
 <section id="leadership">
 	<div class="row">
-		<div class="meet-your-leadership-team small-12-columns">
+		<div class="meet-your-leadership-team small-12 columns">
 		<h2>Meet the visionary leaders behind healthier health care.</h2>
 		</div>
 	</div>
@@ -29,7 +29,7 @@ $args = array(
 		<div class="small-12 medium-3 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
-				<p><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$dr_credentials; }  ?></p>
+				<p><strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$dr_credentials; } ?></strong></p>
 				<p><em><?php echo $dr_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
 				<!--END IF HAS BIO-->

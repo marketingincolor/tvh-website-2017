@@ -35,7 +35,7 @@ switch ($page_location) {
 }
 
 $doc_args = array(
-	'category__not_in' => array( 4, 5, 6, 7, 8, 9, 10 ),
+	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
 	'meta_query' => array(
 		'relation' => 'OR',
@@ -71,7 +71,7 @@ $doc_args = array(
 	),
 );
 $staff_args = array(
-	'category__in' => array( 4, 5, 6, 7, 9, 10 ),
+	'category__in' => array( 4, 5, 6, 9, 10 ),
 	'post_type' => 'staff',
 
 	'meta_query' => array(
@@ -115,8 +115,8 @@ $psr_args = array(
 <!--DOCTOR TEMPLATE -->
 <section id="all-doctors">
 	<div class="row">
-		<div class="meet-your-care-team small-12-columns">
-		<h3>Meet Your Care Team</h3>
+		<div class="meet-your-care-team small-12 columns">
+		<h2>Meet Your Care Team</h2>
 		</div>
 	</div>
 
@@ -134,7 +134,7 @@ $psr_args = array(
 		<div class="small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
-				<p><?php the_title(); ?>, <?php echo $dr_credentials; ?></p>
+				<p><strong><?php the_title(); ?>, <?php echo $dr_credentials; ?></strong></p>
 				<p><em><?php echo $dr_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
 				<!--END IF HAS BIO-->
@@ -161,8 +161,8 @@ $psr_args = array(
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $staff_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p>
-					<?php the_title(); ?>
-					<?php if(get_field('credentials')) { echo ', '.$staff_credentials; } ?>
+					<strong><?php the_title(); ?>
+					<?php if(get_field('credentials')) { echo ', '.$staff_credentials; } ?></strong>
 				</p>
 				<p><em><?php echo $staff_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
@@ -190,8 +190,8 @@ $psr_args = array(
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $psr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p>
-					<?php the_title(); ?>
-					<?php if(get_field('credentials')) { echo ', '.$psr_credentials; } ?>
+					<strong><?php the_title(); ?>
+					<?php if(get_field('credentials')) { echo ', '.$psr_credentials; } ?></strong>
 				</p>
 				<p><em><?php echo $psr_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
