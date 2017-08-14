@@ -23,6 +23,12 @@ switch($slug) {
 	case 'care-centers':
 		get_template_part( 'sidebar-carecenters' );
 		break;
+	case 'contact':
+		get_template_part( 'sidebar-carecenters' );
+		break;
+	case 'doctor-recruitment':
+		get_template_part( 'sidebar-recruit' );
+		break;
 	default:
 		echo '<aside class="sidebar">';
 		do_action( 'foundationpress_before_sidebar' );

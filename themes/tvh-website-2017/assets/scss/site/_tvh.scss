@@ -92,6 +92,36 @@ a:hover { color:#a85020; }
   }*/
 }
 
+// FORMS
+.nf-form-cont {
+  background-color:$grey;
+  border-radius:22px;
+  padding:2em;
+  margin-top:2.2rem;
+  h3 { padding:0; text-align:center; }
+  .nf-before-form-content { font-size:0.85rem; }
+  .nf-field-label label { font-weight:normal; font-size:1rem; }
+  input[type="text"], input[type="email"], textarea { 
+    border-radius:10px; 
+    border:none;
+    line-height:1.4;
+    height:3em;
+    margin-bottom:1em;
+  }
+  .ninja-forms-field[type="button"] {
+    background-color:transparent;
+    color:$orange;
+    border-radius: 7px;
+    height: 41px;
+    padding: 14px 20px;
+    border: 1.5px solid $orange;
+    line-height:.4;
+    font-size:18px;
+    cursor:pointer;
+  }
+  .ninja-forms-field[type="button"]:hover { background-color:$orange; color:#fff; }
+}
+
 // Staff Listings
 .single-staff {
   .main-wrap {
@@ -161,7 +191,12 @@ a:hover { color:#a85020; }
   }
   :last-child {margin-bottom:0em;}
 }
-.list-cc {padding:1.5em 1em;}
+.list-cc {
+  padding:1.25em 1em;
+  img { padding-bottom:17px; }
+  div p { margin-bottom:0em; }
+}
+.list-cc:first-child { padding-top:0; }
 .sidebar-location .widget-photo img, .sidebar .widget-directory-dl img { max-width:none; width:100%; }
 
 // Teams
