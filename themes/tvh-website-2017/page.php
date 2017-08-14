@@ -80,6 +80,7 @@
 	<?php get_template_part( 'template-parts/testimonial-career' ); ?>
 <?php elseif ( is_page('find-a-doctor') ) : ?>
 	<?php get_template_part( 'template-parts/testimonial-findadoctor' ); ?>
+<?php elseif ( is_page('accepted-insurance') ) : ?>
 <?php else : ?>
 	<?php get_template_part( 'template-parts/testimonial-main' ); ?>
 <?php endif; ?>

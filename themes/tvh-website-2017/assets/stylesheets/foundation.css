@@ -7955,7 +7955,7 @@ a:hover {
   .nf-form-cont .nf-field-label label {
     font-weight: normal;
     font-size: 1rem; }
-  .nf-form-cont input[type="text"], .nf-form-cont input[type="email"], .nf-form-cont textarea {
+  .nf-form-cont input[type="text"], .nf-form-cont input[type="email"], .nf-form-cont input[type="tel"], .nf-form-cont textarea {
     border-radius: 10px;
     border: none;
     line-height: 1.4;
@@ -7986,7 +7986,8 @@ a:hover {
       margin-top: calc(410px - 94px); }
       .single-staff .main-wrap .main-content .entry-header .entry-image .entry-caption h3 {
         padding-top: 1rem;
-        margin-bottom: 0rem; }
+        margin-bottom: 0rem;
+        font-size: 1.625rem; }
       .single-staff .main-wrap .main-content .entry-header .entry-image .entry-caption h4 {
         font-style: italic;
         line-height: 1; }
@@ -8037,12 +8038,6 @@ a:hover {
   max-width: none;
   width: 100%; }
 
-#individual-doctor {
-  padding: 1em; }
-  #individual-doctor p {
-    margin-bottom: .5rem;
-    line-height: 1.2; }
-
 .meet-your-care-team {
   border-left: 5px solid #2c7a3e;
   padding-left: 1rem;
@@ -8051,8 +8046,15 @@ a:hover {
     padding: 1rem 0rem;
     margin-bottom: 0; }
 
+#individual-doctor {
+  padding: 1em; }
+  #individual-doctor p {
+    margin-bottom: .5rem;
+    line-height: 1.2; }
+
 #individual-doctor img {
-  border-radius: 50%; }
+  border-radius: 50%;
+  padding-bottom: 1rem; }
 
 #individual-doctor p:first-child {
   margin-bottom: 0rem; }

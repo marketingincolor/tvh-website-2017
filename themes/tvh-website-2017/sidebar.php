@@ -29,6 +29,15 @@ switch($slug) {
 	case 'doctor-recruitment':
 		get_template_part( 'sidebar-recruit' );
 		break;
+	case 'general-recruitment':
+		get_template_part( 'sidebar-recruit' );
+		break;
+	case 'accepted-insurance':
+		get_template_part( 'sidebar-tlc' );
+		break;
+	case 'become-a-patient':
+		get_template_part( 'sidebar-tlc' );
+		break;
 	default:
 		echo '<aside class="sidebar">';
 		do_action( 'foundationpress_before_sidebar' );
