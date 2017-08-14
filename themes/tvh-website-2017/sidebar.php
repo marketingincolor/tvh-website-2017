@@ -44,6 +44,9 @@ switch($slug) {
 	case 'faq':
 		get_template_part( 'sidebar-tlc' );
 		break;
+	case 'news':
+		get_template_part( 'sidebar-news' );
+		break;
 	default:
 		echo '<aside class="sidebar">';
 		do_action( 'foundationpress_before_sidebar' );

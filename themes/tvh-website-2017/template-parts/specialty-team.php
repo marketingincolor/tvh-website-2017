@@ -24,10 +24,6 @@ $doc_args = array(
 		'last_clause' => 'ASC',
 	),
 
-
-
-
-
 );
 ?>
 

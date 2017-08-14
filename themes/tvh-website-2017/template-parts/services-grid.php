@@ -25,7 +25,7 @@
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-endocrinology-thumb.jpg">
 		<h5>Endocrinology</h5>
 		<h6 style="color:red;">Awaiting Client Input</h6>
-		<a href="./encodrinology"><button class="cta-button orange">Learn More</button></a>
+		<a href="./endocrinology"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-gastroenterology-thumb.jpg">

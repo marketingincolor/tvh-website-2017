@@ -8174,6 +8174,18 @@ a:hover {
     font-weight: 300;
     font-size: 1.25rem; }
 
+.entry-content .display-posts-listing {
+  margin-left: 0rem;
+  list-style-type: none; }
+  .entry-content .display-posts-listing .listing-item {
+    margin: 1em 0em; }
+    .entry-content .display-posts-listing .listing-item .image {
+      float: left;
+      display: inline-block;
+      padding: 0em 1em 1em 0em; }
+      .entry-content .display-posts-listing .listing-item .image img {
+        border-radius: 100%; }
+
 .footer-social-link {
   display: inline-block; }
   .footer-social-link a {

@@ -1,50 +1,20 @@
 <?php
 /**
- * The sidebar containing specific about page widgets
+ * The sidebar containing specific news page widgets
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-$dr_firstname = get_field('first_name') ? get_field('first_name') : "" ;
-$dr_lastname = get_field('last_name') ? get_field('last_name') : "" ;
-$doctor = $dr_firstname . "&nbsp;" .$dr_lastname;
-$dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
+$options = get_option('tvh_theme_options');
+$testimonial = Array( 'eb', 'jr', 'lm', 'rw' );
 ?>
 <aside class="sidebar">
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
-	<article id="widget-1" class="widget widget-location">
-		<div class="widget-title">
-			Sidebar Wiget Title
-		</div>
-		<div class="widget-container">
-			<p>Sidebar Widget Message</p>
-			<button class="cta-button orange">Link</button>
-		</div>
+	<article id="widget-1" class="widget widget-directory-dl">
+		<a href="<?php echo site_url(); ?>/evergreen-wellness"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-egw.jpg"></a>
 	</article>
-	<article id="widget-2" class="widget widget-insurance">
-		<div class="widget-title">
-			Sidebar Wiget Title
-		</div>
-		<div class="widget-container">
-			<p>Sidebar Widget Message</p>
-		</div>
-	</article>
-	<article id="widget-3" class="widget widget-directory-dl">
-		<div class="widget-title">
-			Sidebar Wiget Title
-		</div>
-		<div class="widget-container">
-			<p>Sidebar Widget Message</p>
-		</div>
-	</article>
-	<article id="widget-4" class="widget widget-dr-articles">
-		<div class="widget-title">
-			Sidebar Wiget Title
-		</div>
-		<div class="widget-container">
-			<p>Sidebar Widget Message</p>
-			<button class="cta-button orange">Learn More</button>
-		</div>
+	<article id="widget-2" class="widget widget-directory-dl">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-side-img-<?php echo $testimonial[array_rand($testimonial)]; ?>-test.jpg">
 	</article>
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>
 </aside>
