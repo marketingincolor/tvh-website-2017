@@ -24,7 +24,7 @@ $options = get_option('tvh_theme_options');
 		</div>
 	</article>
 	<article id="widget-2" class="widget widget-directory-dl">
-		<a href="<?php echo site_url(); ?>/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-paradigm.jpg"></a>
+		<a href="<?php echo site_url(); ?>/inventing-a-new-paradigm-for-care/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-paradigm.jpg"></a>
 	</article>
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>
 </aside>

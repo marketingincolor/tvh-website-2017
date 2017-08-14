@@ -11,6 +11,7 @@ p { margin-bottom:1.5rem; }
 $orange: #db6829;
 $green: #2d7a3d;
 $grey: #f5f5f2;
+$black: #333333;
 
 // Page Content
 a { color:$orange; }
@@ -19,6 +20,7 @@ a:hover { color:#a85020; }
 .main-wrap .main-content {} /* article */
 .main-wrap .main-content header {}
 .main-wrap .main-content header .entry-title { font-size:36px; font-weight:300; } /* h1 */
+.main-wrap .entry-content a { text-decoration:underline; }
 .disclaimer { font-size:14px; line-height:1.4; font-style:italic; }
 
 // Doctor Finder
@@ -50,6 +52,7 @@ a:hover { color:#a85020; }
   padding:1em 0em 3em;
   .services-item {
     padding:1em;
+    img { margin-bottom:0.5em; }
     h5 { font-weight:bold; }
     a { display:inline-block; }
     button { cursor:pointer; }
@@ -59,9 +62,10 @@ a:hover { color:#a85020; }
 // Specialty Subnav
 .specialty-subnav { 
   text-align:center;
-  .serv-sub { display:inline; border-bottom:3px solid $orange; 
+  padding-bottom:3rem;
+  .serv-sub { display:inline; border-bottom:2px solid $orange; padding-bottom:0.4rem;
     a { 
-      position:relative; display:inline-block; padding:0em .5em .5em; line-height:1.6; 
+      position:relative; display:inline-block; padding:0em .5em .8em; line-height:2; 
     }
     a:after {
       content:"\2022"; 
@@ -73,6 +77,21 @@ a:hover { color:#a85020; }
       position:absolute;
     }
   }
+  .current { 
+    background-color:$orange;  
+    a {
+      color:#fff;
+    }
+  }
+  .serv-sub:hover { 
+    background-color:$orange;  
+    a:hover {
+      color:#fff;
+    }
+  }
+
+
+
 
   /*ul {
     display:inline-block; margin:0 !important; list-style:none;
@@ -193,7 +212,8 @@ a:hover { color:#a85020; }
 }
 .list-cc {
   padding:1.25em 1em;
-  img { padding-bottom:17px; }
+  p a { color:$black; }
+  img { padding-bottom:.5em; }
   div p { margin-bottom:0em; }
 }
 .list-cc:first-child { padding-top:0; }
@@ -228,6 +248,14 @@ a:hover { color:#a85020; }
 // Testimonial Components
 .orange { color:$orange; }
 
+.special-button {
+  border-radius: 7px;
+  height: 41px;
+  padding: 14px 20px;
+  border: 1.5px solid $orange;
+  line-height:.2;
+  font-size:17px;
+}
 .top-button, 
 .cta-button,
 .cta-button-front {

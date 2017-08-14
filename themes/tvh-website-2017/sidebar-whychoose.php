@@ -15,7 +15,7 @@ $options = get_option('tvh_theme_options');
 		</div>
 		<div class="widget-container">
 			<p>Ready to choose TVH? Simply click the button below to provide your information and become a patient.</p>
-			<button class="cta-button orange">New Patient Form</button>
+			<a href="<?php echo site_url(); ?>/for-patients/become-a-patient/"><button class="cta-button orange">New Patient Form</button></a>
 		</div>
 	</article>
 	<article id="widget-2" class="widget widget-insurance">
@@ -23,7 +23,8 @@ $options = get_option('tvh_theme_options');
 			Take A Care Center Tour
 		</div>
 		<div class="widget-container">
-			<p>Call <?php echo $options['tvh_pn_textbox']; ?> to schedule your personal tour and see firsthand how exceptional healthcare works.</p>
+			<p>Stop by any Care Center or call to schedule your personal tour to see firsthand how exceptional health care can be.</p>
+			<a href="<?php echo site_url(); ?>/care-centers"><button class="cta-button orange">Locations &amp; Phone Numbers</button></a>
 		</div>
 	</article>
 	<article id="widget-3" class="widget widget-directory-dl">
@@ -40,7 +41,7 @@ $options = get_option('tvh_theme_options');
 		</div>
 		<div class="widget-container">
 			<p>You don't have to be our patient to see our specialists.</p>
-			<button class="cta-button orange">Learn More</button>
+			<a href="<?php echo site_url(); ?>/specialty-services/"><button class="cta-button orange">Learn More</button></a>
 		</div>
 	</article>
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>

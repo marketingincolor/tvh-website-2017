@@ -18,7 +18,7 @@
 ?>
 <aside class="sidebar sidebar-location">
 <?php do_action( 'foundationpress_before_sidebar' ); ?>
-	<?php if ( $location_slug != 'acute-care-clinic' ) : ?>
+	<?php if ( ($location_slug == 'acute-care-clinic') || ($location_slug == 'specialty-care-center') ) :  else : ?>
 		<article id="widget-1" class="widget widget-photo">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-<?php echo $location_slug; ?>-sidebar.jpg">
 		</article>
@@ -33,6 +33,8 @@
 		<article id="widget-4" class="widget widget-insurance">
 			<?php get_template_part( 'template-parts/accepted-insurance' ); ?>
 		</article>
+	<?php endif; ?>
+	<?php if ( ($location_slug == 'acute-care-clinic') || ($location_slug == 'specialty-care-center') ) :  else : ?>
 		<article id="widget-5" class="widget widget-services">
 			<?php get_template_part( 'template-parts/pc-services' ); ?>
 		</article>

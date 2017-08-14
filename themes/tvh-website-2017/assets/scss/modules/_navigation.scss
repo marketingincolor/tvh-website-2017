@@ -39,7 +39,10 @@
 .dropdown.menu.vertical > li.opens-right > .is-dropdown-submenu { left:25%; }
 .dropdown.menu.vertical > li .is-dropdown-submenu { top:100%; }
 
-.single-staff .top-bar, .contact .top-bar { border-bottom:17px solid #f5f5f2; }
+.single-staff .top-bar,
+.doctors .top-bar, 
+.general-staff-form .top-bar,
+.contact .top-bar { border-bottom:17px solid #f5f5f2; }
 
 // Site title
 .site-mobile-title a {

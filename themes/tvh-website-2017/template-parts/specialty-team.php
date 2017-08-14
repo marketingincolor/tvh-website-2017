@@ -4,9 +4,30 @@
 //$staff_location = get_the_title();
 $staff_location = $post->post_name;
 $doc_args = array(
-	'meta_key' => 'specialty',
-	'meta_value' => $staff_location,
-	'post_type' => 'staff'
+	//'meta_key' => 'specialty',
+	//'meta_value' => $staff_location,
+	'post_type' => 'staff',
+
+	'meta_query' => array(
+		'relation' => 'AND',
+		'all_clause' => array(
+			'key' => 'specialty',
+			'value' => $staff_location,
+			'compare' => 'LIKE',
+		),
+		'last_clause' => array(
+			'key' => 'last_name',
+			'compare' => 'EXISTS'
+		),
+	),
+	'orderby' => array(
+		'last_clause' => 'ASC',
+	),
+
+
+
+
+
 );
 ?>
 
@@ -29,7 +50,7 @@ $doc_args = array(
 				<p><em><?php echo $dr_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
 				<!--END IF HAS BIO-->
-				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Read Bio</button></a></p>
+				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
 		<!-- end loop to display team -->

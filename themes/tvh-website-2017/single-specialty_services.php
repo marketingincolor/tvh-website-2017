@@ -22,37 +22,37 @@ get_header(); ?>
 			<?php //wp_nav_menu( array( 'menu' => 'specialty', 'menu_class' => '', 'container_class' => 'specialty-subnav') ); ?>
 
 		<div class="specialty-subnav">
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('audiology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/audiology">Audiology</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('cardiology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/cardiology">Cardiology</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('dermatology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/dermatology">Dermatology</a>
 			</div>
-			<div class="serv-sub">
-				<a href="<?php echo site_url('/specialty-services'); ?>/encodrinology">Endocrinology</a>
+			<div class="serv-sub<?php echo ( is_single('endocrinology') ? ' current' : ''); ?>">
+				<a href="<?php echo site_url('/specialty-services'); ?>/endocrinology">Endocrinology</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('gastroenterology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/gastroenterology">Gastroenterology</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('general-surgery') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/general-surgery">General Surgery</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('gynecology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/gynecology">Gynecology</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('neurology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/neurology">Neurology</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('orthopaedics') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/orthopaedics">Orthopaedics</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('rheumatology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/rheumatology">Rheumatology</a>
 			</div>
-			<div class="serv-sub">
+			<div class="serv-sub<?php echo ( is_single('urology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/urology">Urology</a>
 			</div>
 		</div>
