@@ -7873,7 +7873,9 @@ a:hover {
   border-top: 1px solid #2d7a3d;
   border-bottom: 1px solid #2d7a3d;
   display: inline-block;
-  margin: 1em; }
+  margin: 1em 3em;
+  font-size: 26px;
+  text-align: center; }
 
 .doctor-finder {
   width: 100%;
@@ -7883,7 +7885,8 @@ a:hover {
   background-color: #f5f5f2;
   border-radius: 22px;
   padding: 2.5em 0em;
-  margin-top: 2.2rem; }
+  margin-top: 2.2rem;
+  margin-bottom: 75px; }
   @media print, screen and (min-width: 40em) {
     .doctor-finder {
       padding-right: 0.9375rem;
@@ -7953,7 +7956,8 @@ a:hover {
   .specialty-subnav .serv-sub {
     display: inline;
     border-bottom: 2px solid #db6829;
-    padding-bottom: 0.4rem; }
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem; }
     .specialty-subnav .serv-sub a {
       position: relative;
       display: inline-block;
@@ -8202,7 +8206,7 @@ a:hover {
     font-size: 1.25rem; }
 
 .entry-content .display-posts-listing {
-  margin-left: 0rem;
+  margin-left: 0rem !important;
   list-style-type: none; }
   .entry-content .display-posts-listing .listing-item {
     margin: 1em 0em;

@@ -29,7 +29,9 @@ a:hover { color:#a85020; }
   border-top:1px solid $green; 
   border-bottom:1px solid $green; 
   display:inline-block; 
-  margin:1em;
+  margin:1em 3em;
+  font-size:26px;
+  text-align:center;
 }
 // Doctor Finder
 .doctor-finder {
@@ -38,6 +40,7 @@ a:hover { color:#a85020; }
   border-radius:22px;
   padding:2.5em 0em;
   margin-top:2.2rem;
+  margin-bottom:75px;
   h4 {
     font-size:1.437rem; font-weight:300; text-align:center; margin-bottom:2rem;
   }
@@ -72,7 +75,7 @@ a:hover { color:#a85020; }
 .specialty-subnav { 
   text-align:center;
   padding-bottom:3rem;
-  .serv-sub { display:inline; border-bottom:2px solid $orange; padding-bottom:0.4rem;
+  .serv-sub { display:inline; border-bottom:2px solid $orange; padding-bottom:0.4rem; padding-top:0.4rem;
     a { 
       position:relative; display:inline-block; padding:0em .5em .8em; line-height:2; 
     }
@@ -332,7 +335,7 @@ a:hover { color:#a85020; }
 
 //News
 .entry-content .display-posts-listing {
-  margin-left:0rem;
+  margin-left:0rem !important;
   list-style-type:none;
   .listing-item {
     margin:1em 0em;
