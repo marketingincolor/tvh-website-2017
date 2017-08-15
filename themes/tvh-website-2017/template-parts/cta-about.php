@@ -16,7 +16,7 @@
 		<div class="default small-12 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-aboutmain-img-test.jpg" alt="">
 			<h3>The Villages Health System: Inventing a New Paradigm</h3>
-			<p data-equalizer-watch="inner">Learn more about our novel and profoundly superior health care system, as remarkable and exemplary as The Villages&reg; itself. </p>
+			<p data-equalizer-watch="inner">Learn more about our remarkable health care system, where everything we do is centered on our patients.</p>
 			<p class="btn-box"><a href="<?php echo site_url(); ?>/inventing-a-new-paradigm-for-care/"><button class="cta-button orange">Read More</button></a></p>
 		</div>
 	</div>
@@ -25,7 +25,7 @@
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-aboutmain-img-accolades.jpg" alt="">
 			<h3>AWARDS BLURB &ndash; NEED NEW AWARD INFO</h3>
 			<p data-equalizer-watch="inner">Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-			<p class="btn-box"><a href="about/"><button class="cta-button orange">Read More</button></a></p>
+			<p class="btn-box"><a href="<?php echo site_url(); ?>/about/awards-accreditions/"><button class="cta-button orange">Read More</button></a></p>
 		</div>
 	</div>
 </div>

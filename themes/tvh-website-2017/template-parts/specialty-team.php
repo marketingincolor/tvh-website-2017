@@ -3,6 +3,7 @@
 // 
 //$staff_location = get_the_title();
 $staff_location = $post->post_name;
+if ($staff_location == 'general-surgery') { $staff_location = 'General Surgery'; }
 $doc_args = array(
 	//'meta_key' => 'specialty',
 	//'meta_value' => $staff_location,

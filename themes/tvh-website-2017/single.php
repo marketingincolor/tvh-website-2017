@@ -35,7 +35,11 @@ get_header(); ?>
 			?>
 			<p><?php the_tags(); ?></p>
 		</footer>
-		<?php the_post_navigation(); ?>
+		<?php $args = array(
+			'prev_text' => 'Previous',
+			'next_text' => 'Next'
+		);
+		the_post_navigation($args); ?>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
 		<?php //comments_template(); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>

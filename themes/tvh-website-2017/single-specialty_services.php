@@ -65,7 +65,7 @@ get_header(); ?>
 			<div class="entry-dr-meta">
 
 			<?php if( get_field('carecenter') ): ?>
-			    <h5>Care Center: <span><?php echo $location; ?></span></h5>
+			    <!--<h5>Care Center: <span><?php echo $location; ?></span></h5>-->
 			<?php endif; ?>
 
 			</div>

@@ -7653,7 +7653,7 @@ body#tinymce {
     .intro .fp-intro:last-child:not(:first-child) {
       float: right; }
     .intro .fp-intro h1 {
-      font-size: 2.25em;
+      font-size: 36px;
       font-weight: 300; }
 
 .cta-container {
@@ -7835,7 +7835,7 @@ p {
   margin-bottom: 1.5rem; }
 
 .main-content h2, .main-content h3 {
-  padding-top: 1.5rem; }
+  padding-top: 0.7rem; }
 
 .columns:last-child:not(:first-child) {
   float: left; }
@@ -7846,6 +7846,9 @@ a {
 a:hover {
   color: #a85020; }
 
+.main-wrap {
+  margin-bottom: 2rem; }
+
 /* see content.scss */
 /* article */
 .main-wrap .main-content header .entry-title {
@@ -7855,6 +7858,9 @@ a:hover {
 /* h1 */
 .main-wrap .entry-content a {
   text-decoration: underline; }
+
+.main-wrap .entry-content ul {
+  margin-left: 3.5rem; }
 
 .disclaimer {
   font-size: 14px;
@@ -8066,6 +8072,9 @@ a:hover {
     padding: 1rem 0rem;
     margin-bottom: 0; }
 
+.btn-box {
+  margin-top: 2.54rem; }
+
 #individual-doctor {
   padding: 1em; }
   #individual-doctor p {
@@ -8081,7 +8090,8 @@ a:hover {
 
 .em-location-map-container {
   width: 100% !important;
-  border-radius: 22px !important; }
+  border-radius: 22px !important;
+  margin-top: 2.8rem; }
   .em-location-map-container .em-location-map, .em-location-map-container .em-locations-map {
     border-radius: 22px !important; }
 
@@ -8091,6 +8101,10 @@ a:hover {
   height: 230px !important; }
   .widget-map .em-location-map-container .em-location-map, .widget-map .em-location-map-container .em-locations-map {
     border-radius: 22px !important; }
+
+.meet-your-leadership-team h2,
+.meet-your-hospitalist-team h2 {
+  padding-top: 1.4rem; }
 
 .orange {
   color: #db6829; }
@@ -8120,6 +8134,9 @@ a:hover {
 .top-button:hover, .cta-button:hover, .cta-button-front:hover {
   background-color: #db6829;
   color: #fff; }
+
+.bcta-center {
+  margin: 0px 4px; }
 
 .testimonial {
   background: url("../images/tvh-tm-bgnd.jpg") top center;
@@ -8178,13 +8195,21 @@ a:hover {
   margin-left: 0rem;
   list-style-type: none; }
   .entry-content .display-posts-listing .listing-item {
-    margin: 1em 0em; }
+    margin: 1em 0em;
+    display: inline-block; }
     .entry-content .display-posts-listing .listing-item .image {
       float: left;
-      display: inline-block;
+      display: block;
       padding: 0em 1em 1em 0em; }
       .entry-content .display-posts-listing .listing-item .image img {
         border-radius: 100%; }
+    .entry-content .display-posts-listing .listing-item .title {
+      display: block;
+      font-size: 1.4375rem; }
+    .entry-content .display-posts-listing .listing-item .excerpt-dash {
+      display: none; }
+    .entry-content .display-posts-listing .listing-item .excerpt {
+      display: block; }
 
 .footer-social-link {
   display: inline-block; }

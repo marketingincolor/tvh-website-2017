@@ -5,7 +5,7 @@ h3 { font-size:1.4375rem; font-weight:300; }
 h4 { font-size:1.25rem; font-weight:300; }
 h1, h2, h3, h4 { line-height:1.4; }
 p { margin-bottom:1.5rem; }
-.main-content h2, .main-content h3 { padding-top:1.5rem; }
+.main-content h2, .main-content h3 { padding-top:0.7rem; }
 .columns:last-child:not(:first-child) { float:left; }
 //Colors
 $orange: #db6829;
@@ -16,11 +16,12 @@ $black: #333333;
 // Page Content
 a { color:$orange; }
 a:hover { color:#a85020; }
-.main-wrap { } /* see content.scss */
+.main-wrap { margin-bottom:2rem; } /* see content.scss */
 .main-wrap .main-content {} /* article */
 .main-wrap .main-content header {}
 .main-wrap .main-content header .entry-title { font-size:36px; font-weight:300; } /* h1 */
 .main-wrap .entry-content a { text-decoration:underline; }
+.main-wrap .entry-content ul { margin-left: 3.5rem; }
 .disclaimer { font-size:14px; line-height:1.4; font-style:italic; }
 
 // Doctor Finder
@@ -226,6 +227,7 @@ a:hover { color:#a85020; }
 }
 
 // Teams
+.btn-box { margin-top:2.54rem; }
 #individual-doctor { 
   p { margin-bottom:.5rem; line-height:1.2; }
   padding:1em; 
@@ -235,14 +237,15 @@ a:hover { color:#a85020; }
 
 // Location Maps
 .em-location-map-container { 
-  width:100% !important; border-radius:22px !important;
+  width:100% !important; border-radius:22px !important; margin-top:2.8rem;
   .em-location-map, .em-locations-map { border-radius:22px !important; }
 }
 .widget-map .em-location-map-container { 
   width:100% !important; border-radius:22px !important; height:230px !important; 
   .em-location-map, .em-locations-map { border-radius:22px !important; }
 }
-
+.meet-your-leadership-team h2,
+.meet-your-hospitalist-team h2 { padding-top:1.4rem; }
 
 
 // Testimonial Components
@@ -271,7 +274,7 @@ a:hover { color:#a85020; }
   font-size:18px;
 }
 .top-button:hover, .cta-button:hover, .cta-button-front:hover { background-color:$orange; color:#fff; }
-
+.bcta-center { margin:0px 4px; }
 .testimonial {
   .tm-content {
     @include grid-row();
@@ -325,10 +328,14 @@ a:hover { color:#a85020; }
   list-style-type:none;
   .listing-item {
     margin:1em 0em;
+    display:inline-block;
     .image {
-      float:left; display:inline-block; padding:0em 1em 1em 0em;
+      float:left; display:block; padding:0em 1em 1em 0em;
       img { border-radius:100%; }
     }
+    .title { display:block; font-size:1.4375rem; }
+    .excerpt-dash { display:none; }
+    .excerpt { display:block; }
   }
 
 }

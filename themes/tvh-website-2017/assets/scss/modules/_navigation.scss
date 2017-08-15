@@ -31,6 +31,7 @@
 .desktop-menu .current-menu-parent a,
 .desktop-menu .current-menu-item a, 
 .desktop-menu .menu-item a:hover { border-bottom:8px solid #db6829; }
+//.desktop-menu .current-menu-parent a:last-child { border-bottom:0px !important; }
 .is-submenu-item a { border-bottom:0px !important; }
 .submenu .current-menu-item, .submenu .current-page-ancestor { background-color:#db6829; }
 .submenu .current-menu-item a, .submenu .menu-item a:hover { color:#fff; border-bottom:0px; background-color:rgba(168, 80, 32, 0.9); }
