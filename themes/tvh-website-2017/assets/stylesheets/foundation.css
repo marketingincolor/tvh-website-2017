@@ -7867,6 +7867,14 @@ a:hover {
   line-height: 1.4;
   font-style: italic; }
 
+.body-callout {
+  color: #2d7a3d;
+  padding: 1em;
+  border-top: 1px solid #2d7a3d;
+  border-bottom: 1px solid #2d7a3d;
+  display: inline-block;
+  margin: 1em; }
+
 .doctor-finder {
   width: 100%;
   float: left;
@@ -7916,6 +7924,8 @@ a:hover {
       margin-bottom: 0.5em; }
     .services-grid .services-item h5 {
       font-weight: bold; }
+    .services-grid .services-item h6 {
+      margin-bottom: 1.5rem; }
     .services-grid .services-item a {
       display: inline-block; }
     .services-grid .services-item button {
@@ -8073,7 +8083,7 @@ a:hover {
     margin-bottom: 0; }
 
 .btn-box {
-  margin-top: 2.54rem; }
+  margin-top: 1.5rem; }
 
 #individual-doctor {
   padding: 1em; }

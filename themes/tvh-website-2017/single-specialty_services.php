@@ -57,7 +57,7 @@ get_header(); ?>
 			</div>
 		</div>
 		
-		<header>
+		<header class="columns">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
