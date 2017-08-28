@@ -14,7 +14,13 @@
 		</div>
 		<div class="widget-container">
 		<?php 
-		$show_locations = new WP_Query( array('post_type' => 'location', 'orderby' => 'name', 'order' => 'ASC') );
+		$show_locations = new WP_Query( array(
+			'post_name__in' => array(
+				'belleview-care-center', 'colony-care-center', 'creekside-care-center', 'mulberry-grove-care-center', 'pinellas-care-center', 'santa-barbara-care-center', 'brownwood-care-center', 'specialty-care-center'),
+			'post_type' => 'location', 
+			'orderby' => 'name', 
+			'order' => 'ASC'
+			) );
 		if($show_locations->have_posts()) :
 			while ($show_locations->have_posts()) : $show_locations->the_post(); 
 			$loc_id = get_the_id();

@@ -24,6 +24,7 @@ get_header(); ?>
 	$search    = $_GET['s'];
 	$specialty = $_GET['specialty'];
 	$location  = $_GET['carecenter'];
+	$gender  = $_GET['gender'];
 
 	// For Debugging
 	//echo 'String: ' . $search . '<br />';
@@ -52,7 +53,11 @@ get_header(); ?>
 				'value'   => $location,
 				'compare' => 'LIKE',
 			),
-
+			array(
+				'key'     => 'gender',
+				'value'   => $gender,
+				'compare' => 'LIKE',
+			),
 		),
 	);
 

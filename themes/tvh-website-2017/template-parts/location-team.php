@@ -166,8 +166,9 @@ $psr_args = array(
 				</p>
 				<p><em><?php echo $staff_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
-				<p><?php the_content(); ?></p>
+				<p><?php //the_content(); ?></p>
 				<!--END IF HAS BIO-->
+				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
 		<!-- end loop to display team -->

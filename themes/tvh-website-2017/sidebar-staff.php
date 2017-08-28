@@ -19,15 +19,19 @@ $dr_specialty = get_field('specialty') ? get_field('specialty') : "" ;
 	</article>
 <?php else : ?>
 
-	<?php if ( is_single('elliot-j-sussman') || is_single('thomas-menichino') || is_single('jeffrey-lowenkron') || is_single('robert-warden') ) :  else : ?>
+	<?php if ( is_single('elliot-j-sussman') || is_single('thomas-menichino') || is_single('jeffrey-lowenkron') || is_single('robert-warden') ) : ?>
+		<article id="widget-1" class="widget widget-quote">
+			<?php get_template_part( 'template-parts/side-quote' ); ?>
+		</article>
+	<?php else : ?>
 		<article id="widget-1" class="widget widget-location">
 			<?php get_template_part( 'template-parts/side-location' ); ?>
 		</article>
 	<?php endif; ?>
 
-	<article id="widget-2" class="widget widget-insurance">
-		<?php get_template_part( 'template-parts/accepted-insurance' ); ?>
-	</article>	
+	<!--<article id="widget-2" class="widget widget-insurance">
+		<?php //get_template_part( 'template-parts/accepted-insurance' ); ?>
+	</article>-->
 <?php endif; ?>
 	<!--<article id="widget-3" class="widget widget-directory-dl">
 		<?php //get_template_part( 'template-parts/provider-download' ); ?>

@@ -7,6 +7,7 @@ if ($staff_location == 'general-surgery') { $staff_location = 'General Surgery';
 $doc_args = array(
 	//'meta_key' => 'specialty',
 	//'meta_value' => $staff_location,
+	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
 
 	'meta_query' => array(

@@ -9,7 +9,7 @@
 		<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform" class="dr-search">
 			<div class="small-12 columns"><label for="s">Doctor's Name</label><input type="text" name="s" placeholder="First or Last Name"/></div>
 			<input type="hidden" name="post_type" value="staff" /> <!-- // hidden 'staff' value -->
-			<div class="small-6 columns">
+			<div class="small-4 columns">
 				<label for="specialty">Specialty</label>
 				<select name="specialty">
 					<option value="">Select an Option</option>
@@ -29,7 +29,7 @@
 					<option value="Urology">Urology</option>
 				</select>
 			</div>
-			<div class="small-6 columns">
+			<div class="small-4 columns">
 				<label for="carecenter">Location</label>
 				<select name="carecenter">
 					<option value="">Select a Location</option>
@@ -41,6 +41,14 @@
 					<option value="Pinellas Care Center">Pinellas Care Center</option>
 					<option value="Santa Barbara Care Center">Santa Barbara Care Center</option>
 					<option value="Specialty Care Center">Specialty Care Center</option>
+				</select>
+			</div>
+			<div class="small-4 columns">
+				<label for="gender">Gender</label>
+				<select name="gender">
+					<option value="">Select a Gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
 				</select>
 			</div>
 			<input class="top-button orange" type="submit" alt="Search" value="Find A Doctor" />

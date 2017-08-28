@@ -32,7 +32,7 @@ $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 		if ( $options['tvh_pn_textbox'] != null || $options['tvh_pn_textbox'] != "" ) : ?>
 			<!--<a href="tel:<?php echo $justnumber; ?>">--><button class="special-button orange"><?php echo $options['tvh_pn_textbox']; ?></button><!--</a>-->
 		<?php endif; ?>
-			<a href="<?php echo site_url(); ?>/for-patients/request-an-appointment/" class="bcta-center"><button class="top-button orange">Make An Appointment</button></a>
+			<a href="<?php echo site_url(); ?>/for-patients/request-an-appointment/" class="bcta-center"><button class="top-button orange">Request An Appointment</button></a>
 			<a href="https://mycw42.eclinicalweb.com/portal4749/jsp/100mp/login_otp.jsp" target="_blank"><button class="top-button orange">Patient Portal</button></a>
 		</div>
 	</div>

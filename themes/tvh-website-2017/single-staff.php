@@ -18,7 +18,7 @@ $dr_residency = get_field('residency') ? get_field('residency') : "" ;
 $dr_certifications = get_field('certifications') ? get_field('certifications') : "" ;
 $dr_fellowships = get_field('fellowships') ? get_field('fellowships') : "" ;
 $dr_quote = get_field('quote') ? get_field('quote') : "" ;
-
+$dr_type = get_the_category();
 $thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', true );
 $thumbnail_url = $thumbnail_url[0];
 get_header(); ?>
@@ -33,7 +33,7 @@ get_header(); ?>
 			<div class="entry-image row collapse" style="background:url(<?php echo $thumbnail_url; ?>) top center / cover;">
 				<?php //echo the_post_thumbnail('full'); ?>
 				<div class="entry-caption small-12 columns">
-					<h3><?php echo $dr_firstname . "&nbsp;". $dr_lastname; ?>, <?php echo $dr_credentials; ?> </h3>
+					<h3><?php echo $dr_firstname . "&nbsp;". $dr_lastname; ?><?php echo ( $dr_credentials == '' ? '' : ', ' . $dr_credentials  ); ?> </h3>
 					<h4><?php echo $dr_position; ?></h4>
 				</div>
 			</div>
@@ -68,7 +68,7 @@ get_header(); ?>
 			<?php endif; ?>
 			</div>
 
-			<?php if( get_field('quote') ): ?>
+			<?php if( ( get_field('quote') ) && ($dr_type[0]->name != 'Leadership') ) : ?>
 			    <h5 class="staff-quote">"<?php echo $dr_quote; ?>"</h5>
 			<?php endif; ?>
 
