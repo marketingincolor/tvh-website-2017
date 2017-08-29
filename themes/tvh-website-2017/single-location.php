@@ -44,14 +44,11 @@ get_header(); ?>
 			<p><?php the_tags(); ?></p>
 		</footer>
 		<?php //the_post_navigation(); ?>
+			
+		<?php get_template_part('template-parts/location-team'); ?>
+
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
 		<?php //comments_template(); ?>
-		
-		<?php if ( $location_slug == 'specialty-care-center' ) : ?>
-			<?php get_template_part( 'template-parts/services-grid' ); ?>
-		<?php else : ?>
-			<?php get_template_part('template-parts/location-team'); ?>
-		<?php endif; ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
 	</article>
 <?php endwhile;?>

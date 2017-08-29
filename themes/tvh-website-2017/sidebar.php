@@ -38,6 +38,9 @@ switch($slug) {
 	case 'become-a-patient':
 		get_template_part( 'sidebar-tlc' );
 		break;
+	case 'diabetes-program':
+		get_template_part( 'sidebar-tlc' );
+		break;
 	case 'patient-information':
 		get_template_part( 'sidebar-tlc' );
 		break;
