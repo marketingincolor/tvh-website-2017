@@ -260,7 +260,7 @@ function tvh_staff_pagination($numpages = '', $pagerange = '', $paged='') {
    * function. 
    */
   $pagination_args = array(
-    'base'            => get_pagenum_link(1) . '%_%',
+    //'base'            => get_pagenum_link(1) . '%_%',
     'format'          => 'page/%#%',
     'total'           => $numpages,
     'current'         => $paged,
