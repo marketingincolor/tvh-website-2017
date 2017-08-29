@@ -25,6 +25,9 @@ get_header(); ?>
 			<div class="serv-sub<?php echo ( is_single('audiology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/audiology">Audiology</a>
 			</div>
+			<div class="serv-sub<?php echo ( is_single('behavioral-health') ? ' current' : ''); ?>">
+				<a href="<?php echo site_url('/specialty-services'); ?>/behavioral-health">Behavioral Health</a>
+			</div>
 			<div class="serv-sub<?php echo ( is_single('cardiology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/cardiology">Cardiology</a>
 			</div>
@@ -91,6 +94,12 @@ get_header(); ?>
 
 		<?php get_template_part( 'template-parts/specialty-team' ); ?>
 		
+		<?php if ( is_single('cardiology') || is_single('audiology') ) : ?>
+			<div class="entry-content row columns" style="margin-top:2em;">	
+				<?php echo get_field('secondary_content'); ?>
+			</div>
+		<?php endif; ?>
+
 	</article>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>

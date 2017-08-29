@@ -3,7 +3,11 @@
 // 
 //$staff_location = get_the_title();
 $staff_location = $post->post_name;
-if ($staff_location == 'general-surgery') { $staff_location = 'General Surgery'; }
+if ($staff_location == 'general-surgery') {
+	$staff_location = 'General Surgery'; 
+} elseif ($staff_location == 'behavioral-health') {
+	$staff_location = 'Behavioral Health'; 
+}
 $doc_args = array(
 	//'meta_key' => 'specialty',
 	//'meta_value' => $staff_location,
@@ -15,7 +19,8 @@ $doc_args = array(
 		'all_clause' => array(
 			'key' => 'specialty',
 			'value' => $staff_location,
-			'compare' => 'LIKE',
+			//'compare' => 'LIKE',
+			'compare' => '=',
 		),
 		'last_clause' => array(
 			'key' => 'last_name',
