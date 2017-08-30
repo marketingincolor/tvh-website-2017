@@ -42,7 +42,7 @@ switch($slug) {
 		get_template_part( 'sidebar-tlc' );
 		break;
 	case 'become-a-patient':
-		get_template_part( 'sidebar-tlc' );
+		get_template_part( 'sidebar-carecenters' );
 		break;
 	case 'diabetes-program':
 		get_template_part( 'sidebar-tlc' );

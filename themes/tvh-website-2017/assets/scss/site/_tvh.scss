@@ -127,7 +127,7 @@ a:hover { color:#a85020; }
 .nf-form-cont {
   background-color:$grey;
   border-radius:22px;
-  padding:2em;
+  padding:2em 6em;
   margin-top:2.2rem;
   h3 { padding:0; text-align:center; }
   .nf-before-form-content { font-size:0.85rem; }
@@ -139,6 +139,7 @@ a:hover { color:#a85020; }
     height:3em;
     margin-bottom:1em;
   }
+  .event-button,
   .ninja-forms-field[type="button"] {
     background-color:transparent;
     color:$orange;
@@ -150,7 +151,14 @@ a:hover { color:#a85020; }
     font-size:18px;
     cursor:pointer;
   }
+  .event-button:hover,
   .ninja-forms-field[type="button"]:hover { background-color:$orange; color:#fff; }
+}
+
+.request-an-appointment .entry-content,
+.new-patient-form .entry-content {
+  @include grid-column(10);
+  @include grid-column-position(center);
 }
 
 // Staff Listings

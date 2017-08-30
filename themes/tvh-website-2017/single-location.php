@@ -1,12 +1,13 @@
 <?php
 /**
- * The template for displaying all single posts and attachments
+ * The template for displaying single locations
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
 $location_id = get_the_id();
 $location_slug = get_post_field( 'post_name', $location_id );
+$location_title = 'Welcome to ';
 $location_address = get_post_meta($location_id, '_location_address', true);
 $location_town = get_post_meta($location_id, '_location_town', true);
 $location_state = get_post_meta($location_id, '_location_state', true);
@@ -24,7 +25,7 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
 		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="entry-title"><?php echo $location_title; ?><?php the_title(); ?></h1>
 			<?php //foundationpress_entry_meta(); ?>
 		</header>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
