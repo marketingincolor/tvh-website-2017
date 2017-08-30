@@ -32,6 +32,9 @@ switch($slug) {
 	case 'general-recruitment':
 		get_template_part( 'sidebar-recruit' );
 		break;
+	case 'benefits-of-medicare':
+		get_template_part( 'sidebar-benefits' );
+		break;
 	case 'primary-accepted-insurance':
 		get_template_part( 'sidebar-tlc' );
 		break;
