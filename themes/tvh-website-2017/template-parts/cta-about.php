@@ -23,8 +23,8 @@
 	<div class="front-cta small-12 large-4 columns end">
 		<div class="default small-12 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-aboutmain-img-accolades.jpg" alt="">
-			<h3>AWARDS BLURB &ndash; NEED NEW AWARD INFO</h3>
-			<p data-equalizer-watch="inner">Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+			<h3>Impressive Accolades</h3>
+			<p data-equalizer-watch="inner">Our dedication to provide world-class health care has resulted in some impressive designations and accomplishments.</p>
 			<p class="btn-box"><a href="<?php echo site_url(); ?>/about/awards-accreditions/"><button class="cta-button orange">Read More</button></a></p>
 		</div>
 	</div>
