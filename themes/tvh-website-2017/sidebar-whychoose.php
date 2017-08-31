@@ -40,7 +40,7 @@ $options = get_option('tvh_theme_options');
 			Specialty Care
 		</div>
 		<div class="widget-container">
-			<p>You don't have to be our patient to see our specialists.</p>
+			<p>You don't have to be a primary care patient at TVH to benefit from our exceptional specialty care. Make your appointment with one of our specialists today!</p>
 			<a href="<?php echo site_url(); ?>/specialty-services/"><button class="cta-button orange">Learn More</button></a>
 		</div>
 	</article>

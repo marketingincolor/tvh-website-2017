@@ -25,7 +25,7 @@
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-aboutmain-img-accolades.jpg" alt="">
 			<h3>Impressive Accolades</h3>
 			<p data-equalizer-watch="inner">Our dedication to provide world-class health care has resulted in some impressive designations and accomplishments.</p>
-			<p class="btn-box"><a href="<?php echo site_url(); ?>/about/awards-accreditions/"><button class="cta-button orange">Read More</button></a></p>
+			<p class="btn-box"><a href="<?php echo site_url(); ?>/about/awards-accreditations/"><button class="cta-button orange">Read More</button></a></p>
 		</div>
 	</div>
 </div>

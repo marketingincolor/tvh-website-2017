@@ -32,7 +32,7 @@
 
 			<div class='nf-form-cont'>
 				<form action='../events-listings' method='post'>
-					<p>Or, to find the learning experience that’s just right for you, search our range of topics using the following options:</p>
+					<p>To find the learning experience that's just right for you, search our range of topics using the following options:</p>
 					<div class="small-6 columns">
 						<select name='event-type'>
 							<option value=''>Choose Type of Event</option>

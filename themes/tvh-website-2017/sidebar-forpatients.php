@@ -18,7 +18,7 @@ $dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
 	<article id="widget-2" class="widget widget-directory-dl">
 		<?php get_template_part( 'template-parts/provider-download' ); ?>
 	</article>
-	<article id="widget-3" class="widget widget-directory-dl">
+	<!--<article id="widget-3" class="widget widget-directory-dl">
 		<div class="widget-title">
 			Primary Care Services
 		</div>
@@ -26,6 +26,6 @@ $dr_location = get_field('carecenter') ? get_field('carecenter') : "" ;
 			<p>Learn everything you need to know about becoming a primary care patient and its many convenient benefits.</p>
 			<a href="<?php echo site_url(); ?>/services/primary-care"><button class="cta-button orange">Learn More</button></a>
 		</div>
-	</article>
+	</article>-->
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>
 </aside>

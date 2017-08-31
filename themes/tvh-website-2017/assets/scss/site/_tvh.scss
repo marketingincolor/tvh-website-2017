@@ -20,6 +20,7 @@ a:hover { color:#a85020; }
 .main-wrap .main-content {} /* article */
 .main-wrap .main-content header {}
 .main-wrap .main-content header .entry-title { font-size:36px; font-weight:300; } /* h1 */
+.main-wrap .main-content header .entry-title sup { font-size:24px; font-weight:300; vertical-align:super; } /* h1 */
 .main-wrap .entry-content a { text-decoration:underline; }
 .main-wrap .entry-content ul { margin-left: 3.5rem; }
 .disclaimer { font-size:14px; line-height:1.4; font-style:italic; }
