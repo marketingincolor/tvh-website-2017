@@ -94,7 +94,8 @@ get_header(); ?>
 
 		<?php get_template_part( 'template-parts/specialty-team' ); ?>
 		
-		<?php if ( is_single('cardiology') || is_single('audiology') ) : ?>
+		<?php //if ( is_single('cardiology') || is_single('audiology') || is_single('urology') ) : ?>
+		<?php if ( get_field('secondary_content') != '' ) : ?>
 			<div class="entry-content row columns" style="margin-top:2em;">	
 				<?php echo get_field('secondary_content'); ?>
 			</div>
