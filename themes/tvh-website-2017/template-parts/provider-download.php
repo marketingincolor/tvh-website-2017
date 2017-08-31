@@ -7,4 +7,4 @@
 	$dr_location = get_field('location') ? get_field('location') : "" ;
 ?>
 
-<a href="<?php echo site_url(); ?>/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-cover.jpg" alt="Image of Provider Directory"></a>
+<a href="https://www.thevillageshealth.com/TVHPD/TVHProviderDirectory.pdf"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-dir-img-cover.jpg" alt="Image of Provider Directory"></a>

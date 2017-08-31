@@ -8022,8 +8022,8 @@ a:hover {
     background-color: #db6829;
     color: #fff; }
 
-.request-an-appointment .entry-content,
-.new-patient-form .entry-content {
+.request-an-appointment .entry-content .nf-form-cont,
+.new-patient-form .entry-content .nf-form-cont {
   width: 83.33333%;
   float: left;
   padding-right: 0.625rem;
@@ -8031,18 +8031,21 @@ a:hover {
   margin-right: auto;
   margin-left: auto; }
   @media print, screen and (min-width: 40em) {
-    .request-an-appointment .entry-content,
-    .new-patient-form .entry-content {
+    .request-an-appointment .entry-content .nf-form-cont,
+    .new-patient-form .entry-content .nf-form-cont {
       padding-right: 0.9375rem;
       padding-left: 0.9375rem; } }
-  .request-an-appointment .entry-content:last-child:not(:first-child),
-  .new-patient-form .entry-content:last-child:not(:first-child) {
+  .request-an-appointment .entry-content .nf-form-cont:last-child:not(:first-child),
+  .new-patient-form .entry-content .nf-form-cont:last-child:not(:first-child) {
     float: right; }
-  .request-an-appointment .entry-content, .request-an-appointment .entry-content:last-child:not(:first-child),
-  .new-patient-form .entry-content,
-  .new-patient-form .entry-content:last-child:not(:first-child) {
+  .request-an-appointment .entry-content .nf-form-cont, .request-an-appointment .entry-content .nf-form-cont:last-child:not(:first-child),
+  .new-patient-form .entry-content .nf-form-cont,
+  .new-patient-form .entry-content .nf-form-cont:last-child:not(:first-child) {
     float: none;
     clear: both; }
+  .request-an-appointment .entry-content .nf-form-cont .nf-form-wrap,
+  .new-patient-form .entry-content .nf-form-cont .nf-form-wrap {
+    padding: 2em 6em; }
 
 .single-staff .main-wrap {
   background: inherit; }

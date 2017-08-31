@@ -156,10 +156,11 @@ a:hover { color:#a85020; }
   .ninja-forms-field[type="button"]:hover { background-color:$orange; color:#fff; }
 }
 
-.request-an-appointment .entry-content,
-.new-patient-form .entry-content {
+.request-an-appointment .entry-content .nf-form-cont,
+.new-patient-form .entry-content .nf-form-cont {
   @include grid-column(10);
   @include grid-column-position(center);
+  .nf-form-wrap {padding:2em 6em;}
 }
 
 // Staff Listings
