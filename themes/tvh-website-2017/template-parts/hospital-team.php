@@ -3,6 +3,7 @@
 // 
 $args = array(
 	'category_name' => 'hospitalist',
+	'posts_per_page' => -1,
 	'post_type' => 'staff'
 );
 ?>

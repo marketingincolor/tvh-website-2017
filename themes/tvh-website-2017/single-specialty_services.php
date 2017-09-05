@@ -89,7 +89,7 @@ get_header(); ?>
 		</footer>
 		<?php //the_post_navigation(); ?>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
-		<?php comments_template(); ?>
+		<?php //comments_template(); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
 
 		<?php get_template_part( 'template-parts/specialty-team' ); ?>

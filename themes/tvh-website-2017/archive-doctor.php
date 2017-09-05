@@ -30,6 +30,7 @@ get_header(); ?>
 	//echo 'String: ' . $search . '<br />';
 	//echo 'Speciality: ' .$specialty . '<br />';
 	//echo 'Location: ' . $location . '<br />';
+	//echo 'Gender: ' . $gender . '<br />';
 	//print_r($_GET);
 	?>
 	<?php
@@ -38,6 +39,7 @@ get_header(); ?>
 	$args = array(
 		's' => $search,
 		'category__not_in' => tvh_exclude_staff(),
+		//'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 		'posts_per_page' => 10,
 		'paged' => $paged,
 		'post_type'  => 'staff',
@@ -56,7 +58,7 @@ get_header(); ?>
 			array(
 				'key'     => 'gender',
 				'value'   => $gender,
-				'compare' => 'LIKE',
+				'compare' => '=',
 			),
 		),
 	);
@@ -76,8 +78,8 @@ get_header(); ?>
 					<?php if( get_field('position') ): ?>
 					    <span><?php the_field('position'); ?></span> -
 					<?php endif; ?>
-					<?php if( get_field('location') ): ?>
-					    <span><?php the_field('location'); ?></span>
+					<?php if( get_field('carecenter') ): ?>
+					    <span><?php the_field('carecenter'); ?></span>
 					<?php endif; ?>
 					</a>
 				</div>

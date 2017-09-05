@@ -30,6 +30,7 @@
 			$loc_state = get_post_meta($loc_id, '_location_state', true);
 			$loc_zip = get_post_meta($loc_id, '_location_postcode', true);
 			$loc_phone = get_post_meta($loc_id, 'location_phone', true);
+			$loc_fax = get_post_meta($loc_id, 'location_fax', true);
 			$loc_time = get_post_meta($loc_id, 'location_time', true);
 
 			switch ($loc_slug) {
@@ -67,7 +68,10 @@
 				<div id="individual-center" class="text-center">
 					<a href="<?php echo site_url() . '/' . $loc_slug; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-<?php echo $loc_slug; ?>-thumb.png"></a>
 					<p><strong><a href="<?php echo site_url() . '/' . $loc_slug; ?>"><?php echo $loc_title; ?></a></strong></p>
+					<p><?php echo $loc_address; ?><br>
+					<?php echo $loc_town; ?>, <?php echo $loc_state; ?> <?php echo $loc_zip; ?></p>
 					<p><?php echo $loc_phone; ?></p>
+					<p><?php echo ( $loc_fax != '' ? 'Fax: ' . $loc_fax  : '' ); ?></p>
 
 				</div> 
 			</div>

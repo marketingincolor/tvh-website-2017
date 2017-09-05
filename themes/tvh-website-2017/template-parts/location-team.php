@@ -34,9 +34,51 @@ switch ($page_location) {
 	break;
 }
 
+$spdoc_args = array(
+	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'specialty',
+	'meta_value' => array( 'cardiology', 'audiology', 'dermatology', 'neurology', 'psychiatry' ),
+	'meta_compare' => 'NOT IN',
+	'meta_query' => array(
+		'relation' => 'OR',
+		array(
+			'relation' => 'AND',
+			'all_clause' => array(
+				'key' => 'carecenter',
+				'value' => $staff_location,
+				'compare' => 'LIKE',
+			),
+			'last_clause' => array(
+				'key' => 'last_name',
+				'compare' => 'EXISTS'
+			),
+		),
+		array(
+			'relation' => 'AND',
+			'center_clause' => array(
+				'key' => 'carecenter',
+				'value' => $staff_location,
+				'compare' => 'LIKE',
+			),
+			'pos_clause' => array(
+				'key' => 'position',
+				'value' => 'Medical Director',
+				'compare' => '=',
+			),
+		),
+	),
+	'orderby' => array(
+		'pos_clause' => 'DESC',
+		'last_clause' => 'ASC',
+	),
+);
+
 $doc_args = array(
 	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
+	'posts_per_page' => -1,
 	'meta_query' => array(
 		'relation' => 'OR',
 		array(
@@ -71,9 +113,9 @@ $doc_args = array(
 	),
 );
 $staff_args = array(
-	'category__in' => array( 4, 5, 6, 9, 10 ),
+	'category__in' => array( 6, 9, 10 ),
 	'post_type' => 'staff',
-
+	'posts_per_page' => -1,
 	'meta_query' => array(
 		'relation' => 'AND',
 		'all_clause' => array(
@@ -93,7 +135,7 @@ $staff_args = array(
 $psr_args = array(
 	'category__in' => array( 8 ),
 	'post_type' => 'staff',
-
+	'posts_per_page' => -1,
 	'meta_query' => array(
 		'relation' => 'AND',
 		'all_clause' => array(
@@ -123,7 +165,12 @@ $psr_args = array(
 	<div class="row" data-equalizer data-equalize-by-row="true">
 
 	<?php 
-	$show_drs = new WP_Query( $doc_args );
+	if ($staff_location == 'Specialty Care Center' ) {
+		$show_args = $spdoc_args;
+	} else {
+		$show_args = $doc_args;
+	}
+	$show_drs = new WP_Query( $show_args );
 	if($show_drs->have_posts()) :
 		while ($show_drs->have_posts()) : $show_drs->the_post(); 
 		$dr_credentials = get_field('credentials') ? get_field('credentials') : "" ;

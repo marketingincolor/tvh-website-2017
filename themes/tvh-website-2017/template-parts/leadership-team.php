@@ -3,6 +3,7 @@
 // 
 $args = array(
 	'category_name' => 'leadership',
+	'posts_per_page' => -1,
 	'post_type' => 'staff'
 );
 ?>
