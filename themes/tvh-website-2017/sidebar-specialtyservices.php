@@ -14,6 +14,35 @@ $location = get_field('carecenter') ? get_field('carecenter') : "" ;
 		<?php get_template_part( 'template-parts/side-location' ); ?>
 	</article>
 	<?php endif; ?>
+
+	<?php if ( (is_single('cardiology')) || (is_single('endocrinology')) || (is_single('gastroenterology')) || (is_single('general-surgery')) || (is_single('gynecology')) || (is_single('orthopaedics')) || (is_single('rheumatology')) ) : 
+		$bw_location = 'Brownwood Care Center' ;
+		$bw_url = 'brownwood-care-center';
+		$bwloc_id = get_id_by_slug( $bw_location, 'location' );
+		$bw_address = get_post_meta($bwloc_id, '_location_address', true);
+		$bw_town = get_post_meta($bwloc_id, '_location_town', true);
+		$bw_state = get_post_meta($bwloc_id, '_location_state', true);
+		$bw_zip = get_post_meta($bwloc_id, '_location_postcode', true);
+		$bw_country = get_post_meta($bwloc_id, '_location_country', true);
+		$bw_phone = get_post_meta($bwloc_id, 'location_phone', true);
+		$bw_time = get_post_meta($bwloc_id, 'location_time', true);
+	?>
+	<article id="widget-1" class="widget widget-location">
+		<div class="staff-widget-title">
+			<?php echo $bw_location; ?>
+		</div>
+		<div class="staff-widget-container">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-phone.png" alt="Phone Number:">
+			<h3 class="context"><?php echo $bw_phone; ?></h3>
+			<a href="<?php echo site_url('/care-centers/') . $bw_url; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-address.png" alt="Address:"></a>
+			<h4 class="context"><?php echo $bw_address; ?><br>
+			<?php echo $bw_town; ?>, <?php echo $bw_state; ?>, <?php echo $bw_zip; ?></h4>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-hours.png" alt="Office Hours:">
+			<h4>Office Hours:<br><?php echo $bw_time; ?></h4>
+		</div>
+	</article>
+	<?php endif; ?>
+
 	<article id="widget-2" class="widget widget-insurance">
 		<?php get_template_part( 'template-parts/accepted-insurance' ); ?>
 	</article>

@@ -11,9 +11,9 @@
 	</div>
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-behavioralhealth-thumb.jpg">
-		<h5>Behavioral Health</h5>
+		<h5>Psychiatry</h5>
 		<h6>It's vital to protect your mental health in addition to caring for your physical health. Our mental health professionals are here to support you.</h6>
-		<a href="./behavioral-health"><button class="cta-button orange">Learn More</button></a>
+		<a href="./psychiatry"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-cardiology-thumb.jpg">
