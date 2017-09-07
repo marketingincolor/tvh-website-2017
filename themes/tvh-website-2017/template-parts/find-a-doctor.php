@@ -55,3 +55,7 @@
 		</form>
 	</div>
 </div>
+
+<div>
+<h3>Our complete list of primary care doctors and specialists is available for <a href="https://www.thevillageshealth.com/TVHPD/TVHProviderDirectory.pdf"><u>download here</u></a>.</h3>
+</div>

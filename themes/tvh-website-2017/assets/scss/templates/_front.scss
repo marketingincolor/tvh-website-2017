@@ -65,6 +65,9 @@
       @include grid-column-end;
 
     }*/
+    @include breakpoint(small) {
+      margin-bottom: rem-calc(25);
+    }
     .default,
     .choose,
     .tour {
@@ -75,7 +78,7 @@
 
 
     img {
-
+      width:100%;
     }
 
     h3 {

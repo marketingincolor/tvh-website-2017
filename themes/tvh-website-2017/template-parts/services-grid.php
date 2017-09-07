@@ -10,15 +10,9 @@
 		<a href="./audiology"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-behavioralhealth-thumb.jpg">
-		<h5>Psychiatry</h5>
-		<h6>It's vital to protect your mental health in addition to caring for your physical health. Our mental health professionals are here to support you.</h6>
-		<a href="./psychiatry"><button class="cta-button orange">Learn More</button></a>
-	</div>
-	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-cardiology-thumb.jpg">
 		<h5>Cardiology</h5>
-		<h6>Our cardiologists have the expertise you can count on to fight heart disease, America's number one killer.</h6>
+		<h6>Our team offers high-quality, comprehensive cardiac care by providing prevention, management and the latest treatments for heart conditions.</h6>
 		<a href="./cardiology"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
@@ -36,13 +30,13 @@
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-gastroenterology-thumb.jpg">
 		<h5>Gastroenterology</h5>
-		<h6>Benefit from gastroenterology care led by a former National Institutes of Health researcher in gastrointestinal disorders.</h6>
+		<h6>Comprehensive evaluation and treatment for disorders of the digestive system or gastrointestinal tract.</h6>
 		<a href="./gastroenterology"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-generalsurgery-thumb.jpg">
 		<h5>General Surgery</h5>
-		<h6>No one enjoys having surgery but if you need an operation, our experienced general surgeons will get you back on your feet quickly.</h6>
+		<h6>If you need an operation, trust our experienced general surgeons to get you back on your feet quickly.</h6>
 		<a href="./general-surgery"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
@@ -54,19 +48,25 @@
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-neurology-thumb.jpg">
 		<h5>Neurology</h5>
-		<h6>With dementia, degenerative diseases, and stroke prevalent in senior populations, we're thrilled to offer exceptional neurology care.</h6>
+		<h6>Our board-certified neurologist is here to help  with care for dementia, degenerative diseases, stroke and other neurological conditions.</h6>
 		<a href="./neurology"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-orthopaedics-thumb.jpg">
 		<h5>Orthopaedics</h5>
-		<h6>Our orthopaedic specialists can help you address major joint, shoulder, and knee pain to enjoy maximum mobility.</h6>
+		<h6>Our orthopaedic specialists can help you address joint pain that makes you struggle to enjoy maximum mobility.</h6>
 		<a href="./orthopaedics"><button class="cta-button orange">Learn More</button></a>
+	</div>
+	<div class="services-item column" data-equalizer-watch>
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-behavioralhealth-thumb.jpg">
+		<h5>Psychiatry</h5>
+		<h6>Our behavioral health professionals work in partnership with your TVH Primary Care physician to care for your mental health needs.</h6>
+		<a href="./psychiatry"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-rheumatology-thumb.jpg">
 		<h5>Rheumatology</h5>
-		<h6>Our board-certified rheumatologist can help alleviate your discomfort with the most up-to-date treatments available.</h6>
+		<h6>We offer the most up-to-date treatments for arthritis, gout, osteoporosis and other rheumatologic conditions.</h6>
 		<a href="./rheumatology"><button class="cta-button orange">Learn More</button></a>
 	</div>
 	<div class="services-item column" data-equalizer-watch>

@@ -15,6 +15,8 @@ $location_zip = get_post_meta($location_id, '_location_postcode', true);
 $location_country = get_post_meta($location_id, '_location_country', true);
 $location_phone = get_post_meta($location_id, 'location_phone', true);
 $location_time = get_post_meta($location_id, 'location_time', true);
+$loc_event_id = get_post_meta($location_id, '_location_id', true);
+$event_short = '[events_list_grouped location="'.$loc_event_id.'" mode="monthly" country="US"]#_EVENTLINK - #_EVENTDATES at #_EVENTTIMES<br />[/events_list_grouped]';
 get_header(); ?>
 
 <?php get_template_part( 'template-parts/featured-image' ); ?>
@@ -31,7 +33,7 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
-			<?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php //edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 		<footer>
 			<?php
@@ -43,6 +45,16 @@ get_header(); ?>
 				);
 			?>
 			<p><?php the_tags(); ?></p>
+			<div class="show-for-medium">
+				<?php //echo do_shortcode($event_short) ; ?>
+				<?php 
+					$some_var = EM_Events::output(array('location'=>$loc_event_id));
+					if ($some_var != 'No Events') { 
+						echo '<h2>Upcoming Events</h2>';
+						echo do_shortcode($event_short); 
+					}
+				?>
+			</div>
 		</footer>
 		<?php //the_post_navigation(); ?>
 			

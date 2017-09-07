@@ -2,9 +2,14 @@
   @include grid-row();
   margin-top: 1rem;
   margin-bottom: rem-calc(75);
-
   @include breakpoint(medium) {
     margin-top: 3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+  }
+  @include breakpoint(small) {
+    padding-left:1rem;
+    padding-right:1rem;
   }
 }
 

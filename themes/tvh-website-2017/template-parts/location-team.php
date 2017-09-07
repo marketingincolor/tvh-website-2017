@@ -71,10 +71,10 @@ $spdoc_args = array(
 	),
 	'orderby' => array(
 		'pos_clause' => 'DESC',
+		'specialty' => 'ASC',
 		'last_clause' => 'ASC',
 	),
 );
-
 $doc_args = array(
 	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
