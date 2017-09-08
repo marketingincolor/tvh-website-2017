@@ -43,6 +43,17 @@ $location = get_field('carecenter') ? get_field('carecenter') : "" ;
 	</article>
 	<?php endif; ?>
 
+	<?php if ( is_single('audiology') ) : ?>
+		<article id="widget-1a" class="widget widget-custom">
+			<div class="staff-widget-title">
+				Specialty Care Center
+			</div>
+			<div class="staff-widget-container">
+				<p>To make an appointment, call (352) 674-1700</p>
+			</div>
+		</article>
+	<?php endif; ?>
+
 	<article id="widget-2" class="widget widget-insurance">
 		<?php get_template_part( 'template-parts/accepted-insurance' ); ?>
 	</article>

@@ -2,6 +2,9 @@
   @include grid-row;
   margin-top: 2.5em;
   margin-bottom: 2em;
+  @include breakpoint(small only) {
+    margin:.75em 0em;
+  }
 }
 
 .site-logo {
@@ -14,7 +17,7 @@
 .site-cta {
   @include grid-column(12);
     @include breakpoint(medium) {
-    @include grid-column(7);
+    @include grid-column(8);
     text-align:right;
     margin-top:0.5%;
   }	

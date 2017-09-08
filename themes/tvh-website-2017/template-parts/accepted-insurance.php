@@ -14,6 +14,13 @@
 		<p>See the list of insurance policies that we accept for primary care.</p>
 		<p><a href="<?php echo site_url(); ?>/for-patients/primary-accepted-insurance/"><button class="cta-button orange">Primary Care</button></a></p>
 	</div>
+<?php elseif ( is_single('audiology') ) : ?>
+	<div class="staff-widget-title">
+		Accepted Insurance
+	</div>
+	<div class="staff-widget-container">
+		<p>TVH Audiology works with most insurance plans.</p>
+	</div>
 <?php else : ?>
 	<div class="staff-widget-title">
 		Accepted Insurance

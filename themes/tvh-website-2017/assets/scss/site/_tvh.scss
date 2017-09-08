@@ -54,12 +54,6 @@ a:hover { color:#a85020; }
 
 
 
-
-
-
-
-
-
 .main-wrap { margin-bottom:2rem; } /* see content.scss */
 .main-wrap .main-content {} /* article */
 .main-wrap .main-content header {}
@@ -351,12 +345,19 @@ a:hover { color:#a85020; }
   line-height:.2;
   font-size:17px;
   cursor:pointer;
+  @include breakpoint(small only) {
+    line-height:1;
+    padding:1px 20px !important;
+  }
 }
 .cta-button-front {
   font-size:18px;
 }
 .top-button:hover, .cta-button:hover, .cta-button-front:hover { background-color:$orange; color:#fff; }
-.bcta-center { margin:0px 4px; }
+.bcta-center {
+  margin:0px 4px; 
+  @include breakpoint(small only) { margin:0; }
+}
 .testimonial {
   .tm-content {
     @include grid-row();

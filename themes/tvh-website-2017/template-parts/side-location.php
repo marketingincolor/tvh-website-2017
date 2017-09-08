@@ -8,6 +8,9 @@
 		$location_id = get_the_id();
 		$show_location = 'Contact Us';
 	}
+	if ( $show_location == 'Specialty Care Center' ) {
+		$show_location = $show_location . 's';
+	}
 	//$location_url = get_post_meta($location_id, '_location_slug', true);
 	$location_url = get_page_uri($location_id);
 	$location_address = get_post_meta($location_id, '_location_address', true);

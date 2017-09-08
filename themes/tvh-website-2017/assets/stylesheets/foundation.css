@@ -7231,26 +7231,26 @@ a.thumbnail {
 .top-bar, .top-bar ul {
   background-color: #ffffff; }
 
-.top-bar li {
+.top-bar .desktop-menu li {
   height: 42px;
   display: inline-block; }
 
-.top-bar li a {
+.top-bar .desktop-menu li a {
   color: #333;
   font-weight: normal;
   font-size: 1em;
   padding: 0.5rem 0.75rem !important; }
 
-.top-bar .is-dropdown-submenu {
+.top-bar .desktop-menu .is-dropdown-submenu {
   background: transparent;
   border: none;
   min-width: 240px; }
 
-.top-bar .is-dropdown-submenu li {
+.top-bar .desktop-menu .is-dropdown-submenu li {
   background-color: rgba(219, 104, 41, 0.9);
   height: auto; }
 
-.top-bar .is-dropdown-submenu li a {
+.top-bar .desktop-menu .is-dropdown-submenu li a {
   color: #fff; }
 
 .desktop-menu .active a {
@@ -7303,9 +7303,17 @@ a.thumbnail {
 .mobile-off-canvas-menu .is-accordion-submenu-parent.active > a::after {
   border-color: transparent transparent transparent !important; }
 
+.mobile-menu li,
+.mobile-off-canvas-menu li {
+  vertical-align: middle;
+  border-bottom: 1px solid #e6e6e6; }
+
 .mobile-menu .current_page_item > a,
 .mobile-off-canvas-menu .current_page_item > a {
-  font-weight: bold; }
+  font-weight: bold;
+  background: #db6829;
+  height: 100%;
+  color: #fff; }
 
 .desktop-menu li.is-dropdown-submenu-parent > a::after {
   border-color: transparent transparent transparent !important; }
@@ -7341,6 +7349,9 @@ a.thumbnail {
     content: ' '; }
   .site-top::after {
     clear: both; }
+  @media screen and (max-width: 39.9375em) {
+    .site-top {
+      margin: .75em 0em; } }
 
 .site-logo {
   width: 100%;
@@ -7380,7 +7391,7 @@ a.thumbnail {
     float: right; }
   @media print, screen and (min-width: 40em) {
     .site-cta {
-      width: 58.33333%;
+      width: 66.66667%;
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem;
@@ -7630,11 +7641,18 @@ body#tinymce {
 [data-whatinput="mouse"] a:focus, button:focus [data-whatinput="touch"] a:focus, button:focus {
   outline: none; }
 
+@media screen and (max-width: 39.9375em) {
+  .front-hero {
+    position: relative; } }
+
 .front-hero .tagline {
   position: absolute;
   top: calc(24rem - 40px);
   left: calc(50% - 40px);
   display: inline-block; }
+  @media screen and (max-width: 39.9375em) {
+    .front-hero .tagline {
+      top: calc(50% - 40px); } }
 
 .intro {
   max-width: 81.25rem;
@@ -8222,6 +8240,11 @@ a:hover {
   line-height: .2;
   font-size: 17px;
   cursor: pointer; }
+  @media screen and (max-width: 39.9375em) {
+    .cta-button,
+    .cta-button-front {
+      line-height: 1;
+      padding: 1px 20px !important; } }
 
 .cta-button-front {
   font-size: 18px; }
@@ -8232,6 +8255,9 @@ a:hover {
 
 .bcta-center {
   margin: 0px 4px; }
+  @media screen and (max-width: 39.9375em) {
+    .bcta-center {
+      margin: 0; } }
 
 .testimonial {
   background: url("../images/tvh-tm-bgnd.jpg") top center;

@@ -7,8 +7,8 @@
 	<div class="front-cta small-12 large-6 columns">
 		<div class="choose small-10 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-care-img-primary.jpg">
-			<h3>Primary Care Services</h3>
-			<p data-equalizer-watch="inner">Learn about the many benefits of becoming a patient of The Villages Health.</p>
+			<h3>Patient Information</h3>
+			<p data-equalizer-watch="inner">Learn more about benefits and services available to you as a patient of The Villages Health.</p>
 			<p class="btn-box"><a href="<?php echo site_url('/'); ?>for-patients/patient-information"><button class="cta-button-front orange">Learn More</button></a></p>
 		</div>
 	</div>

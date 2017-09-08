@@ -8,6 +8,9 @@
 $location_id = get_the_id();
 $location_slug = get_post_field( 'post_name', $location_id );
 $location_title = 'Welcome to ';
+if ($location_slug == 'specialty-care-center') {
+	$location_title = 'Welcome to our ';
+}
 $location_address = get_post_meta($location_id, '_location_address', true);
 $location_town = get_post_meta($location_id, '_location_town', true);
 $location_state = get_post_meta($location_id, '_location_state', true);
