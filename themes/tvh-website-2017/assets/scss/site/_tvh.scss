@@ -146,9 +146,6 @@ a:hover { color:#a85020; }
     }
   }
 
-
-
-
   /*ul {
     display:inline-block; margin:0 !important; list-style:none;
     li {
@@ -165,6 +162,31 @@ a:hover { color:#a85020; }
       border-bottom:3px solid $orange;
     }
   }*/
+}
+
+//Learning Center
+.main-wrap .entry-content {
+  ul {
+    margin-left:0 !important;
+    border:none !important;
+    background:transparent;
+    text-align:center;
+    .tabs-title {
+      float:none !important;
+      display:inline-block;
+    }
+    .tabs-title > a[aria-selected='true'] { background:transparent; }
+  }
+  .tabs-content {
+    border:none;
+    width:80%;
+    margin:auto;
+    th, td { text-align:center; }
+    th:first-child, td:first-child { width:50%; text-align:left;
+    }
+    td, td p { font-size:1em; }
+
+  }
 }
 
 // FORMS

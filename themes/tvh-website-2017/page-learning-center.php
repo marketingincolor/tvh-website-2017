@@ -25,12 +25,36 @@
 		<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
+			
+
+			<ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+			  <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true"><button class="top-button orange">Classes</button></a></li>
+			  <li class="tabs-title"><a href="#panel2c"><button class="top-button orange">Boot Camps</button></a></li>
+			  <li class="tabs-title"><a href="#panel3c"><button class="top-button orange">Screenings</button></a></li>
+			  <li class="tabs-title"><a href="#panel4c"><button class="top-button orange">Location</button></a></li>
+			</ul>
+
+			<div class="tabs-content" data-tabs-content="collapsing-tabs">
+			  <div class="tabs-panel is-active" id="panel1c">
+			    <?php echo EM_Events::output(array('scope'=>'3-months', 'category'=>'classes' )); ?>
+			  </div>
+			  <div class="tabs-panel" id="panel2c">
+			    <?php echo EM_Events::output(array('scope'=>'3-months', 'category'=>'boot-camps' )); ?>
+			  </div>
+			  <div class="tabs-panel" id="panel3c">
+			    <?php echo EM_Events::output(array('scope'=>'3-months', 'category'=>'screenings' )); ?>
+			  </div>
+			  <div class="tabs-panel" id="panel4c">
+			    <?php echo EM_Events::output(array('scope'=>'3-months', 'orderby'=>'location_name' )); ?>
+			  </div>
+			</div>
+
 
 			<?php //echo do_shortcode('[event_search_form]'); ?>
-			<h2> Upcoming Events</h2>
-			<?php echo EM_Events::output(array('limit'=>10, 'pagination'=>1 )); ?>
+			<!--<h2> Upcoming Events</h2>-->
+			<?php //echo EM_Events::output(array('limit'=>10, 'pagination'=>1 )); ?>
 
-			<div class='nf-form-cont'>
+			<!--<div class='nf-form-cont'>
 				<form action='../events-listings' method='post'>
 					<p>To find the learning experience that's just right for you, search our range of topics using the following options:</p>
 					<div class="small-6 columns">
@@ -59,7 +83,7 @@
 					<input class='event-button orange' type='submit' value='Submit'> 
 
 				</form>
-			</div>
+			</div>-->
 
 		</div>
 	</article>
