@@ -152,6 +152,46 @@ $psr_args = array(
 		'last_clause' => 'ASC',
 	),
 );
+$pncc_args = array(
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'last_name',
+	'meta_value' => array( 'Turri', 'Zaka' ),
+	'meta_compare' => 'IN',
+	'orderby' => array( 'last_name' => 'ASC', ),
+);
+$cocc_args = array(
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'last_name',
+	'meta_value' => array( 'Turri', 'Pratesi' ),
+	'meta_compare' => 'IN',
+	'orderby' => array( 'last_name' => 'ASC', ),
+);
+$crcc_args = array(
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'last_name',
+	'meta_value' => array( 'Turri', 'Montero' ),
+	'meta_compare' => 'IN',
+	'orderby' => array( 'last_name' => 'ASC', ),
+);
+$sbcc_args = array(
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'last_name',
+	'meta_value' => array( 'Waldo' ),
+	'meta_compare' => 'IN',
+	'orderby' => array( 'last_name' => 'ASC', ),
+);
+$mgcc_args = array(
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'last_name',
+	'meta_value' => array( 'Zaka' ),
+	'meta_compare' => 'IN',
+	'orderby' => array( 'last_name' => 'ASC', ),
+);
 ?>
 <?php if ($staff_location != 'Saturday Acute Care Clinic') : ?>
 <!--DOCTOR TEMPLATE -->
@@ -183,6 +223,43 @@ $psr_args = array(
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p><strong><?php the_title(); ?>, <?php echo $dr_credentials; ?></strong></p>
 				<p><em><?php echo $dr_position; ?></em></p>
+				<!--IF HAS BIO ADD HERE -->
+				<!--END IF HAS BIO-->
+				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
+			</div> 
+		</div>
+		<!-- end loop to display team -->
+	<?php 
+		endwhile; 
+	endif;
+	wp_reset_postdata();
+	?>
+
+	<?php 
+	if ($staff_location == 'Pinellas Care Center' ) {
+		$custom_args = $pncc_args;
+	} elseif ($staff_location == 'Colony Care Center' ) {
+		$custom_args = $cocc_args;
+	} elseif ($staff_location == 'Creekside Care Center' ) {
+		$custom_args = $crcc_args;
+	} elseif ($staff_location == 'Santa Barbara Care Center' ) {
+		$custom_args = $sbcc_args;
+	} elseif ($staff_location == 'Mulberry Grove Care Center' ) {
+		$custom_args = $mgcc_args;
+	}
+	$show_custom = new WP_Query( $custom_args );
+	if($show_custom->have_posts()) :
+		while ($show_custom->have_posts()) : $show_custom->the_post(); 
+		$custom_credentials = get_field('credentials') ? get_field('credentials') : "" ;
+		$custom_position = get_field('position') ? get_field('position') : "" ;
+		$custom_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
+		?>
+		<!-- Loop to display team -->
+		<div class="small-12 medium-6 columns">
+			<div id="individual-doctor" class="text-center" data-equalizer-watch>
+				<img src="<?php echo $custom_round['url']; ?>" alt="<?php the_title(); ?> photo">
+				<p><strong><?php the_title(); ?>, <?php echo $custom_credentials; ?></strong></p>
+				<p><em><?php echo $custom_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
 				<!--END IF HAS BIO-->
 				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>

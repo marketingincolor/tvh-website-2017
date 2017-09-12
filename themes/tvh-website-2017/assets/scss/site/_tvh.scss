@@ -23,37 +23,6 @@ $black: #333333;
 // Page Content
 a { color:$orange; }
 a:hover { color:#a85020; }
-
-
-/*.main-wrap {
-  margin-bottom:2rem;
-  @include breakpoint(small) {
-    @include grid-column-row(2em);
-  }
-  @include breakpoint(medium) {
-    @include grid-column-row();
-  }
-  .main-content{
-    header {
-      .entry-title{
-        font-size:36px; font-weight:300;
-        @include breakpoint(small) {
-          font-size:30px;
-        }
-        sup {
-          font-size:24px; font-weight:300; vertical-align:super;
-        }
-      }
-    }
-  }
-  .entry-content {
-    a {text-decoration:underline;}
-    ul{margin-left: 3.5rem;}
-  }
-} */
-
-
-
 .main-wrap { margin-bottom:2rem; } /* see content.scss */
 .main-wrap .main-content {} /* article */
 .main-wrap .main-content header {}
@@ -145,23 +114,6 @@ a:hover { color:#a85020; }
       color:#fff;
     }
   }
-
-  /*ul {
-    display:inline-block; margin:0 !important; list-style:none;
-    li {
-      padding:-1px; position:relative; list-style-type:none; display:inline-block; border-bottom:3px solid $orange;
-    }
-    li:after { 
-      position:absolute; 
-      content:"\2022"; 
-      left:42%; 
-      bottom:0; 
-      font-size:56px; 
-      line-height:0; 
-      color:$orange;
-      border-bottom:3px solid $orange;
-    }
-  }*/
 }
 
 //Learning Center
@@ -220,6 +172,37 @@ a:hover { color:#a85020; }
   .event-button:hover,
   .ninja-forms-field[type="button"]:hover { background-color:$orange; color:#fff; }
 }
+.em-booking {
+  @include grid-column(6);
+  @include grid-column-end;
+}
+.em-booking-form {
+  background-color:$grey;
+  border-radius:22px;
+  padding:2em;
+  margin-top:2.2rem;
+  display:inline-block;
+  input[type="text"], input[type="email"], input[type="tel"], select, textarea { 
+    border-radius:10px; 
+    border:none;
+    line-height:1.4;
+    height:3em;
+    margin-bottom:1em;
+    width:100%;
+  }
+  textarea { height:6em; }
+  .em-booking-buttons input {
+    background-color:transparent;
+    color:$orange;
+    border-radius: 7px;
+    height: 41px;
+    padding: 14px 20px;
+    border: 1.5px solid $orange;
+    line-height:.4;
+    font-size:18px;
+    cursor:pointer;
+  }
+}
 
 .request-an-appointment .entry-content .nf-form-cont,
 .new-patient-form .entry-content .nf-form-cont {
@@ -272,12 +255,8 @@ a:hover { color:#a85020; }
 
 // Sidebars, including staff
 .sidebar, .sidebar-staff {
-  @include breakpoint(large) {
-    padding-left:4em;
-  }
-  @include breakpoint(small) {
-    padding:2em;
-  }
+  @include breakpoint(large) { padding-left:4em; }
+  @include breakpoint(small) { padding:2em; }
   article {
     margin-bottom:2em;
     background-color:$grey;
@@ -326,6 +305,9 @@ a:hover { color:#a85020; }
 #individual-doctor img { border-radius: 50%; padding-bottom:1rem; }
 #individual-doctor p:first-child { margin-bottom:0rem; }
 
+.meet-your-leadership-team h2,
+.meet-your-hospitalist-team h2 { padding-top:1.4rem; }
+
 // Location Maps
 .em-location-map-container { 
   width:100% !important; border-radius:22px !important; margin-top:2.8rem;
@@ -335,9 +317,7 @@ a:hover { color:#a85020; }
   width:100% !important; border-radius:22px !important; height:230px !important; 
   .em-location-map, .em-locations-map { border-radius:22px !important; }
 }
-.meet-your-leadership-team h2,
-.meet-your-hospitalist-team h2 { padding-top:1.4rem; }
-
+.single-event .em-location-map-container { margin-top:0rem; }
 
 // Testimonial Components
 .orange { color:$orange; }
@@ -353,9 +333,7 @@ a:hover { color:#a85020; }
   @include breakpoint(small only) {
     width:100%;
     margin:.5em 0;
-
   }
-
 }
 
 .cta-button,
@@ -372,9 +350,7 @@ a:hover { color:#a85020; }
     padding:1px 20px !important;
   }
 }
-.cta-button-front {
-  font-size:18px;
-}
+.cta-button-front { font-size:18px; }
 .top-button:hover, .cta-button:hover, .cta-button-front:hover { background-color:$orange; color:#fff; }
 .bcta-center {
   margin:0px 4px; 
@@ -387,18 +363,12 @@ a:hover { color:#a85020; }
     color:#fff;
     position:relative;
     top:50%;
-    @include breakpoint(medium) {
-      transform:translateY(-50%);
-    }
-    @include breakpoint(small) {
-      transform:translateY(0%);
-    }
+    @include breakpoint(medium) { transform:translateY(-50%); }
+    @include breakpoint(small) { transform:translateY(0%); }
 
   }
   .tm-content h3 { font-size:1.625rem; font-weight:300; line-height:1.5; padding:0em;
-    @include breakpoint(small) {
-      padding: .5em 2em;
-    }
+    @include breakpoint(small) { padding: .5em 2em; }
   }
   .tm-content h4 { font-size:1rem; font-style:italic; font-weight:400; margin-top:.95em;}
   @include breakpoint(small) {
@@ -432,9 +402,7 @@ a:hover { color:#a85020; }
     font-weight:300;
     font-size:1.25rem;
   }
-  .testimonial-attrib {
-
-  }
+  .testimonial-attrib {  }
 }
 
 //News
