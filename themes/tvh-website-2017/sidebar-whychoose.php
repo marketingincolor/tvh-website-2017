@@ -24,7 +24,7 @@ $options = get_option('tvh_theme_options');
 		</div>
 		<div class="widget-container">
 			<p>Stop by any Care Center or call to schedule your personal tour to see firsthand how exceptional health care can be.</p>
-			<a href="<?php echo site_url(); ?>/care-centers"><button class="cta-button orange">Locations &amp; Phone Numbers</button></a>
+			<a href="<?php echo site_url(); ?>/care-centers"><button class="cta-button orange">Locations</button></a>
 		</div>
 	</article>
 	<article id="widget-3" class="widget widget-directory-dl">

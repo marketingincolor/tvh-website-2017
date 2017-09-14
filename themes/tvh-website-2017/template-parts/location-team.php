@@ -164,7 +164,7 @@ $cocc_args = array(
 	'post_type' => 'staff',
 	'posts_per_page' => -1,
 	'meta_key' => 'last_name',
-	'meta_value' => array( 'Turri', 'Pratesi' ),
+	'meta_value' => array( 'Turri', 'Pratesi-Bradley' ),
 	'meta_compare' => 'IN',
 	'orderby' => array( 'last_name' => 'ASC', ),
 );

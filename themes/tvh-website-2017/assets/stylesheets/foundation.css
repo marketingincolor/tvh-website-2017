@@ -8001,27 +8001,27 @@ a:hover {
     .specialty-subnav .serv-sub:hover a:hover {
       color: #fff; }
 
-.main-wrap .entry-content ul {
+.learning-center .container .main-wrap .entry-content ul {
   margin-left: 0 !important;
   border: none !important;
   background: transparent;
   text-align: center; }
-  .main-wrap .entry-content ul .tabs-title {
+  .learning-center .container .main-wrap .entry-content ul .tabs-title {
     float: none !important;
     display: inline-block; }
-  .main-wrap .entry-content ul .tabs-title > a[aria-selected='true'] {
+  .learning-center .container .main-wrap .entry-content ul .tabs-title > a[aria-selected='true'] {
     background: transparent; }
 
-.main-wrap .entry-content .tabs-content {
+.learning-center .container .main-wrap .entry-content .tabs-content {
   border: none;
   width: 80%;
   margin: auto; }
-  .main-wrap .entry-content .tabs-content th, .main-wrap .entry-content .tabs-content td {
+  .learning-center .container .main-wrap .entry-content .tabs-content th, .learning-center .container .main-wrap .entry-content .tabs-content td {
     text-align: center; }
-  .main-wrap .entry-content .tabs-content th:first-child, .main-wrap .entry-content .tabs-content td:first-child {
+  .learning-center .container .main-wrap .entry-content .tabs-content th:first-child, .learning-center .container .main-wrap .entry-content .tabs-content td:first-child {
     width: 50%;
     text-align: left; }
-  .main-wrap .entry-content .tabs-content td, .main-wrap .entry-content .tabs-content td p {
+  .learning-center .container .main-wrap .entry-content .tabs-content td, .learning-center .container .main-wrap .entry-content .tabs-content td p {
     font-size: 1em; }
 
 .nf-form-cont {

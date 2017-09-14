@@ -8,7 +8,7 @@ get_header(); ?>
 <header class="front-hero">
 	<?php get_template_part( 'template-parts/featured-image' ); ?>
 	<div class="tagline">
-	<a href="https://www.youtube.com/watch?v=0WkF47c28nc&t&rel=0" rel="wp-video-lightbox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tvh-ws-btn-vid-launch.png" /></a>
+	<a href="https://my.matterport.com/show/?m=woxE3zsTMnD?iframe=true" rel="wp-video-lightbox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tvh-ws-btn-vid-launch.png" /></a>
 	</div>
 </header>
 <?php else : ?>

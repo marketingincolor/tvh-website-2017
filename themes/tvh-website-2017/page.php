@@ -16,7 +16,7 @@
 <header class="front-hero">
 	<?php get_template_part( 'template-parts/featured-image' ); ?>
 	<div class="tagline">
-	<a href="https://www.youtube.com/watch?v=5YbOsZiu6ZE&rel=0" rel="wp-video-lightbox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tvh-ws-btn-vid-launch.png" /></a>
+	<a href="https://www.youtube.com/watch?v=pKhpg_XfH-o&t&rel=0" rel="wp-video-lightbox"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tvh-ws-btn-vid-launch.png" /></a>
 	</div>
 </header>
 <?php else : ?>
