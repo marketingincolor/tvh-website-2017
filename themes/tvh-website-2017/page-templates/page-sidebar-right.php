@@ -46,6 +46,10 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/services-grid' ); ?>
 		<?php endif; ?>
 
+		<?php if ( is_page('news')): ?>
+			<?php get_template_part( 'template-parts/newsfeed' ); ?>
+		<?php endif; ?>
+
 	</article>
 <?php endwhile;?>
 

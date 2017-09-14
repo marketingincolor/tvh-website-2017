@@ -320,3 +320,15 @@ function tvh_exclude_staff() {
 
   return $category;
 }
+
+/* ------------------------------------------------------------------------ *
+ * Custom Excerpt Changes
+ * ------------------------------------------------------------------------ */
+function custom_excerpt_length( $length ) {
+  return 40;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function custom_excerpt_more( $more ) {
+  return ' ... Read More';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
