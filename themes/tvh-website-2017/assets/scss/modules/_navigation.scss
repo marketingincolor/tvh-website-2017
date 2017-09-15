@@ -1,14 +1,46 @@
 // Navigation breakpoints
+
+.site-header {
+  @include breakpoint(medium down) {
+  display:inline-block; 
+  position:absolute;
+  right:0;
+  width:100%;
+  z-index:10;
+  }
+
+}
+
+.menu-icon {
+ width:80%;
+}
+.menu-icon:after, .menu-icon:hover:after {
+  background:#db6829;
+  height:2px;
+  webkit-box-shadow:0 7px 0 #db6829, 0 14px 0 #db6829, 0 21px 0 #db6829;
+  box-shadow:0 7px 0 #db6829, 0 14px 0 #db6829, 0 21px 0 #db6829;
+}
+
 .mobile-menu,
 .site-title-bar {
-  @include hide-for(medium);
+  //@include hide-for(medium);
+  @include hide-for(large);
+  position:relative;
+  z-index:10;
+  background:transparent;
 }
 
 .desktop-menu,
 .site-navigation .top-bar-left {
-  @include show-for(medium);
+  //@include show-for(medium);
+  @include show-for(large);
 }
-
+.title-bar-right {
+  color:#db6829;
+  text-align:center;
+  text-transform:uppercase;
+}
+.title-bar-title { font-weight:normal; }
 .desktop-menu,
 .site-navigation .top-bar-nav {
   @include grid-row;
@@ -19,7 +51,7 @@
 
 // Navigation Bar
 .top-bar { padding:0; /*margin-top:1.5em;*/ }
-.top-bar, .top-bar ul { background-color:#ffffff; }
+.top-bar, .top-bar ul { background-color:transparent; }
 .top-bar .desktop-menu li { height:42px; display:inline-block;  }
 .top-bar .desktop-menu li a { color:#333; font-weight:normal; font-size:1em; padding:0.5rem 0.75rem !important; }
 
@@ -59,6 +91,14 @@
 // Mobile menu
 .mobile-menu {
   display: none; // prevents repaint caused by JS hiding menu onload
+  position: relative;
+  ul { 
+    background-color:rgba(219, 104, 41, 0.9); 
+    a {
+      color:#fff;
+    }
+  }
+
 }
 
 
@@ -68,10 +108,10 @@
   // submenu arrow
   .is-accordion-submenu-parent {
     > a::after {
-      border-color: /*#333*/ transparent transparent transparent !important;
+      border-color: #fff transparent transparent transparent !important;
     }
     &.active > a::after {
-      border-color: /*#333*/ transparent transparent transparent !important;
+      border-color: #fff transparent transparent transparent !important;
     }
   }
   li { 

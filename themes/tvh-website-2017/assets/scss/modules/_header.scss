@@ -1,24 +1,30 @@
 .site-top {
   @include grid-row;
   margin-top: 2.5em;
-  margin-bottom: 2em;
   @include breakpoint(small only) {
-    margin:.75em 0em;
+    margin-top:.75em;
   }
 }
 
 .site-logo {
-  @include grid-column(12);
-    @include breakpoint(medium) {
+  @include grid-column(10);
+    @include breakpoint(large) {
     @include grid-column(4);
   }
+  a {z-index:20; position:relative;}
 }
 
 .site-cta {
   @include grid-column(12);
-    @include breakpoint(medium) {
+  background-color:#f5f5f2;
+  padding-top:0.75em;
+  padding-bottom:0.75em;
+  text-align:center;
+  margin-top:.5em;
+    @include breakpoint(large) {
+    background-color:#fff;
     @include grid-column(8);
     text-align:right;
-    margin-top:0.5%;
+    margin-top:0.5em;
   }	
 }

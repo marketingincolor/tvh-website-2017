@@ -17,13 +17,13 @@
 
   // default 2 column
   //@include grid-column(12);
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     @include grid-column(12);
   }
 
   // 1 column
   //.full-width.main-wrap & {
-  //  @include breakpoint(medium) {
+  //  @include breakpoint(large) {
   //    @include grid-column(12);
   //  }
   //}
@@ -31,14 +31,14 @@
   // 2 column sidebar right
   .sidebar-right.main-wrap & {
     @include grid-column(12);
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       @include grid-column(8);
     }
   }
 
   // 2 column sidebar left
   .sidebar-left.main-wrap & {
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       @include grid-column(8);
       @include grid-col-pos(4);
     }
@@ -49,14 +49,14 @@
 
   // default 2 column
   @include grid-column(12);
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     @include grid-column(4);
     //margin-top: 1rem;
   }
 
   // 2 column sidebar left
   .sidebar-left.main-wrap & {
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       @include grid-column(4);
       @include grid-col-pos(-8);
       //margin-top: 1rem;

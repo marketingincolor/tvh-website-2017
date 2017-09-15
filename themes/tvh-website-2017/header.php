@@ -26,7 +26,31 @@ $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 	<?php do_action( 'foundationpress_after_body' ); ?>
 	
 	<div class="site-top collapse-for-medium-up">
-		<div class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-logo-header-main.png" alt="<?php bloginfo( 'name' ); ?>" /></a></div>
+		<div class="site-logo hide-for-small-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-logo-header-main.png" alt="<?php bloginfo( 'name' ); ?>" /></a>
+
+			<header class="site-header" role="banner">
+				<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?> data-hide-for="large">
+					<div class="title-bar-right">
+						<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button><span class="site-mobile-title title-bar-title">Menu</span>
+					</div>
+				</div>
+			</header>
+
+
+		</div>
+		<div class="site-logo hide-for-medium"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-logo-header-main-sm.png" alt="<?php bloginfo( 'name' ); ?>" /></a>
+
+
+			<header class="site-header" role="banner">
+				<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?> data-hide-for="large">
+					<div class="title-bar-right">
+						<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button><span class="site-mobile-title title-bar-title">Menu</span>
+					</div>
+				</div>
+			</header>
+
+
+		</div>
 		<div class="site-cta">
 		<?php 
 		if ( $options['tvh_pn_textbox'] != null || $options['tvh_pn_textbox'] != "" ) : ?>
@@ -44,12 +68,12 @@ $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
+		<!--<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?> data-hide-for="large">
 			<div class="title-bar-left">
 				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 				<span class="site-mobile-title title-bar-title">Menu</span>
 			</div>
-		</div>
+		</div>-->
 		<nav class="site-navigation top-bar" role="navigation">
 			<!--<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">

@@ -10,6 +10,9 @@
     top: calc(24rem - 40px);
     left: calc(50% - 40px);
     display:inline-block;
+    @include breakpoint(large down) {
+      top: calc(20rem - 40px);
+    }
     @include breakpoint(small only) {
       top: calc(50% - 40px);
     }
