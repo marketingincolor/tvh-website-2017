@@ -4,12 +4,12 @@
   margin-bottom: rem-calc(75);
   @include breakpoint(medium) {
     margin-top: 3rem;
-    padding-left:1rem;
-    padding-right:1rem;
+    //padding-left:1rem;
+    //padding-right:1rem;
   }
   @include breakpoint(small) {
-    padding-left:1rem;
-    padding-right:1rem;
+    padding-left:0rem;
+    padding-right:0rem;
   }
 }
 
@@ -17,6 +17,8 @@
 
   // default 2 column
   //@include grid-column(12);
+  padding-left:1rem;
+  padding-right:1rem;
   @include breakpoint(large) {
     @include grid-column(12);
   }
@@ -31,6 +33,12 @@
   // 2 column sidebar right
   .sidebar-right.main-wrap & {
     @include grid-column(12);
+
+    @include breakpoint(medium down) {
+      padding:0rem 1rem;
+      padding-left:1rem;
+      padding-right:1rem;
+    }
     @include breakpoint(large) {
       @include grid-column(8);
     }
@@ -45,10 +53,18 @@
   }
 }
 
+
+
+
+
+
 .sidebar {
 
   // default 2 column
   @include grid-column(12);
+  @include breakpoint(medium down) {
+    @include grid-column-collapse;
+  }
   @include breakpoint(large) {
     @include grid-column(4);
     //margin-top: 1rem;

@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   height: rem-calc(240);
   @include breakpoint(medium) {
+    //height: rem-calc(300);
+    height: calc(100vw * (5/8));
+  }
+  @include breakpoint(large) {
     height: rem-calc(300);
   }
   @include breakpoint(xlarge) {
@@ -14,10 +18,40 @@
     text-align:right;
     line-height:15rem;
     @include breakpoint(medium) {
+      //line-height: 19rem;
+      line-height: calc(100vw * (5/8));
+    }
+    @include breakpoint(large) {
       line-height: 19rem;
     }
-        @include breakpoint(xlarge) {
+    @include breakpoint(xlarge) {
       line-height: 25rem;
+    }
+    .featured-caption {
+      background:rgba(255,255,255, .85);
+      font-size:.85em;
+      font-style:italic;
+      padding:.5em 1em;
+      display:inline-block;
+      vertical-align:bottom;
+      line-height:normal;
+    }
+  }
+}
+
+.sm-featured-hero {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  //height: rem-calc(240);
+  height: calc(100vw * (5/8));
+  .featured-display {
+    max-width: 81.25rem;
+    text-align:right;
+    //line-height:15rem;
+    line-height: calc(100vw * (5/8));
+    @include breakpoint(medium) {
+      line-height: 19rem;
     }
     .featured-caption {
       background:rgba(255,255,255, .85);

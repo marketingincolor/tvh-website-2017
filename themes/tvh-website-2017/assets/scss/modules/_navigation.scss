@@ -101,7 +101,6 @@
 
 }
 
-
 .mobile-menu,
 .mobile-off-canvas-menu {
 
@@ -125,6 +124,7 @@
     height:100%;
     color:#fff;
   }
+.menu .active > a { background-color:rgba(168, 80, 32, 0.8); }
 }
 
 

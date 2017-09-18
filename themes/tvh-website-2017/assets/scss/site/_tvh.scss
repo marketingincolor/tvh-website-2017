@@ -1,3 +1,28 @@
+// =======================================
+// ========== Table of Contents ==========
+// =======================================
+/*
+1.) General Styles
+2.) Page Content
+3.) Doctor Finder
+4.) Services
+5.) Specialty Subnav
+6.) Learning Center
+7.) Forms
+8.) Staff Listings
+9.) Sidebars
+10.) 
+11.) 
+12.) 
+13.) 
+14.) 
+15.) 
+*/
+
+// =======================================
+// ========= 1.) General Styles ==========
+// =======================================
+
 body { font-size:1.125em; color:#333333; }
 h1 { font-size:2.25rem; margin-bottom:1rem; }
 h2 { font-size:1.625rem; font-weight:300; }
@@ -20,10 +45,15 @@ $green: #2d7a3d;
 $grey: #f5f5f2;
 $black: #333333;
 
-// Page Content
+// =======================================
+// ========== 2.) Page Content ===========
+// =======================================
+
 a { color:$orange; }
 a:hover { color:#a85020; }
-.main-wrap { margin-bottom:2rem; } /* see content.scss */
+.main-wrap { 
+  margin-bottom:2rem; 
+} /* see content.scss */
 .main-wrap .main-content {} /* article */
 .main-wrap .main-content header {}
 .main-wrap .main-content header .entry-title { 
@@ -46,7 +76,11 @@ a:hover { color:#a85020; }
   font-size:26px;
   text-align:center;
 }
-// Doctor Finder
+
+// =======================================
+// ========= 3.) Doctor Finder ===========
+// =======================================
+
 .doctor-finder {
   @include grid-column(12);
   background-color:$grey;
@@ -70,7 +104,10 @@ a:hover { color:#a85020; }
   }
 }
 
-// Services
+// =======================================
+// ============ 4.) Services =============
+// =======================================
+
 .services-grid {
   text-align:center;
   padding:1em 0em 3em;
@@ -84,7 +121,10 @@ a:hover { color:#a85020; }
   }
 }
 
-// Specialty Subnav
+// =======================================
+// ======== 5.) Specialty Subnav =========
+// =======================================
+
 .specialty-subnav { 
   text-align:center;
   padding-bottom:3rem;
@@ -116,7 +156,10 @@ a:hover { color:#a85020; }
   }
 }
 
-//Learning Center
+// =======================================
+// ======== 6.) Learning Center ==========
+// =======================================
+
 .learning-center .container .main-wrap .entry-content {
   ul {
     margin-left:0 !important;
@@ -139,7 +182,10 @@ a:hover { color:#a85020; }
   }
 }
 
-// FORMS
+// =======================================
+// ============== 7.) Forms ==============
+// =======================================
+
 .nf-form-cont {
   background-color:$grey;
   border-radius:22px;
@@ -209,7 +255,10 @@ a:hover { color:#a85020; }
   .nf-form-wrap {padding:2em 6em;}
 }
 
-// Staff Listings
+// =======================================
+// ========= 8.) Staff Listings ==========
+// =======================================
+
 .single-staff {
   .main-wrap {
     background:inherit;
@@ -251,14 +300,18 @@ a:hover { color:#a85020; }
   }
 }
 
-// Sidebars, including staff
+// =======================================
+// ============ 9.) Sidebars =============
+// =======================================
+
 .sidebar, .sidebar-staff {
   @include breakpoint(large) { padding-left:4em; }
-  @include breakpoint(small) { padding:2em; }
+ //@include breakpoint(small) { padding:2em; }
   article {
     margin-bottom:2em;
     background-color:$grey;
     border-radius:22px;
+    @include breakpoint(medium down) { border-radius:0px; }
     .widget-title, .staff-widget-title {
       font-size:1.25rem;
       background-color:$green;
@@ -266,6 +319,7 @@ a:hover { color:#a85020; }
       text-align:center;
       color:#fff;
       padding:.5em 0em;
+      @include breakpoint(medium down) { border-radius:0px; }
     }
     .widget-container, .staff-widget-container {
       padding:2em;
