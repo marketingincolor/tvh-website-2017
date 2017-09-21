@@ -49,4 +49,9 @@ get_header(); ?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 <?php //get_sidebar(); ?>
 </div>
+
+<?php if ( is_single('evergreen-wellness') ) : ?>
+	<?php get_template_part('template-parts/egw-popup'); ?>
+<?php endif; ?>
+
 <?php get_footer();

@@ -285,8 +285,7 @@ $mgcc_args = array(
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $staff_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p>
-					<strong><?php the_title(); ?>
-					<?php if(get_field('credentials')) { echo ', '.$staff_credentials; } ?></strong>
+					<strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$staff_credentials; } ?></strong>
 				</p>
 				<p><em><?php echo $staff_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->
@@ -315,8 +314,7 @@ $mgcc_args = array(
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $psr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p>
-					<strong><?php the_title(); ?>
-					<?php if(get_field('credentials')) { echo ', '.$psr_credentials; } ?></strong>
+					<strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$psr_credentials; } ?></strong>
 				</p>
 				<p><em><?php echo $psr_position; ?></em></p>
 				<!--IF HAS BIO ADD HERE -->

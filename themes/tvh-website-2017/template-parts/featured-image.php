@@ -11,7 +11,7 @@ if ( (has_post_thumbnail( $post->ID )) && $small_thumb == "" ) : ?>
 	<?php endif; ?>
 	</header>
 
-<?php else : ?>
+<?php elseif ( (has_post_thumbnail( $post->ID )) && $small_thumb != "" ) : ?>
 
 	<header class="featured-hero row expanded show-for-medium" role="banner" data-interchange="[<?php echo $small_thumb['url']; ?>, medium], [<?php echo the_post_thumbnail_url('featured-large'); ?>, large], [<?php echo the_post_thumbnail_url('featured-xlarge'); ?>, xlarge]">
 	<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
@@ -27,7 +27,7 @@ if ( (has_post_thumbnail( $post->ID )) && $small_thumb == "" ) : ?>
     	<div class="featured-caption"><?php echo $caption; ?></div>
     </div>
 	<?php endif; ?>
-	</header>	
+	</header>
 
 <?php endif; ?>
 

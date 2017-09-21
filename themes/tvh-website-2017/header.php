@@ -21,6 +21,7 @@ $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 		<?php wp_head(); ?>
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/javascript/js.cookie.js"></script>
 	</head>
 	<body <?php if ( is_page($post_slug) ) { body_class( $post_slug ); } else { body_class(); } ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>

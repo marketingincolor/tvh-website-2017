@@ -8269,11 +8269,11 @@ body#tinymce {
 7.) Forms
 8.) Staff Listings
 9.) Sidebars
-10.) 
-11.) 
-12.) 
-13.) 
-14.) 
+10.) Teams
+11.) Locations
+12.) Testimonials
+13.) News
+14.) Footer
 15.) 
 */
 body {
@@ -8456,8 +8456,9 @@ a:hover {
 
 .learning-center .container .main-wrap .entry-content .tabs-content {
   border: none;
-  width: 80%;
   margin: auto; }
+  .learning-center .container .main-wrap .entry-content .tabs-content .tabs-panel {
+    padding: 0rem; }
   .learning-center .container .main-wrap .entry-content .tabs-content th, .learning-center .container .main-wrap .entry-content .tabs-content td {
     text-align: center; }
   .learning-center .container .main-wrap .entry-content .tabs-content th:first-child, .learning-center .container .main-wrap .entry-content .tabs-content td:first-child {
@@ -8465,6 +8466,9 @@ a:hover {
     text-align: left; }
   .learning-center .container .main-wrap .entry-content .tabs-content td, .learning-center .container .main-wrap .entry-content .tabs-content td p {
     font-size: 1em; }
+  @media screen and (max-width: 39.9375em) {
+    .learning-center .container .main-wrap .entry-content .tabs-content p {
+      display: none !important; } }
 
 .nf-form-cont {
   background-color: #f5f5f2;
@@ -8810,6 +8814,18 @@ a:hover {
       display: none; }
     .entry-content .display-posts-listing .listing-item .excerpt {
       display: block; }
+
+.reveal {
+  border: none; }
+  .reveal .notify {
+    border: 1px solid #db6829;
+    padding: 2em;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #db6829; }
+    .reveal .notify p {
+      font-size: 0.85rem;
+      color: #333; }
 
 .footer-social-link {
   display: inline-block; }

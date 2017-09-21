@@ -11,11 +11,11 @@
 7.) Forms
 8.) Staff Listings
 9.) Sidebars
-10.) 
-11.) 
-12.) 
-13.) 
-14.) 
+10.) Teams
+11.) Locations
+12.) Testimonials
+13.) News
+14.) Footer
 15.) 
 */
 
@@ -174,11 +174,15 @@ a:hover { color:#a85020; }
   }
   .tabs-content {
     border:none;
-    width:80%;
+    //width:80%;
     margin:auto;
+    .tabs-panel { padding:0rem; }
     th, td { text-align:center; }
     th:first-child, td:first-child { width:50%; text-align:left; }
     td, td p { font-size:1em; }
+    p { 
+      @include show-for('medium');
+     }
   }
 }
 
@@ -342,13 +346,15 @@ a:hover { color:#a85020; }
 .list-cc:first-child { padding-top:0; }
 .sidebar-location .widget-photo img, .sidebar .widget-directory-dl img { max-width:none; width:100%; }
 
-// Locations
+// =======================================
+// ============= 10.) Teams ==============
+// =======================================
 .meet-your-care-team { 
   border-left: 5px solid #2c7a3e; padding-left: 1rem; margin: 2rem 0rem; 
   h2 { padding:1rem 0rem; margin-bottom:0; }
 }
 
-// Teams
+
 .btn-box { margin-top:1.5rem; }
 #individual-doctor { 
   p { margin-bottom:.5rem; line-height:1.2; }
@@ -360,7 +366,9 @@ a:hover { color:#a85020; }
 .meet-your-leadership-team h2,
 .meet-your-hospitalist-team h2 { padding-top:1.4rem; }
 
-// Location Maps
+// =======================================
+// =========== 11.) Locations ============
+// =======================================
 .em-location-map-container { 
   width:100% !important; border-radius:22px !important; margin-top:2.8rem;
   .em-location-map, .em-locations-map { border-radius:22px !important; }
@@ -371,7 +379,9 @@ a:hover { color:#a85020; }
 }
 .single-event .em-location-map-container { margin-top:0rem; }
 
-// Testimonial Components
+// =======================================
+// ========= 12.) Testimonials ===========
+// =======================================
 .orange { color:$orange; }
 .top-button,
 .special-button {
@@ -457,7 +467,10 @@ a:hover { color:#a85020; }
   .testimonial-attrib {  }
 }
 
-//News
+// =======================================
+// ============== 13.) News ==============
+// =======================================
+
 .entry-content .display-posts-listing {
   margin-left:0rem !important;
   list-style-type:none;
@@ -472,10 +485,26 @@ a:hover { color:#a85020; }
     .excerpt-dash { display:none; }
     .excerpt { display:block; }
   }
-
+}
+.reveal {
+  border:none;
+  .notify {
+      border:1px solid $orange; 
+      padding:2em;
+      font-size:0.85rem;
+      text-align:center;
+      color:$orange;
+     p { 
+      font-size:0.85rem; 
+      color:#333;
+    }
+  }
 }
 
-// Footer Social Links
+// =======================================
+// ============= 14.) Footer =============
+// =======================================
+
 .footer-social-link {
 	display: inline-block; 
 	
