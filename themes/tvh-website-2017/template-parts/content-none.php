@@ -27,6 +27,11 @@
 		?>
 	</p>
 
+	<?php elseif ( is_search() && $post_type == 'staff' ) : ?>
+
+	<p><?php _e( 'Sorry, but no Doctor matched your search terms. Please <a onclick="history.back()">try again</a> with some different keywords.', 'foundationpress' ); ?></p>
+	<?php //get_search_form(); ?>
+
 	<?php elseif ( is_search() ) : ?>
 
 	<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'foundationpress' ); ?></p>

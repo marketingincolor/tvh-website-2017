@@ -32,11 +32,9 @@ get_header(); ?>
 	//echo 'Location: ' . $location . '<br />';
 	//echo 'Gender: ' . $gender . '<br />';
 	//print_r($_GET);
-	?>
-	<?php
+	//print_r( tvh_exclude_staff() )
 
-
-	$args = array(
+	/*$args = array(
 		's' => $search,
 		'category__not_in' => tvh_exclude_staff(),
 		//'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
@@ -61,9 +59,29 @@ get_header(); ?>
 				'compare' => '=',
 			),
 		),
+	);*/
+	//$staff_search = new WP_Query($args);
+
+	$meta_args = array( 'relation' => 'AND' );
+	if(isset($specialty) && !empty($specialty)){
+		array_push($meta_args, array('key' => 'specialty', 'value' => $specialty, 'compare' => 'LIKE'));
+	}
+	if(isset($location) && !empty($location)){
+		array_push($meta_args, array('key' => 'carecenter', 'value' => $location, 'compare' => 'LIKE'));
+	}
+	if(isset($gender) && !empty($gender)){
+		array_push($meta_args, array('key' => 'gender', 'value' => $gender, 'compare' => '='));
+	}
+
+	$staff_search = new WP_Query( array(
+		's' => $search,
+		'category__not_in' => tvh_exclude_staff(),
+		'posts_per_page' => 10,
+		'paged' => $paged,
+		'post_type'  => 'staff',
+		'meta_query' => $meta_args )
 	);
 
-	$staff_search = new WP_Query($args);
 	?>
 	<?php if ( $staff_search->have_posts() ) : ?>
 

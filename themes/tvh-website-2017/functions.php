@@ -213,19 +213,17 @@ function get_id_by_slug($page_slug, $slug_page_type = 'page') {
 /* ------------------------------------------------------------------------ *
  * Custom Search Template Chooser
  * ------------------------------------------------------------------------ */
-
- function template_chooser($template)   
-{    
-  global $wp_query;   
-  $post_type = get_query_var('post_type');   
-  if( $wp_query->is_search && $post_type == 'staff' )   
+ function template_chooser($template)
+{
+  global $wp_query;
+  $post_type = get_query_var('post_type');
+  if( $wp_query->is_search && $post_type == 'staff' )
   {
     return locate_template('archive-doctor.php');  //  redirect to archive-doctor.php
-  }   
-  return $template;   
+  }
+  return $template;
 }
-add_filter('template_include', 'template_chooser');  
-
+add_filter('template_include', 'template_chooser');
 
 
 function tvh_staff_pagination($numpages = '', $pagerange = '', $paged='') {
@@ -279,7 +277,7 @@ function tvh_staff_pagination($numpages = '', $pagerange = '', $paged='') {
 
   if ($paginate_links) {
     echo "<nav class='custom-pagination'>";
-      echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
+      echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> &nbsp;&nbsp;";
       echo $paginate_links;
     echo "</nav>";
   }

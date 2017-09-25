@@ -55,7 +55,11 @@ get_header(); ?>
 			    <h5>Undergraduate: <span><?php echo $dr_undergraduate; ?></span></h5>
 			<?php endif; ?>
 			<?php if( get_field('graduate') ): ?>
+				<?php if(($dr_type[0]->name == 'Nurse') || ($dr_type[0]->name == 'Physician Assistant')): ?>
 			    <h5>Graduate School: <span><?php echo $dr_graduate; ?></span></h5>
+				<?php else: ?>
+			    <h5>Medical School: <span><?php echo $dr_graduate; ?></span></h5>
+				<?php endif; ?>
 			<?php endif; ?>
 			<?php if( get_field('residency') ): ?>
 			    <h5>Internship/Residency: <span><?php echo $dr_residency; ?></span></h5>

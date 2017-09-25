@@ -47,7 +47,7 @@ $spdoc_args = array(
 			'relation' => 'AND',
 			'all_clause' => array(
 				'key' => 'carecenter',
-				'value' => $staff_location,
+				'value' => 'Specialty Care Center',
 				'compare' => 'LIKE',
 			),
 			'last_clause' => array(
@@ -59,7 +59,7 @@ $spdoc_args = array(
 			'relation' => 'AND',
 			'center_clause' => array(
 				'key' => 'carecenter',
-				'value' => $staff_location,
+				'value' => 'Specialty Care Center',
 				'compare' => 'LIKE',
 			),
 			'pos_clause' => array(
@@ -246,6 +246,8 @@ $mgcc_args = array(
 		$custom_args = $sbcc_args;
 	} elseif ($staff_location == 'Mulberry Grove Care Center' ) {
 		$custom_args = $mgcc_args;
+	} elseif ($staff_location == 'Brownwood Care Center' ) {
+		$custom_args = $spdoc_args;
 	}
 	$show_custom = new WP_Query( $custom_args );
 	if($show_custom->have_posts()) :
