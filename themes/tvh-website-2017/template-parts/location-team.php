@@ -35,15 +35,13 @@ switch ($page_location) {
 }
 $splist_args = array(
 	'category__in' => array( 31 ),
-	//'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
+	'category__not_in' => array( 4, 5, 6 ),
 	'post_type' => 'staff',
 	'posts_per_page' => -1,
 	'meta_key' => 'specialty',
 	'meta_value' => array( 'audiology', 'psychiatry' ),
 	'meta_compare' => 'NOT IN',
 	'meta_query' => array(
-		'relation' => 'OR',
-		array(
 			'relation' => 'AND',
 			'all_clause' => array(
 				'key' => 'carecenter',
@@ -55,22 +53,8 @@ $splist_args = array(
 				'compare' => 'EXISTS'
 			),
 		),
-		array(
-			'relation' => 'AND',
-			'center_clause' => array(
-				'key' => 'carecenter',
-				'value' => 'Center',
-				'compare' => 'LIKE',
-			),
-			'pos_clause' => array(
-				'key' => 'position',
-				'value' => 'Medical Director',
-				'compare' => '=',
-			),
-		),
-	),
+
 	'orderby' => array(
-		'pos_clause' => 'DESC',
 		'specialty' => 'ASC',
 		'last_clause' => 'ASC',
 	),
@@ -152,6 +136,17 @@ $doc_args = array(
 		'pos_clause' => 'DESC',
 		'last_clause' => 'ASC',
 	),
+);
+$bstaff_args = array(
+	'category_name' => 'nurse',
+	'category__in' => array( 31 ),
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_query' => array(
+		'key' => 'last_name',
+		'compare' => 'EXISTS',
+	),
+	'orderby' => 'last_name',
 );
 $staff_args = array(
 	'category__in' => array( 6, 9, 10 ),
@@ -320,7 +315,11 @@ $bwcc_args = array(
 	if($show_custom->have_posts()) :
 		while ($show_custom->have_posts()) : $show_custom->the_post(); 
 		$custom_credentials = get_field('credentials') ? get_field('credentials') : "" ;
-		$custom_position = get_field('position') ? get_field('position') : "" ;
+		if ($staff_location == 'Brownwood Care Center' ) { 
+			$custom_position = get_field('specialty') ? get_field('specialty') : "" ;
+		} else {
+			$custom_position = get_field('position') ? get_field('position') : "" ;
+		}
 		$custom_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
 		<!-- Loop to display team -->
@@ -342,7 +341,12 @@ $bwcc_args = array(
 	?>
 
 	<?php 
-	$show_staff = new WP_Query( $staff_args );
+	if ($staff_location == 'Brownwood Care Center' ) {
+		$staffcustom_args = $bstaff_args;
+	} else {
+		$staffcustom_args = $staff_args;
+	}
+	$show_staff = new WP_Query( $staffcustom_args );
 	if($show_staff->have_posts()) :
 		while ($show_staff->have_posts()) : $show_staff->the_post(); 
 		$staff_credentials = get_field('credentials') ? get_field('credentials') : "" ;
