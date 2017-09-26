@@ -33,7 +33,48 @@ switch ($page_location) {
 	$staff_location = 'Saturday Acute Care Clinic';
 	break;
 }
-
+$splist_args = array(
+	'category__in' => array( 31 ),
+	//'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'specialty',
+	'meta_value' => array( 'audiology', 'psychiatry' ),
+	'meta_compare' => 'NOT IN',
+	'meta_query' => array(
+		'relation' => 'OR',
+		array(
+			'relation' => 'AND',
+			'all_clause' => array(
+				'key' => 'carecenter',
+				'value' => 'Center',
+				'compare' => 'LIKE',
+			),
+			'last_clause' => array(
+				'key' => 'last_name',
+				'compare' => 'EXISTS'
+			),
+		),
+		array(
+			'relation' => 'AND',
+			'center_clause' => array(
+				'key' => 'carecenter',
+				'value' => 'Center',
+				'compare' => 'LIKE',
+			),
+			'pos_clause' => array(
+				'key' => 'position',
+				'value' => 'Medical Director',
+				'compare' => '=',
+			),
+		),
+	),
+	'orderby' => array(
+		'pos_clause' => 'DESC',
+		'specialty' => 'ASC',
+		'last_clause' => 'ASC',
+	),
+);
 $spdoc_args = array(
 	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
@@ -192,6 +233,26 @@ $mgcc_args = array(
 	'meta_compare' => 'IN',
 	'orderby' => array( 'last_name' => 'ASC', ),
 );
+$bwcc_args = array(
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_query' => array(
+		'relation' => 'AND',
+		'all_clause' => array(
+			'key' => 'first_name',
+			'value' => array( 'David', 'Robert' ),
+			'compare' => 'IN',
+		),
+		'last_clause' => array(
+			'key' => 'last_name',
+			'value' => array( 'Kelley', 'Raquet' ),
+			'compare' => 'IN',
+		),
+	),
+	'orderby' => array(
+		'last_clause' => 'ASC',
+	),
+);
 ?>
 <?php if ($staff_location != 'Saturday Acute Care Clinic') : ?>
 <!--DOCTOR TEMPLATE -->
@@ -203,10 +264,14 @@ $mgcc_args = array(
 	</div>
 
 	<div class="row" data-equalizer data-equalize-by-row="true">
-
+	<?php if ($staff_location == 'Brownwood Care Center' ) : ?>
+		<h3 class="small-11 small-offset-1">Primary Care</h3>
+	<?php endif; ?>
 	<?php 
 	if ($staff_location == 'Specialty Care Center' ) {
 		$show_args = $spdoc_args;
+	} elseif ($staff_location == 'Brownwood Care Center' ) {
+		$show_args = $bwcc_args;
 	} else {
 		$show_args = $doc_args;
 	}
@@ -234,7 +299,9 @@ $mgcc_args = array(
 	endif;
 	wp_reset_postdata();
 	?>
-
+	<?php if ($staff_location == 'Brownwood Care Center' ) : ?>
+		<h3 class="small-11 small-offset-1">Specialty Care</h3>
+	<?php endif; ?>
 	<?php 
 	if ($staff_location == 'Pinellas Care Center' ) {
 		$custom_args = $pncc_args;
@@ -247,7 +314,7 @@ $mgcc_args = array(
 	} elseif ($staff_location == 'Mulberry Grove Care Center' ) {
 		$custom_args = $mgcc_args;
 	} elseif ($staff_location == 'Brownwood Care Center' ) {
-		$custom_args = $spdoc_args;
+		$custom_args = $splist_args;
 	}
 	$show_custom = new WP_Query( $custom_args );
 	if($show_custom->have_posts()) :
