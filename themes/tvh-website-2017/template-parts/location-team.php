@@ -315,7 +315,7 @@ $bwcc_args = array(
 	if($show_custom->have_posts()) :
 		while ($show_custom->have_posts()) : $show_custom->the_post(); 
 		$custom_credentials = get_field('credentials') ? get_field('credentials') : "" ;
-		if ($staff_location == 'Brownwood Care Center' ) { 
+		if (($staff_location == 'Brownwood Care Center') && (get_field('position') != 'Dietitian')) { 
 			$custom_position = get_field('specialty') ? get_field('specialty') : "" ;
 		} else {
 			$custom_position = get_field('position') ? get_field('position') : "" ;

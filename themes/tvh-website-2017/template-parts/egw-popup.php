@@ -13,7 +13,7 @@
     <p>The content included on this page (on The Villages Health website), has been contributed by The Villages Health physicians and staff for your information and entertainment.</p>
     <p>If you have questions about any of the content on this page, or about your health, please contact your health care provider. And, of course, if you experience any sort of urgent health care need, do not seek guidance on this site, but immediately call 911.</p>
     <button class="close-button" data-close aria-label="Close modal" type="button">
-      <span aria-hidden="true">&times;</span>
+      <!--<span aria-hidden="true">&times;</span>-->
     </button>
     <form id="checkegw"><input id="set-cookie" type="checkbox"> I understand</form>
   </div>
@@ -28,6 +28,7 @@
     }
     jQuery('#checkegw :checkbox').change(function() {
       Cookies('showed_modal', 'true', { expires: 730 });
+      jQuery("#egwModal").foundation("close");
     });
 
 	});

@@ -1,6 +1,12 @@
 <?php
 	// Custom Widget for Location Information
 	// 
+	$dr_firstname = get_field('first_name') ? get_field('first_name') : "" ;
+	$dr_lastname = get_field('last_name') ? get_field('last_name') : "" ;
+	$doctor = $dr_firstname . " " .$dr_lastname;
+	$dr_array = array( 'James Flaherty', 'Robert Herman', 'Robert Kersh', 'Robert Skotnicki', 'Jerry Drucker', 'James Mersey', 'Michael Pezzone', 'Nicole Bairossi', 'Edwin Menor', 'Elizabeth Raquet', 'Kathleen Steepy', 'Thomas Sullivan', 'Edward Morris' );
+	if ( in_array($doctor, $dr_array) ) { $show_alt = true; }
+
 	$show_location = get_field('carecenter') ? get_field('carecenter') : "" ;
 	if ( $show_location != "" ) {
 		$location_id = get_id_by_slug( $show_location, 'location' );
@@ -12,7 +18,7 @@
 		$show_location = $show_location . 's';
 	}
 	//$location_url = get_post_meta($location_id, '_location_slug', true);
-	$location_url = get_page_uri($location_id);
+	$location_url = get_page_uri($location_id); 
 	$location_address = get_post_meta($location_id, '_location_address', true);
 	$location_town = get_post_meta($location_id, '_location_town', true);
 	$location_state = get_post_meta($location_id, '_location_state', true);
@@ -49,6 +55,11 @@
 		<a href="<?php echo site_url('/care-centers/') . $location_url; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-address.png" alt="Address:"></a>
 		<h4 class="context"><?php echo $location_address; ?><br>
 		<?php echo $location_town; ?>, <?php echo $location_state; ?>, <?php echo $location_zip; ?></h4>
+
+		<?php if ($show_alt == true) : ?>
+			<h4 class="context">2910 Brownwood Blvd.<br>The Villages, FL, 32159</h4>
+		<?php endif; ?>
+
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-hours.png" alt="Office Hours:">
 		<h4>Office Hours:<br><?php echo $location_time; ?></h4>
 

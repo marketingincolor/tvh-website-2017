@@ -25,9 +25,6 @@ get_header(); ?>
 			<div class="serv-sub<?php echo ( is_single('audiology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/audiology">Audiology</a>
 			</div>
-			<div class="serv-sub<?php echo ( is_single('psychiatry') ? ' current' : ''); ?>">
-				<a href="<?php echo site_url('/specialty-services'); ?>/psychiatry">Psychiatry</a>
-			</div>
 			<div class="serv-sub<?php echo ( is_single('cardiology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/cardiology">Cardiology</a>
 			</div>
@@ -51,6 +48,9 @@ get_header(); ?>
 			</div>
 			<div class="serv-sub<?php echo ( is_single('orthopaedics') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/orthopaedics">Orthopaedics</a>
+			</div>
+			<div class="serv-sub<?php echo ( is_single('psychiatry') ? ' current' : ''); ?>">
+				<a href="<?php echo site_url('/specialty-services'); ?>/psychiatry">Psychiatry</a>
 			</div>
 			<div class="serv-sub<?php echo ( is_single('rheumatology') ? ' current' : ''); ?>">
 				<a href="<?php echo site_url('/specialty-services'); ?>/rheumatology">Rheumatology</a>
