@@ -34,7 +34,7 @@ get_header(); ?>
 		</div>
 	</article>
 
- <?php get_sidebar(); ?>
+ <?php //get_sidebar(); ?>
 
 </div>
 
