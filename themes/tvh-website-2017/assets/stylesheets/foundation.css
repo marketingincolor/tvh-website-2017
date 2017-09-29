@@ -8473,8 +8473,11 @@ a:hover {
 .nf-form-cont {
   background-color: #f5f5f2;
   border-radius: 22px;
-  padding: 2em 6em;
+  padding: 1em;
   margin-top: 2.2rem; }
+  @media print, screen and (min-width: 40em) {
+    .nf-form-cont {
+      padding: 2em 6em; } }
   .nf-form-cont h3 {
     padding: 0;
     text-align: center; }
@@ -8568,7 +8571,11 @@ a:hover {
     clear: both; }
   .request-an-appointment .entry-content .nf-form-cont .nf-form-wrap,
   .new-patient-form .entry-content .nf-form-cont .nf-form-wrap {
-    padding: 2em 6em; }
+    padding: 1em; }
+  @media print, screen and (min-width: 40em) {
+    .request-an-appointment .entry-content .nf-form-cont .nf-form-wrap,
+    .new-patient-form .entry-content .nf-form-cont .nf-form-wrap {
+      padding: 2em 6em; } }
 
 .single-staff .main-wrap {
   background: inherit; }

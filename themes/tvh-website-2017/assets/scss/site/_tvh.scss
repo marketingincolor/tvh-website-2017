@@ -193,8 +193,11 @@ a:hover { color:#a85020; }
 .nf-form-cont {
   background-color:$grey;
   border-radius:22px;
-  padding:2em 6em;
+  padding:1em;
   margin-top:2.2rem;
+  @include breakpoint(medium) {
+    padding:2em 6em;
+  }
   h3 { padding:0; text-align:center; }
   .nf-before-form-content { font-size:0.85rem; }
   .nf-field-label label { font-weight:normal; font-size:1rem; }
@@ -256,7 +259,10 @@ a:hover { color:#a85020; }
 .new-patient-form .entry-content .nf-form-cont {
   @include grid-column(10);
   @include grid-column-position(center);
-  .nf-form-wrap {padding:2em 6em;}
+  .nf-form-wrap {padding:1em;}
+  @include breakpoint(medium) {
+    .nf-form-wrap {padding:2em 6em;}
+  }
 }
 
 // =======================================
