@@ -36,7 +36,7 @@ Template Name: Green Landing Page
         .lander p { text-align:left; margin-bottom:1em !important; }
         .logo { padding:10px; }
         .logo { background-color:rgb(45, 122, 61); }
-        .blue-lander { margin-bottom:2em; }
+        .green-lander { margin-bottom:2em; }
         h1, h2, h3, h4, h5, h6 { font-family:'Roboto', sans-serif; }
         h2 { font-weight:200 !important; font-size:2em; text-align:left; }
         h2.special { font-weight:400 !important; font-size:1.25em; margin:.5em 0em; text-align:center; }
@@ -72,7 +72,7 @@ Template Name: Green Landing Page
 
 		<div class="row">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<div class="blue-lander small-12 columns">
+			<div class="green-lander small-12 columns">
 
 				<h1 class="h1-headline"><?php the_title(); ?></h1>
 
