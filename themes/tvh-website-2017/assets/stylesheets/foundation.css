@@ -8396,6 +8396,12 @@ a:hover {
     line-height: 1.4;
     height: 3em;
     margin-bottom: 2em; }
+  .doctor-finder input[type="text"]::-webkit-input-placeholder {
+    color: #1a1a1a; }
+  .doctor-finder input[type="text"]:-ms-input-placeholder {
+    color: #1a1a1a; }
+  .doctor-finder input[type="text"]::placeholder {
+    color: #1a1a1a; }
 
 .services-grid {
   text-align: center;

@@ -10,8 +10,14 @@
 //Get Custom Theme Options
 global $post;
 $post_slug = $post->post_name;
+$location_id = get_the_id();
+$location_phone = get_post_meta($location_id, 'location_phone', true);
 $options = get_option('tvh_theme_options');
-$number = $options['tvh_pn_textbox'];
+if ($location_phone != "") {
+	$number = $location_phone;
+} else {
+	$number = $options['tvh_pn_textbox'];
+}
 $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 ?>
 <!doctype html>
@@ -72,9 +78,9 @@ $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 
 		</div>
 		<div class="site-cta">
-		<?php 
-		if ( $options['tvh_pn_textbox'] != null || $options['tvh_pn_textbox'] != "" ) : ?>
-			<!--<a href="tel:<?php echo $justnumber; ?>">--><button class="special-button orange"><?php echo $options['tvh_pn_textbox']; ?></button><!--</a>-->
+		<?php if ( $options['tvh_pn_textbox'] != null || $options['tvh_pn_textbox'] != "" ) : ?>
+			<button class="special-button orange hide-for-small-only"><?php echo $number; ?></button>
+			<a href="tel:<?php echo $justnumber; ?>" class="hide-for-medium"><button class="special-button orange"><?php echo $number; ?></button></a>
 		<?php endif; ?>
 			<a href="<?php echo site_url(); ?>/for-patients/request-an-appointment/" class="bcta-center"><button class="top-button orange">Request An Appointment</button></a>
 			<a href="https://mycw42.eclinicalweb.com/portal4749/jsp/100mp/login_otp.jsp" target="_blank"><button class="top-button orange">Patient Portal</button></a>
