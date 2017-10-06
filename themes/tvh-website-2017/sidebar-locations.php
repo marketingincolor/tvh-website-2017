@@ -26,6 +26,23 @@
 		<article id="widget-2" class="widget widget-location">
 			<?php get_template_part( 'template-parts/side-location' ); ?>
 		</article>
+
+	<?php if ( $location_slug == 'brownwood-care-center' ) : ?>
+		<article id="widget-4" class="widget widget-location">
+				<div class="staff-widget-title">
+					Specialty Care
+				</div>
+				<div class="staff-widget-container">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-phone.png" alt="Phone Number:">
+					<h3 class="context">352-674-8700</h3>
+
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-hours.png" alt="Office Hours:">
+					<h4>Office Hours:<br>Mon.-Fri., 8am-5pm</h4>
+
+				</div>
+		</article>
+	<?php endif; ?>
+
 		<article id="widget-3" class="widget widget-map">
 			<?php echo do_shortcode($location_code); ?>
 		</article>

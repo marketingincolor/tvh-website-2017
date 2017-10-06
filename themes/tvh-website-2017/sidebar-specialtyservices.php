@@ -24,8 +24,10 @@ $location = get_field('carecenter') ? get_field('carecenter') : "" ;
 		$bw_state = get_post_meta($bwloc_id, '_location_state', true);
 		$bw_zip = get_post_meta($bwloc_id, '_location_postcode', true);
 		$bw_country = get_post_meta($bwloc_id, '_location_country', true);
-		$bw_phone = get_post_meta($bwloc_id, 'location_phone', true);
-		$bw_time = get_post_meta($bwloc_id, 'location_time', true);
+		//$bw_phone = get_post_meta($bwloc_id, 'location_phone', true);
+		$bw_phone = '352-674-8700';
+		//$bw_time = get_post_meta($bwloc_id, 'location_time', true);
+		$bw_time = 'Mon.-Fri., 8am-5pm';
 	?>
 	<article id="widget-1" class="widget widget-location">
 		<div class="staff-widget-title">

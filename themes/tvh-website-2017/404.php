@@ -8,8 +8,9 @@
 
 get_header(); ?>
 
+ <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-404-img.jpg" style="width:100% !important;"/>
  <div class="main-wrap" role="main">
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+	<!--<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
 		<header>
 			<h1 class="entry-title"><?php _e( 'File Not Found', 'foundationpress' ); ?></h1>
 		</header>
@@ -32,7 +33,7 @@ get_header(); ?>
 				<li><?php _e( 'Click the <a href="javascript:history.back()">Back</a> button', 'foundationpress' ); ?></li>
 			</ul>
 		</div>
-	</article>
+	</article>-->
 
  <?php //get_sidebar(); ?>
 
