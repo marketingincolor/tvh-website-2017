@@ -35,10 +35,6 @@
 				<div class="staff-widget-container">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-phone.png" alt="Phone Number:">
 					<h3 class="context">352-674-8700</h3>
-
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-ws-loc-ico-hours.png" alt="Office Hours:">
-					<h4>Office Hours:<br>Mon.-Fri., 8am-5pm</h4>
-
 				</div>
 		</article>
 	<?php endif; ?>

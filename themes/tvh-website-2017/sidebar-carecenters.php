@@ -71,8 +71,9 @@
 					<p><?php echo $loc_address; ?><br>
 					<?php echo $loc_town; ?>, <?php echo $loc_state; ?> <?php echo $loc_zip; ?></p>
 					<p><?php echo $loc_phone; ?></p>
+					<?php if (is_page('contact')) { ?>
 					<p><?php echo ( $loc_fax != '' ? 'Fax: ' . $loc_fax  : '' ); ?></p>
-
+					<?php } ?>
 				</div> 
 			</div>
 		<?php 
