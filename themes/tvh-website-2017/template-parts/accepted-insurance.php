@@ -26,7 +26,7 @@
 		Accepted Insurance
 	</div>
 	<div class="staff-widget-container">
-		<p>See the list of insurance policies that we accept.</p>
+		<p>See the list of insurance plans that we accept.</p>
 		<p><a href="<?php echo site_url(); ?>/for-patients/primary-accepted-insurance/"><button class="cta-button orange">Primary Care</button></a></p>
 		<p><a href="<?php echo site_url(); ?>/for-patients/specialty-accepted-insurance/"><button class="cta-button orange">Specialty Care</button></a></p>
 	</div>
