@@ -1,12 +1,12 @@
- <?php
+<?php
 // Custom Widget for Staff Location Pages
 // 
 //$staff_location = get_the_title();
-$staff_location = $post->post_name;
-if ($staff_location == 'general-surgery') {
-	$staff_location = 'General Surgery'; 
-} elseif ($staff_location == 'behavioral-health') {
-	$staff_location = 'Behavioral Health'; 
+$specialty_name = $post->post_name;
+if ($specialty_name == 'general-surgery') {
+	$specialty_name = 'General Surgery'; 
+} elseif ($specialty_name == 'behavioral-health') {
+	$specialty_name = 'Behavioral Health'; 
 }
 /*$doc_args = array(
 	//'meta_key' => 'specialty',
@@ -42,19 +42,19 @@ $doc_args = array(
 			'relation' => 'AND',
 			'all_clause' => array(
 				'key' => 'specialty',
-				'value' => $staff_location,
+				'value' => $specialty_name,
 				'compare' => '=',
 			),
 			'last_clause' => array(
 				'key' => 'last_name',
-				'compare' => 'EXISTS'
+				'compare' => 'EXISTS',
 			),
 		),
 		array(
 			'relation' => 'AND',
 			'center_clause' => array(
 				'key' => 'specialty',
-				'value' => $staff_location,
+				'value' => $specialty_name,
 				'compare' => '=',
 			),
 			'pos_clause' => array(
@@ -65,8 +65,8 @@ $doc_args = array(
 		),
 	),
 	'orderby' => array(
-		'pos_clause' => 'DESC',
 		'last_clause' => 'ASC',
+		'pos_clause' => 'DESC',
 	),
 );
 $staff_args = array(
@@ -77,12 +77,12 @@ $staff_args = array(
 		'relation' => 'AND',
 		'all_clause' => array(
 			'key' => 'specialty',
-			'value' => $staff_location,
+			'value' => $specialty_name,
 			'compare' => 'LIKE',
 		),
 		'last_clause' => array(
 			'key' => 'last_name',
-			'compare' => 'EXISTS'
+			'compare' => 'EXISTS',
 		),
 	),
 	'orderby' => array(
@@ -97,12 +97,12 @@ $psr_args = array(
 		'relation' => 'AND',
 		'all_clause' => array(
 			'key' => 'specialty',
-			'value' => $staff_location,
+			'value' => $specialty_name,
 			'compare' => 'LIKE',
 		),
 		'last_clause' => array(
 			'key' => 'last_name',
-			'compare' => 'EXISTS'
+			'compare' => 'EXISTS',
 		),
 	),
 	'orderby' => array(
@@ -124,18 +124,14 @@ $psr_args = array(
 		$dr_position = get_field('position') ? get_field('position') : "" ;
 		$dr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
-		<!-- Loop to display team -->
-		<div class="small-12 medium-6 columns">
+		<div class="team-specialty small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p><?php the_title(); ?>, <?php echo $dr_credentials; ?></p>
 				<p><em><?php echo $dr_position; ?></em></p>
-				<!--IF HAS BIO ADD HERE -->
-				<!--END IF HAS BIO-->
 				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
-		<!-- end loop to display team -->
 	<?php 
 		endwhile; 
 	endif;
@@ -150,18 +146,14 @@ $psr_args = array(
 		$dr_position = get_field('position') ? get_field('position') : "" ;
 		$dr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
-		<!-- Loop to display team -->
-		<div class="small-12 medium-6 columns">
+		<div class="team-staff small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p><?php the_title(); ?>, <?php echo $dr_credentials; ?></p>
 				<p><em><?php echo $dr_position; ?></em></p>
-				<!--IF HAS BIO ADD HERE -->
-				<!--END IF HAS BIO-->
 				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
-		<!-- end loop to display team -->
 	<?php 
 		endwhile; 
 	endif;
@@ -176,18 +168,14 @@ $psr_args = array(
 		$dr_position = get_field('position') ? get_field('position') : "" ;
 		$dr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
-		<!-- Loop to display team -->
-		<div class="small-12 medium-6 columns">
+		<div class="team-psr small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p><?php the_title(); ?>, <?php echo $dr_credentials; ?></p>
 				<p><em><?php echo $dr_position; ?></em></p>
-				<!--IF HAS BIO ADD HERE -->
-				<!--END IF HAS BIO-->
 				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
-		<!-- end loop to display team -->
 	<?php 
 		endwhile; 
 	endif;

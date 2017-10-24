@@ -33,6 +33,7 @@ switch ($page_location) {
 	$staff_location = 'Saturday Acute Care Clinic';
 	break;
 }
+
 $splist_args = array(
 	'category__in' => array( 31 ),
 	'category__not_in' => array( 4, 5, 6 ),
@@ -50,7 +51,7 @@ $splist_args = array(
 			),
 			'last_clause' => array(
 				'key' => 'last_name',
-				'compare' => 'EXISTS'
+				'compare' => 'EXISTS',
 			),
 		),
 
@@ -59,6 +60,7 @@ $splist_args = array(
 		'last_clause' => 'ASC',
 	),
 );
+
 $spdoc_args = array(
 	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
@@ -77,7 +79,7 @@ $spdoc_args = array(
 			),
 			'last_clause' => array(
 				'key' => 'last_name',
-				'compare' => 'EXISTS'
+				'compare' => 'EXISTS',
 			),
 		),
 		array(
@@ -90,16 +92,17 @@ $spdoc_args = array(
 			'pos_clause' => array(
 				'key' => 'position',
 				'value' => 'Medical Director',
-				'compare' => '=',
+				'compare' => '!=',
 			),
 		),
 	),
 	'orderby' => array(
-		'pos_clause' => 'DESC',
+		'pos_clause' => 'ASC',
 		'specialty' => 'ASC',
 		'last_clause' => 'ASC',
 	),
 );
+
 $doc_args = array(
 	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
@@ -115,7 +118,7 @@ $doc_args = array(
 			),
 			'last_clause' => array(
 				'key' => 'last_name',
-				'compare' => 'EXISTS'
+				'compare' => 'EXISTS',
 			),
 		),
 		array(
@@ -137,6 +140,7 @@ $doc_args = array(
 		'last_clause' => 'ASC',
 	),
 );
+
 $bstaff_args = array(
 	'category_name' => 'nurse',
 	'category__in' => array( 31 ),
@@ -161,7 +165,7 @@ $staff_args = array(
 		),
 		'last_clause' => array(
 			'key' => 'last_name',
-			'compare' => 'EXISTS'
+			'compare' => 'EXISTS',
 		),
 	),
 	'orderby' => array(
@@ -181,7 +185,7 @@ $psr_args = array(
 		),
 		'last_clause' => array(
 			'key' => 'last_name',
-			'compare' => 'EXISTS'
+			'compare' => 'EXISTS',
 		),
 	),
 	'orderby' => array(
@@ -262,6 +266,7 @@ $bwcc_args = array(
 	<?php if ($staff_location == 'Brownwood Care Center' ) : ?>
 		<h3 class="small-11 small-offset-1">Primary Care</h3>
 	<?php endif; ?>
+
 	<?php 
 	if ($staff_location == 'Specialty Care Center' ) {
 		$show_args = $spdoc_args;
@@ -277,18 +282,14 @@ $bwcc_args = array(
 		$dr_position = get_field('position') ? get_field('position') : "" ;
 		$dr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
-		<!-- Loop to display team -->
-		<div class="small-12 medium-6 columns">
+		<div class="team-main small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p><strong><?php the_title(); ?>, <?php echo $dr_credentials; ?></strong></p>
 				<p><em><?php echo $dr_position; ?></em></p>
-				<!--IF HAS BIO ADD HERE -->
-				<!--END IF HAS BIO-->
 				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
-		<!-- end loop to display team -->
 	<?php 
 		endwhile; 
 	endif;
@@ -322,18 +323,14 @@ $bwcc_args = array(
 		}
 		$custom_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
-		<!-- Loop to display team -->
-		<div class="small-12 medium-6 columns">
+		<div class="team-custom small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $custom_round['url']; ?>" alt="<?php the_title(); ?> photo">
 				<p><strong><?php the_title(); ?>, <?php echo $custom_credentials; ?></strong></p>
 				<p><em><?php echo $custom_position; ?></em></p>
-				<!--IF HAS BIO ADD HERE -->
-				<!--END IF HAS BIO-->
 				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
-		<!-- end loop to display team -->
 	<?php 
 		endwhile; 
 	endif;
@@ -353,21 +350,15 @@ $bwcc_args = array(
 		$staff_position = get_field('position') ? get_field('position') : "" ;
 		$staff_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
-		<!-- Loop to display team -->
-		<div class="small-12 medium-6 columns">
+		<div class="team-staff small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $staff_round['url']; ?>" alt="<?php the_title(); ?> photo">
-				<p>
-					<strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$staff_credentials; } ?></strong>
-				</p>
+				<p><strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$staff_credentials; } ?></strong></p>
 				<p><em><?php echo $staff_position; ?></em></p>
-				<!--IF HAS BIO ADD HERE -->
 				<p><?php //the_content(); ?></p>
-				<!--END IF HAS BIO-->
 				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
 			</div> 
 		</div>
-		<!-- end loop to display team -->
 	<?php 
 		endwhile; 
 	endif;
@@ -382,20 +373,14 @@ $bwcc_args = array(
 		$psr_position = get_field('position') ? get_field('position') : "" ;
 		$psr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
 		?>
-		<!-- Loop to display team -->
-		<div class="small-12 medium-6 columns">
+		<div class="team-psr small-12 medium-6 columns">
 			<div id="individual-doctor" class="text-center" data-equalizer-watch>
 				<img src="<?php echo $psr_round['url']; ?>" alt="<?php the_title(); ?> photo">
-				<p>
-					<strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$psr_credentials; } ?></strong>
-				</p>
+				<p><strong><?php the_title(); ?><?php if(get_field('credentials')) { echo ', '.$psr_credentials; } ?></strong></p>
 				<p><em><?php echo $psr_position; ?></em></p>
-				<!--IF HAS BIO ADD HERE -->
 				<p><?php the_content(); ?></p>
-				<!--END IF HAS BIO-->
 			</div> 
 		</div>
-		<!-- end loop to display team -->
 	<?php 
 		endwhile; 
 	endif;

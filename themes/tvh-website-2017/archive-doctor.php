@@ -67,7 +67,11 @@ get_header(); ?>
 		array_push($meta_args, array('key' => 'specialty', 'value' => $specialty, 'compare' => 'LIKE'));
 	}
 	if(isset($location) && !empty($location)){
-		array_push($meta_args, array('key' => 'carecenter', 'value' => $location, 'compare' => 'LIKE'));
+		if($specialty == 'Audiology') {
+			array_push($meta_args, array('key' => 'multicenter', 'value' => $location, 'compare' => 'LIKE'));
+		} else {
+			array_push($meta_args, array('key' => 'carecenter', 'value' => $location, 'compare' => 'LIKE'));
+		}
 	}
 	if(isset($gender) && !empty($gender)){
 		array_push($meta_args, array('key' => 'gender', 'value' => $gender, 'compare' => '='));
@@ -97,7 +101,7 @@ get_header(); ?>
 					    <span><?php the_field('position'); ?></span> -
 					<?php endif; ?>
 					<?php if( get_field('carecenter') ): ?>
-					    <span><?php the_field('carecenter'); ?></span>
+					    <span><?php echo $location; ?></span>
 					<?php endif; ?>
 					</a>
 				</div>
