@@ -7,9 +7,9 @@
 	<div class="front-cta small-12 large-4 columns">
 		<div class="default small-12 small-centered" data-equalizer-watch="outer">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tvh-aboutmain-img-vision.jpg" alt="">
-			<h3>A New Vision for Health Care</h3>
-			<p data-equalizer-watch="inner">The Villages Health was the last big initiative of Gary Morse, the founder of The Villages&reg;, who set out to create a health care system that’s second to none.</p>
-			<p class="btn-box"><a href="<?php echo site_url(); ?>/the-gary-morse-legacy-a-vision-for-making-the-villages-americas-healthiest-hometown/"><button class="cta-button orange">Read More</button></a></p>
+			<h3>America's Healthiest Hometown<sup>&reg;</sup></h3>
+			<p data-equalizer-watch="inner">The Villages Health offers education, prevention services, and community events support. It's all part of our vision to help The Villages be America's Healthiest Hometown<sup>&reg;</sup>.</p>
+			<p class="btn-box"><a href="<?php echo site_url(); ?>/about/americas-healthiest-hometown/"><button class="cta-button orange">Learn More</button></a></p>
 		</div>
 	</div>
 	<div class="front-cta small-12 large-4 columns">

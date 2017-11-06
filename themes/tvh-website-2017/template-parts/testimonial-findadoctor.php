@@ -2,13 +2,29 @@
 // Display Specific Client Testimonial in full-width container above footer
 // of career pages on the TVH site.
 // 
-
-$testimonial = Array(
-		'<h3>"When I see patients back and they\'re doing very well – it\'s the reason I went into orthopaedic surgery. Just the gratitude that you can see on their face. It\'s obviously what we went into medicine for, to really help patients, to truly make a difference in peoples\' lives."</h3><h4>David B. Ethier, MD, Orthopaedic Surgeon at The Villages Health Specialty Care Center</h4>'
-	);
- ?>
+$args = array(
+	'post_type' => 'testimonial',
+	'category_name' => 'find-testimonial',
+	'orderby' => 'rand',
+	'posts_per_page' => '1',
+);
+?>
 <div class="testimonial">
 	<div class="tm-content">
-		<?php echo $testimonial[array_rand($testimonial)]; ?>
+		<?php //echo $testimonial[array_rand($testimonial)]; ?>
+
+		<?php 
+		$quote = new WP_Query( $args );
+		if($quote->have_posts()) :
+			while ($quote->have_posts()) : $quote->the_post(); ?>
+			<!-- Loop to display testimonial -->
+			<h3><?php echo get_the_content(); ?></h3>
+			<h4><?php echo get_the_title(); ?>, <?php echo get_the_excerpt(); ?></h4>
+			<!-- end loop to display testimonial -->
+		<?php 
+			endwhile; 
+		endif;
+		wp_reset_postdata();
+		?>
 	</div>
 </div>
