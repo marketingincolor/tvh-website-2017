@@ -37,7 +37,7 @@ p {
   }
 }
 .container {}
-.main-content h2, .main-content h3 { padding-top:0.7rem; }
+.main-content h2, .main-content h3 { padding-top:0.7rem; clear:both; }
 .columns:last-child:not(:first-child) { float:left; }
 //Colors
 $orange: #db6829;

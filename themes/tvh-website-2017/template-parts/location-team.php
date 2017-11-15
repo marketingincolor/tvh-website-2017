@@ -233,24 +233,63 @@ $mgcc_args = array(
 	'orderby' => array( 'last_name' => 'ASC', ),
 );
 $bwcc_args = array(
+	'category__not_in' => array( 4, 5, 8, 9, 10 ),
 	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_query' => array(
+		'relation' => 'OR',
+		array(
+			'relation' => 'AND',
+			'first_clause' => array(
+				'key' => 'first_name',
+				'value' => array( 'David', 'Robert' ),
+				'compare' => 'IN',
+			),
+			'last_clause' => array(
+				'key' => 'last_name',
+				'value' => array( 'Kelley', 'Raquet' ),
+				'compare' => 'IN',
+			),
+		),
+		array(
+			'relation' => 'AND',
+			'all_clause' => array(
+				'key' => 'carecenter',
+				'value' => $staff_location,
+				'compare' => 'LIKE',
+			),
+			'exist_clause' => array(
+				//'key' => 'last_name',
+				//'compare' => 'EXISTS',
+				'key' => 'position',
+				'value' => 'Nurse Practitioner',
+				'compare' => 'LIKE'
+			),
+		),
+	),
+	'orderby' => array(
+		'exist_clause' => 'ASC',
+		'last_clause' => 'ASC',
+	),
+
+	/*'post_type' => 'staff',
 	'posts_per_page' => -1,
 	'meta_query' => array(
 		'relation' => 'AND',
 		'all_clause' => array(
 			'key' => 'first_name',
-			'value' => array( 'David', 'Robert' ),
+			'value' => array( 'David', 'Robert', 'Nancy' ),
 			'compare' => 'IN',
 		),
 		'last_clause' => array(
 			'key' => 'last_name',
-			'value' => array( 'Kelley', 'Raquet' ),
+			'value' => array( 'Kelley', 'Raquet', 'Johnson' ),
 			'compare' => 'IN',
 		),
 	),
 	'orderby' => array(
 		'last_clause' => 'ASC',
-	),
+	),*/
 );
 ?>
 <?php if ($staff_location != 'Saturday Acute Care Clinic') : ?>
