@@ -23,6 +23,7 @@ $justnumber = preg_replace('/[^A-Za-z0-9]/', '', $number);
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
+		<script src="https://www.youtube.com/iframe_api"></script>
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

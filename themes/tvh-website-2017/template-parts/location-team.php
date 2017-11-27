@@ -61,6 +61,28 @@ $splist_args = array(
 	),
 );
 
+$dir_args = array(
+	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
+	'post_type' => 'staff',
+	'posts_per_page' => -1,
+	'meta_key' => 'specialty',
+	'meta_value' => array( 'audiology', 'dermatology', 'neurology', 'psychiatry' ),
+	'meta_compare' => 'NOT IN',
+	'meta_query' => array(
+		'relation' => 'AND',
+		'center_clause' => array(
+			'key' => 'carecenter',
+			'value' => 'Specialty Care Center',
+			'compare' => 'LIKE',
+		),
+		'pos_clause' => array(
+			'key' => 'position',
+			'value' => 'Medical Director',
+			'compare' => '=',
+		),
+	),
+);
+
 $spdoc_args = array(
 	'category__not_in' => array( 4, 5, 6, 8, 9, 10 ),
 	'post_type' => 'staff',
@@ -69,7 +91,7 @@ $spdoc_args = array(
 	'meta_value' => array( 'audiology', 'dermatology', 'neurology', 'psychiatry' ),
 	'meta_compare' => 'NOT IN',
 	'meta_query' => array(
-		'relation' => 'OR',
+		'relation' => 'AND',
 		array(
 			'relation' => 'AND',
 			'all_clause' => array(
@@ -97,7 +119,7 @@ $spdoc_args = array(
 		),
 	),
 	'orderby' => array(
-		'pos_clause' => 'ASC',
+		//'pos_clause' => 'ASC',
 		'specialty' => 'ASC',
 		'last_clause' => 'ASC',
 	),
@@ -151,6 +173,7 @@ $bstaff_args = array(
 		'compare' => 'EXISTS',
 	),
 	'orderby' => 'last_name',
+	'order' => 'ASC',
 );
 $staff_args = array(
 	'category__in' => array( 6, 9, 10 ),
@@ -204,7 +227,7 @@ $cocc_args = array(
 	'post_type' => 'staff',
 	'posts_per_page' => -1,
 	'meta_key' => 'last_name',
-	'meta_value' => array( 'Turri', 'Pratesi-Bradley' ),
+	'meta_value' => array( 'Turri', 'Bradley-Pratesi' ),
 	'meta_compare' => 'IN',
 	'orderby' => array( 'last_name' => 'ASC', ),
 );
@@ -304,6 +327,30 @@ $bwcc_args = array(
 	<div class="row" data-equalizer data-equalize-by-row="true">
 	<?php if ($staff_location == 'Brownwood Care Center' ) : ?>
 		<h3 class="small-11 small-offset-1">Primary Care</h3>
+	<?php endif; ?>
+
+	<?php if ($staff_location == 'Specialty Care Center' ) : ?>
+	<?php 
+	$show_dir = new WP_Query( $dir_args );
+	if($show_dir->have_posts()) :
+		while ($show_dir->have_posts()) : $show_dir->the_post(); 
+		$dr_credentials = get_field('credentials') ? get_field('credentials') : "" ;
+		$dr_position = get_field('position') ? get_field('position') : "" ;
+		$dr_round = get_field('round_thumb') ? get_field('round_thumb') : "" ;
+		?>
+		<div class="team-main director small-12 medium-6 columns">
+			<div id="individual-doctor" class="text-center" data-equalizer-watch>
+				<img src="<?php echo $dr_round['url']; ?>" alt="<?php the_title(); ?> photo">
+				<p><strong><?php the_title(); ?>, <?php echo $dr_credentials; ?></strong></p>
+				<p><em><?php echo $dr_position; ?></em></p>
+				<p class="btn-box"><a href="<?php echo get_permalink(); ?>" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>
+			</div> 
+		</div>
+	<?php 
+		endwhile; 
+	endif;
+	wp_reset_postdata();
+	?>
 	<?php endif; ?>
 
 	<?php 

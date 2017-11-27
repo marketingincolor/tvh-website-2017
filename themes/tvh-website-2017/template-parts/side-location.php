@@ -4,7 +4,7 @@
 	$dr_firstname = get_field('first_name') ? get_field('first_name') : "" ;
 	$dr_lastname = get_field('last_name') ? get_field('last_name') : "" ;
 	$doctor = $dr_firstname . " " .$dr_lastname;
-	$dr_array = array( 'James Flaherty', 'Robert Herman', 'Robert Kersh', 'Robert Skotnicki', 'Jerry Drucker', 'James Mersey', 'Michael Pezzone', 'Nicole Bairossi', 'Edwin Menor', 'Elizabeth Raquet', 'Kathleen Steepy', 'Thomas Sullivan', 'Edward Morris' );
+	$dr_array = array( 'James Flaherty', 'Robert Herman', 'Robert Kersh', 'Robert Skotnicki', 'Jerry Drucker', 'James Mersey', 'Michael Pezzone', 'Nicole Bairossi', 'Edwin Menor', 'Elizabeth Raquet', 'Kathleen Steepy', 'Thomas Sullivan', 'Edward Morris', 'Stephanie Silberberg', 'Cathy Taylor' );
 	if ( in_array($doctor, $dr_array) ) { $show_alt = true; }
 
 	$show_location = get_field('carecenter') ? get_field('carecenter') : "" ;
