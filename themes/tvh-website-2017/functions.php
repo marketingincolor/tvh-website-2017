@@ -330,3 +330,70 @@ function custom_excerpt_more( $more ) {
   return ' ... Read More';
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+/* ------------------------------------------------------------------------ *
+ * Additional Tags Allowed in WP Nav Menu Container
+ * ------------------------------------------------------------------------ */
+function add_allowed_tags( $allowed ) {   
+    array_push($allowed, 'section');
+    return $allowed;
+}
+add_filter( 'wp_nav_menu_container_allowedtags', 'add_allowed_tags' );
+
+/* ------------------------------------------------------------------------ *
+ * Custom Nav Walker for Staff Listing Menus
+ * ------------------------------------------------------------------------ */
+class Staff_Walker extends Walker_Nav_Menu
+{
+  public function start_lvl( &$output, $depth =0, $args = array() ) {
+    $output .= '<div class="row" data-equalizer data-equalize-by-row="true">';
+  }
+
+  public function end_lvl( &$output, $depth =0, $args = array() ) {
+    $output .= '</div>';
+  }
+
+  public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+    $url = '';
+    if( !empty( $item->url ) ) {
+        $url = $item->url;
+    }
+    //$button_string = '<p class="btn-box"><a href="'.$url.'" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>';
+    //$leaderbutton_string = '<p class="btn-box"><a href="'.$url.'" title="Read Bio"><button class="cta-button-front orange">Read Bio</button></a></p>';
+    global $post; 
+    $page_location = $post->post_name;
+    $mainbutton_string = 'Learn More';
+    $leaderbutton_string = 'Read Bio';
+    $staff_credentials = get_field('credentials', $item->object_id) ? ', ' . get_field('credentials', $item->object_id) : "" ;
+    $staff_position = get_field('position', $item->object_id) ? get_field('position', $item->object_id) : "" ;
+    $staff_round = get_field('round_thumb', $item->object_id) ? get_field('round_thumb', $item->object_id) : "" ;
+    if ( ($page_location == 'leadership') || ($page_location == 'hospital-care') ) {
+      $output .= '<div class="team-specialty small-12 medium-3 columns">';
+    } else {
+      $output .= '<div class="team-specialty small-12 medium-6 columns">';
+    }
+    $output .= '<div id="individual-doctor" class="text-center" data-equalizer-watch>';
+    $output .= '<img src=" '. $staff_round['url'] . ' " alt=" photo">';
+    $output .= '<p><strong>' . $item->title . $staff_credentials . '</strong></p>';
+    $output .= '<p><em>' . $staff_position . '</em></p>';
+    /*if ($staff_position != 'Patient Service Representative') {
+      if ($page_location == 'leadership') {
+        $output .= $leaderbutton_string;
+      } else {
+        $output .= $button_string;
+      }
+    }*/
+    if ($staff_position != 'Patient Service Representative') {
+      if ($page_location == 'leadership') {
+        $button_string = $leaderbutton_string;
+      } else {
+        $button_string = $mainbutton_string;
+      }
+      if ($page_location != 'hospital-care') {
+        $output .= '<p class="btn-box"><a href="'.$url.'" title="'.$button_string.'"><button class="cta-button-front orange">'.$button_string.'</button></a></p>';
+      }
+    }
+    $output .= '</div></div>';
+    //$output .= var_dump($item);
+  }
+}

@@ -185,3 +185,18 @@ $psr_args = array(
 	</div>
 </section>
 <!--END DOCTOR TEMPLATE-->
+<hr>
+<?php $construction = array(
+	'theme_location'  => '',
+	'menu'            => strtolower($specialty_name),
+	'container'       => 'section',
+	'container_class' => '',
+	'container_id'    => 'all-doctors',
+	'echo'            => true,
+	'fallback_cb'     => 'wp_page_menu',
+	'items_wrap'      => '<div class="row" data-equalizer data-equalize-by-row="true">%3$s</div>',
+	'depth'           => 0,
+	'walker'          => new Staff_Walker(),
+);
+wp_nav_menu( $construction );
+?>
