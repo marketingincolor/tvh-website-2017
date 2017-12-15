@@ -358,8 +358,6 @@ class Staff_Walker extends Walker_Nav_Menu
     if( !empty( $item->url ) ) {
         $url = $item->url;
     }
-    //$button_string = '<p class="btn-box"><a href="'.$url.'" title="Learn More"><button class="cta-button-front orange">Learn More</button></a></p>';
-    //$leaderbutton_string = '<p class="btn-box"><a href="'.$url.'" title="Read Bio"><button class="cta-button-front orange">Read Bio</button></a></p>';
     global $post; 
     $page_location = $post->post_name;
     $mainbutton_string = 'Learn More';
@@ -376,13 +374,6 @@ class Staff_Walker extends Walker_Nav_Menu
     $output .= '<img src=" '. $staff_round['url'] . ' " alt=" photo">';
     $output .= '<p><strong>' . $item->title . $staff_credentials . '</strong></p>';
     $output .= '<p><em>' . $staff_position . '</em></p>';
-    /*if ($staff_position != 'Patient Service Representative') {
-      if ($page_location == 'leadership') {
-        $output .= $leaderbutton_string;
-      } else {
-        $output .= $button_string;
-      }
-    }*/
     if ($staff_position != 'Patient Service Representative') {
       if ($page_location == 'leadership') {
         $button_string = $leaderbutton_string;
@@ -394,6 +385,5 @@ class Staff_Walker extends Walker_Nav_Menu
       }
     }
     $output .= '</div></div>';
-    //$output .= var_dump($item);
   }
 }
