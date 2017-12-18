@@ -327,9 +327,18 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function custom_excerpt_more( $more ) {
-  return ' ... Read More';
+  return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '">Read More</a>';
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+add_filter('get_the_excerpt', 'wpm_manual_excerpt_read_more_link');
+function wpm_manual_excerpt_read_more_link($excerpt) {
+    $excerpt_more = '';
+    if (has_excerpt() && ! is_attachment() && get_post_type() == 'post') {
+        $excerpt_more = '... <a href="' . get_permalink($post->ID) . '">Read More</a>';
+    }
+    return $excerpt . $excerpt_more;
+}
 
 /* ------------------------------------------------------------------------ *
  * Additional Tags Allowed in WP Nav Menu Container

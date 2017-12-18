@@ -22,7 +22,7 @@ if($news->have_posts()) :
 	<li class="listing-item">
 		<a href="<?php echo get_permalink(); ?>" class="image"><img src="<?php echo $display_image; ?>" alt="photo"></a>
 		<a href="<?php echo get_permalink(); ?>" class="title"><?php the_title(); ?></a>
-		<span class="excerpt"><?php echo wp_strip_all_tags( get_the_excerpt(), true ); ?></span>
+		<span class="excerpt"><?php echo get_the_excerpt(); ?></span>
 	</li> 
 <?php 
 	endwhile; 
