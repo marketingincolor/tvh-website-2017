@@ -35,12 +35,12 @@ Template Name: Green Landing Page
         .lander { color:#333333; text-align:center; font-family:'Roboto', sans-serif; }
         .lander p { text-align:left; margin-bottom:1em !important; }
         .logo { padding:10px; }
-        .logo { background-color:rgb(45, 122, 61); }
+        .logo { background-color:rgb(26, 71, 35); }
         .green-lander { margin-bottom:2em; }
         h1, h2, h3, h4, h5, h6 { font-family:'Roboto', sans-serif; }
         h2 { font-weight:200 !important; font-size:2em; text-align:left; }
         h2.special { font-weight:400 !important; font-size:1.25em; margin:.5em 0em; text-align:center; }
-        .h1-headline { font-weight:200 !important; font-size:3.25em; padding:0em; color:#3594a7; margin:.5em 0em; }
+        .h1-headline { font-weight:200 !important; font-size:3.25em; padding:0em; color:#1a4723; margin:.5em 0em; }
         .h3-footer { font-weight:300 !important; font-size:1em; color:#fff; margin:2.5em 0em; }
         .main a, .main a:hover { color:rgb(219, 104, 41); text-decoration:underline; }
         .disclaimer { font-size:.75em; }
